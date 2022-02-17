@@ -1,0 +1,79 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<title>Nonet - PART</title>
+
+	<link href="fonts/fonts.css" rel="stylesheet">
+	<link href="nonet.css" rel="stylesheet">
+	<script src="lib/libINScore.js"></script>
+	<script src="lib/INScoreJS.js"></script>
+	<script src="lib/timesync.min.js"></script>
+	<script src="lib/comm.js"></script>
+	<script src="lib/client.js"></script>
+    <!-- ATTENTION ! Ne pas modifier cette page, elle est générée automatiquement à partir de rsrc/template.html.  -->
+</head>
+
+<body>
+	<button id="lock" type="button" onclick="ready(this, 'PART')">Please click</button>
+
+<div class="inscore" id="scene">
+<pre>
+    /ITL/scene/title set txt "Nonet - PART";
+    /ITL/scene/title fontSize 38;
+    /ITL/scene/title color white;
+    /ITL/scene/title y -0.7;
+
+    /ITL/scene/tempo set rect 0.1 0.1;
+    /ITL/scene/tempo show 0;
+    /ITL/scene/tempo tempo 60;
+    /ITL/scene/tempo angle 1;
+
+    /ITL/scene/cursor set rect 0.005 0.5;
+    /ITL/scene/cursor color red;
+
+    /ITL/scene load 'inscore/INSTR.inscore.txt';
+    /ITL/scene watch PAGEREADY ( /ITL/log write "pages ready", /ITL/scene/sync cursor page* v );
+ 
+    /ITL/scene load 'inscore/player.inscore.txt';
+    /ITL/scene watch PLAYREADY      ( /ITL/scene/control y 0.9 );
+
+    /ITL/scene load 'inscore/timeline.inscore.txt';
+    /ITL/scene watch TIMELINEREADY  ( /ITL/scene/tl y 0.75, /ITL/scene/sync cursor tl v );
+
+    /ITL/scene/audio set audio 'audio/INSTR.mp3';
+    /ITL/scene/audio show 0;
+
+    /ITL/scene watch PLAY   ( 
+        /ITL/scene/cursor tempo '$(/ITL/scene/tempo get tempo)', 
+        /ITL/scene/audio rate '$(/ITL/scene/tempo get angle)', 
+        /ITL/scene/audio play 1,
+        /ITL/scene/javascript run 'play(1)'
+    );
+    /ITL/scene watch PAUSE  ( 
+        /ITL/scene/cursor tempo 0, 
+        /ITL/scene/audio play 0, 
+        /ITL/scene/javascript run 'play(0)'
+    );
+    /ITL/scene watch STOP   ( 
+        /ITL/scene/cursor tempo 0, 
+        /ITL/scene/cursor date 0,
+        /ITL/scene/audio play 0,
+        /ITL/scene/audio vdate 0,
+        /ITL/scene/javascript run 'play(0)'
+    );
+    /ITL/scene watch GOTO       ( /ITL/scene/cursor date '$1' '$2', /ITL/scene/audio vdate '$1' '$2' );
+    /ITL/scene watch GOTOF      ( /ITL/scene/cursor date '$1', /ITL/scene/audio vdate '$1' );
+    /ITL/scene watch GOTOMARK   ( /ITL/scene/cursor date '$1' '$2', /ITL/scene/audio vdate '$1' '$2' );
+#    /ITL/scene watch TEMPO      ( /ITL/scene/cursor date '$1' '$2', /ITL/scene/audio vdate '$1' '$2' );
+
+    /ITL/scene watch keyDown ' ' 	( /ITL/scene/control/play event mouseDown 0 0 );
+    /ITL/scene watch keyDown '0' 	( /ITL/scene event GOTO 0 1 );
+ 
+</pre>
+</div>
+</body>
+
+<script>
+    connectclient("PART");
+</script>
+</html>
