@@ -1,7 +1,8 @@
 
 function nextindex(i) {
-	j=i+1;
-	return j < 10 ? "0" j : j;
+#	j=i+1;
+# 	return j < 10 ? "0" j : j;
+	return i + 1;
 }
 
 function makePage(i, date, duration, address, loc, cursor) {
@@ -41,10 +42,10 @@ BEGIN {
 END {
 	print "\n" baseaddress  "* show 0;"
 	print baseaddress  "* width 1.95;"
-	print baseaddress  "00 show 1;"	
-	print baseaddress  "01 show 1;"	
-	print baseaddress  "00 $top;"	
-	print baseaddress  "01 $bottom;"
+	print baseaddress  "0 show 1;"	
+	print baseaddress  "1 show 1;"	
+	print baseaddress  "0 $top;"	
+	print baseaddress  "1 $bottom;"
 	print baseaddress  "* watch mouseDown ( /ITL/scene event GOTO '$date');"
 	print baseaddress  "* watch mouseMove ( /ITL/scene event GOTO '$date');"	
 	print "/ITL/scene event PAGEREADY;"
