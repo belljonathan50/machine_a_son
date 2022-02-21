@@ -5,12 +5,27 @@ function nextindex(i) {
 	return i + 1;
 }
 
+function time2msc(date) {
+	min = int(date/60);
+	sec = int(date%60);
+	cts = int(date%60 - sec);
+	return min ":" sec ":" cts;
+}
+
+function time2interval(date, duration) {
+	start = time2msc(date*4);
+	end = time2msc((date + duration)*4);
+	return "[" start ", " end "[";
+}
+
 function makePage(i, date, duration, address, loc, cursor) {
 	odd = i%2;
 	page = address i;
 	print page " set img '" loc i ".png';"
-	print page " date " date ";"
-	print page " duration " duration ";"
+#	print page " date " date ";"
+	interval = time2interval(date, duration);
+	print page " map '([169, 3950[ [0, " height "[) (" interval ")';"
+#	print page " duration " duration ";"
 	end = date + duration;
 	print cursor " watch timeEnter " date " " end " ( " ;
 	print "  " address "* show 0,"

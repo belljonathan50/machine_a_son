@@ -1,6 +1,6 @@
 
 /ITL/scene/control set rect 0.3 0.12 ;
-/ITL/scene/control color lightgrey;
+/ITL/scene/control color black;
 /ITL/scene/control radius 20 40;
 
 /ITL/scene/control/play set img 'rsrc/play.png'; 

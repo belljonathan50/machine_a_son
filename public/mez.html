@@ -32,7 +32,7 @@
     /ITL/scene/cursor color red;
 
     /ITL/scene load 'inscore/mez.inscore.txt';
-    /ITL/scene watch PAGEREADY ( /ITL/log write "pages ready", /ITL/scene/sync cursor page* v );
+    /ITL/scene watch PAGEREADY ( /ITL/log write "pages ready", /ITL/scene/sync cursor page* v absolute);
  
     /ITL/scene load 'inscore/player.inscore.txt';
     /ITL/scene watch PLAYREADY      ( /ITL/scene/control y 0.9 );
@@ -42,26 +42,26 @@
 
     /ITL/scene watch PLAY   ( 
         /ITL/scene/cursor tempo '$(/ITL/scene/tempo get tempo)', 
-        /ITL/scene/audio rate '$(/ITL/scene/tempo get angle)', 
-        /ITL/scene/audio play 1,
+#        /ITL/scene/audio rate '$(/ITL/scene/tempo get angle)', 
+#        /ITL/scene/audio play 1,
         /ITL/scene/javascript run 'play(1)'
     );
     /ITL/scene watch PAUSE  ( 
         /ITL/scene/cursor tempo 0, 
-        /ITL/scene/audio play 0, 
+#        /ITL/scene/audio play 0, 
         /ITL/scene/javascript run 'play(0)'
     );
     /ITL/scene watch STOP   ( 
         /ITL/scene/cursor tempo 0, 
         /ITL/scene/cursor date 0,
-        /ITL/scene/audio play 0,
-        /ITL/scene/audio vdate 0,
+#        /ITL/scene/audio play 0,
+#        /ITL/scene/audio vdate 0,
         /ITL/scene/javascript run 'play(0)'
     );
-    /ITL/scene watch GOTO       ( /ITL/scene/cursor date '$1' '$2', /ITL/scene/audio vdate '$1' '$2' );
-    /ITL/scene watch GOTOF      ( /ITL/scene/cursor date '$1', /ITL/scene/audio vdate '$1' );
-    /ITL/scene watch GOTOMARK   ( /ITL/scene/cursor date '$1' '$2', /ITL/scene/audio vdate '$1' '$2' );
-#    /ITL/scene watch TEMPO      ( /ITL/scene/cursor date '$1' '$2', /ITL/scene/audio vdate '$1' '$2' );
+    /ITL/scene watch GOTO       ( /ITL/scene/cursor date '$1' '$2' );
+    /ITL/scene watch GOTOF      ( /ITL/scene/cursor date '$1' );
+    /ITL/scene watch GOTOMARK   ( /ITL/scene/cursor date '$1' '$2' );
+#    /ITL/scene watch TEMPO      ( /ITL/scene/cursor date '$1' '$2' );
 
     /ITL/scene watch keyDown ' ' 	( /ITL/scene/control/play event mouseDown 0 0 );
     /ITL/scene watch keyDown '0' 	( /ITL/scene event GOTO 0 1 );
