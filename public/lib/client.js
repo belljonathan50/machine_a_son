@@ -84,12 +84,12 @@ function isend (event) {
 }
 
 function setdate (date) {
-    let audio = document.getElementById ("scene/audio")
-    if (!audio) audio = document.getElementById ("scene/audio-gr1-flute")
-    let delay = audio.currentTime/4 - date;
-    if (Math.abs(delay) < 0.03) return;
+    // let audio = document.getElementById ("scene/audio")
+    // if (!audio) audio = document.getElementById ("scene/audio-gr1-flute")
+    // let delay = audio.currentTime/4 - date;
+    // if (Math.abs(delay) < 0.03) return;
     /* was 0.23  0.03better */
-    console.log ("Adjust date: current delay is", delay)
+    // console.log ("Adjust date: current delay is", delay)
     let msg = inscore.newMessageM("event");
     inscore.msgAddStr(msg, "GOTOF");
     inscore.msgAddF(msg, parseFloat(date));

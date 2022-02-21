@@ -32,7 +32,7 @@
     /ITL/scene/cursor color red;
 
     /ITL/scene load 'inscore/INSTR.inscore.txt';
-    /ITL/scene watch PAGEREADY ( /ITL/log write "pages ready", /ITL/scene/sync cursor page* v );
+    /ITL/scene watch PAGEREADY ( /ITL/log write "pages ready", /ITL/scene/sync cursor page* v absolute);
  
     /ITL/scene load 'inscore/player.inscore.txt';
     /ITL/scene watch PLAYREADY      ( /ITL/scene/control y 0.9 );

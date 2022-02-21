@@ -1,5 +1,5 @@
 
-INSTRS 	:= acc bas con mez sop
+INSTRS 	:= acc bas con mez sop 
 TARGETS := $(INSTRS:%=../inscore/%.inscore)
 
 INSCORE := ../inscore
@@ -7,10 +7,12 @@ TARGET  := $(INSCORE)/$(INSTR).inscore
 DATES	:= dates/all.txt
 INIT    ?= 			# -v clean=1		# intended to build standalone inscore pages
 IMGS    ?= "pages"
+HEIGHT  ?= 608
+H  		:= -v height=$(HEIGHT)
 
 $(TARGET) : $(DATES) makepages.awk Makefile
 	@echo "#### ATTENTION ! Ne pas modifier : ce script est généré automatiquement" >  $@
-	cat $(DATES) | awk -v baseaddress='/ITL/scene/page_' -v location=$(IMGS)/$(INSTR)/ -v cursor='/ITL/scene/cursor' $(INIT) -f makepages.awk >> $@
+	cat $(DATES) | awk -v baseaddress='/ITL/scene/page_' -v location=$(IMGS)/$(INSTR)/ -v cursor='/ITL/scene/cursor' $(INIT) $(H) -f makepages.awk >> $@
 
 help:
 	@echo "Build the inscore scripts for all instruments"
@@ -22,7 +24,7 @@ help:
 all:
 	make INSTR=acc 
 	make INSTR=bas 
-	make INSTR=con 
+	make INSTR=con HEIGHT=658
 	make INSTR=mez 
 	make INSTR=sop 
 
