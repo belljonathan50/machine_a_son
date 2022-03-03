@@ -85,9 +85,25 @@ var INScore = /** @class */ (function () {
     INScore.prototype.stop = function () { this.fInscore.stop(this.fInscoreGlue); };
     INScore.prototype.loadInscore = function (script, autoparse) {
         if (autoparse === void 0) { autoparse = false; }
-        return this.fInscore.loadInscore(script, autoparse);
+        try {
+            return this.fInscore.loadInscore(script, autoparse);
+        }
+        catch (err) {
+            console.log("Failed to load script:");
+            console.log(script);
+            return false;
+        }
     };
-    INScore.prototype.loadInscore2 = function (script) { return this.fInscore.loadInscore2(script); };
+    INScore.prototype.loadInscore2 = function (script) {
+        try {
+            return this.fInscore.loadInscore2(script);
+        }
+        catch (err) {
+            console.log("Failed to load script:");
+            console.log(script);
+            return false;
+        }
+    };
     INScore.prototype.postMessage = function (adr, msg) { this.fInscore.postMessage(adr, msg); };
     INScore.prototype.postMessageStr = function (adr, meth) { this.fInscore.postMessageStr(adr, meth); };
     INScore.prototype.postMessageStrI = function (adr, meth, val) { this.fInscore.postMessageStrI(adr, meth, val); };
@@ -542,72 +558,9 @@ function scanPlatform() {
     UnixOS = (os.indexOf('X11') >= 0) || (os.indexOf('Linux') >= 0);
     AndroidOS = (os.indexOf('Android') >= 0);
 }
-///<reference path="lib/inscore.d.ts"/>
-var AIOScanner = /** @class */ (function () {
-    function AIOScanner() {
-    }
-    AIOScanner.init = function () {
-        if (!AIOScanner.fAudioContext) {
-            AIOScanner.fAudioContext = new (window.AudioContext || window.webkitAudioContext)();
-            document.onreadystatechange = function () {
-                if (document.readyState === 'interactive') {
-                    AIOScanner.unlockAudioContext(AIOScanner.fAudioContext);
-                }
-            };
-        }
-    };
-    AIOScanner.scan = function (address) {
-        AIOScanner.init();
-        AIOScanner.fOutput = AIOScanner.fAudioContext.destination;
-        AIOScanner.send(address, AIOScanner.kOutputName, AIOScanner.fOutput);
-        // console.log ("navigator.mediaDevices " + navigator.mediaDevices);
-        // try {
-        if (navigator.mediaDevices) {
-            navigator.mediaDevices.getUserMedia({ audio: true, video: false }).then(function (stream) {
-                AIOScanner.fInput = AIOScanner.fAudioContext.createMediaStreamSource(stream);
-                AIOScanner.send(address, AIOScanner.kInputName, AIOScanner.fInput);
-            })
-                .catch(function (err) {
-                AIOScanner.send(address, AIOScanner.kInputName, null);
-                // console.log("AIOScanner can't get input device: " + err);
-            });
-        }
-        else {
-            AIOScanner.send(address, AIOScanner.kInputName, null);
-        }
-        // }
-        // catch (error) { AIOScanner.send (address, AIOScanner.kInputName, null); }
-        AIOScanner.send(address, AIOScanner.kInputName, null);
-    }; // Get All Physical in/out and populate finput & foutput
-    AIOScanner.send = function (address, name, node) {
-        var msg = inscore.newMessageM("set");
-        var prefix = address.substring(0, address.lastIndexOf("/"));
-        inscore.msgAddStr(msg, "audioio");
-        inscore.msgAddI(msg, node ? (node.numberOfInputs ? node.channelCount : 0) : 0); // nb input
-        inscore.msgAddI(msg, node ? (node.numberOfOutputs ? node.channelCount : 0) : 0); // nb output
-        inscore.postMessage(prefix + "/" + name + "", msg);
-    }; // can send a set audioio message for each physical input/output
-    AIOScanner.unlock = function () {
-        AIOScanner.fUnlockEvents.forEach(function (e) { return document.body.removeEventListener(e, AIOScanner.unlock); });
-        AIOScanner.fAudioContext.resume();
-    };
-    AIOScanner.unlockAudioContext = function (audioCtx) {
-        if (audioCtx.state !== "suspended")
-            return;
-        AIOScanner.fUnlockEvents.forEach(function (e) { return document.body.addEventListener(e, AIOScanner.unlock, false); });
-    };
-    AIOScanner.fInput = null;
-    AIOScanner.fOutput = null;
-    AIOScanner.kInputName = "audioInput";
-    AIOScanner.kOutputName = "audioOutput";
-    AIOScanner.fAudioContext = null;
-    AIOScanner.fUnlockEvents = ["touchstart", "touchend", "mousedown", "keydown"];
-    return AIOScanner;
-}());
 ///<reference path="inscore.ts"/>
 ///<reference path="libraries.ts"/>
 ///<reference path="navigator.ts"/>
-///<reference path="AIOScanner.ts"/>
 //----------------------------------------------------------------------------
 var INScoreGlue = /** @class */ (function () {
     function INScoreGlue() {
@@ -621,7 +574,6 @@ var INScoreGlue = /** @class */ (function () {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
-                AIOScanner.init();
                 return [2 /*return*/, new Promise(function (success, failure) {
                         _this.fInscore.initialise().then(function () {
                             _this.fInscore.start();
@@ -962,6 +914,59 @@ var BasicGlue = /** @class */ (function (_super) {
 }(INScoreBase));
 var inscoreGlue = new BasicGlue();
 inscoreGlue.start();
+///<reference path="lib/inscore.d.ts"/>
+var AIOScanner = /** @class */ (function () {
+    function AIOScanner() {
+    }
+    AIOScanner.init = function () {
+        if (!AIOScanner.fAudioContext) {
+            AIOScanner.fAudioContext = new (window.webkitAudioContext || window.AudioContext)({ latencyHint: 0.00001 });
+            AIOScanner.unlockAudioContext(AIOScanner.fAudioContext);
+            // document.onreadystatechange = function() {
+            //     if (document.readyState === 'interactive') {
+            //         AIOScanner.unlockAudioContext(AIOScanner.fAudioContext); 
+            //     }
+            // }
+        }
+    };
+    AIOScanner.scan = function (address) {
+        AIOScanner.init();
+        AIOScanner.fOutput = AIOScanner.fAudioContext.destination;
+        AIOScanner.create(address, AIOScanner.kOutputName, AIOScanner.fOutput);
+        AIOScanner.create(address, AIOScanner.kInputName, null);
+    };
+    AIOScanner.send = function (address, inputs, outputs) {
+        var msg = inscore.newMessageM("set");
+        inscore.msgAddStr(msg, "audioio");
+        inscore.msgAddI(msg, inputs);
+        inscore.msgAddI(msg, outputs);
+        inscore.postMessage(address, msg);
+    };
+    AIOScanner.create = function (address, name, node) {
+        var inputs = node ? (node.numberOfInputs ? node.channelCount : 0) : 0;
+        var outputs = node ? (node.numberOfOutputs ? node.channelCount : 0) : 0;
+        var prefix = address.substring(0, address.lastIndexOf("/"));
+        AIOScanner.send(prefix + "/" + name, inputs, outputs);
+    };
+    AIOScanner.unlock = function () {
+        AIOScanner.fAudioContext.resume();
+        console.log("unlock", AIOScanner.fAudioContext);
+        if (AIOScanner.fAudioContext.state === "running")
+            AIOScanner.fUnlockEvents.forEach(function (e) { return document.body.removeEventListener(e, AIOScanner.unlock); });
+    };
+    AIOScanner.unlockAudioContext = function (audioCtx) {
+        console.log("unlockAudioContext", audioCtx.state);
+        if (audioCtx.state !== "suspended")
+            return;
+        AIOScanner.fUnlockEvents.forEach(function (e) { return document.body.addEventListener(e, AIOScanner.unlock, false); });
+    };
+    AIOScanner.fOutput = null;
+    AIOScanner.kInputName = "audioInput";
+    AIOScanner.kOutputName = "audioOutput";
+    AIOScanner.fAudioContext = null;
+    AIOScanner.fUnlockEvents = ["touchstart", "touchend", "mousedown", "keydown"];
+    return AIOScanner;
+}());
 ///<reference path="AIOScanner.ts"/>
 var AudioRouting = /** @class */ (function () {
     // depending on the channels and the number of inputs / outputs
@@ -1386,11 +1391,9 @@ var JSObjectView = /** @class */ (function () {
 var AudioTools = /** @class */ (function () {
     function AudioTools() {
     }
-    AudioTools.updateConnections = function (obj, view) {
-        var cnx = obj.getAudioInfos();
-        // console.log ("AudioTools: updateConnections connect: " + obj.getOSCAddress() + " " + cnx.connect.size() + " disconnect: " + cnx.disconnect.size())
-        AudioTools.doit(view, obj, cnx.connect, AudioTools.connectSrcDest, "connect");
-        AudioTools.doit(view, obj, cnx.disconnect, AudioTools.disconnectSrcDest, "disconnect");
+    AudioTools.updateConnections = function (cnx, view) {
+        AudioTools.doit(view, cnx.connect, AudioTools.connectSrcDest, "connect");
+        AudioTools.doit(view, cnx.disconnect, AudioTools.disconnectSrcDest, "disconnect");
     };
     AudioTools.connectSrcDest = function (src, dest, srcchan, destchan) {
         if (src && dest) {
@@ -1444,7 +1447,7 @@ var AudioTools = /** @class */ (function () {
         console.log("AudioTools error: trying to disconnect null AudioNode (" + src + " " + dest + ")");
         return false;
     };
-    AudioTools.doit = function (view, obj, list, cnx, op) {
+    AudioTools.doit = function (view, list, cnx, op) {
         var n = list.size();
         for (var i = 0; i < n; i++) {
             var cdesc = list.get(i);
@@ -1480,6 +1483,7 @@ var JSSvgBase = /** @class */ (function (_super) {
     }
     // basic svg objects are scaled to parent dimension by design
     JSSvgBase.prototype.parentScale = function () { return 1; };
+    JSSvgBase.prototype.setID = function (obj) { this.fSVG.id = obj.getID(); };
     JSSvgBase.prototype.updateDimensions = function (pos) {
         var w = Math.max(1, this.relative2SceneWidth(pos.width));
         var h = Math.max(1, this.relative2SceneHeight(pos.height));
@@ -1539,7 +1543,6 @@ var JSArcView = /** @class */ (function (_super) {
     function JSArcView(parent) {
         var _this = _super.call(this, parent) || this;
         _this.fArc = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        _this.getElement().className = "inscore-arc";
         _this.fSVG.appendChild(_this.fArc);
         return _this;
     }
@@ -1560,6 +1563,7 @@ var JSArcView = /** @class */ (function (_super) {
         var endPoint = JSArcView.getPoint(r1, r2, endAngle);
         var path = JSArcView.getPath(range, startPoint, endPoint, r1, r2, arc.closed);
         this.fArc.setAttribute('d', path);
+        this.setID(obj);
         return true;
     };
     // computes a point coordinates at a given angle
@@ -1642,6 +1646,7 @@ var TMedia = /** @class */ (function (_super) {
         _this.fListen = false;
         _this.fAudioNode = null;
         _this.fRouter = null;
+        AIOScanner.init();
         _this.fAudioNode = AIOScanner.fAudioContext.createMediaElementSource(elt);
         _this.fAudioNode.connect(AIOScanner.fAudioContext.destination);
         _this.fRouter = new AudioRouting(_this.fAudioNode, _this.fAudioNode.channelCount, _this.toString());
@@ -1662,6 +1667,7 @@ var TMedia = /** @class */ (function (_super) {
             obj.updateDuration(elt.duration * 1000);
             obj.setAudioInOut(this.getNumInputs(), this.getNumChans());
             obj.ready();
+            elt.id = obj.getID();
             // the connect message is intended to sync the model with the existing connection
             inscore.postMessageStrStr(obj.getOSCAddress(), "connect", AIOScanner.kOutputName);
             inscore.postMessageStrStr(obj.getOSCAddress(), "event", "ready");
@@ -1694,7 +1700,7 @@ var JSAudioView = /** @class */ (function (_super) {
         var audio = document.createElement('audio');
         _this = _super.call(this, audio, parent) || this;
         _this.fAudio = audio;
-        _this.fFile = "";
+        _this.fAudio.preload = "auto";
         return _this;
     }
     JSAudioView.prototype.clone = function (parent) { return new JSAudioView(parent); };
@@ -1710,7 +1716,7 @@ var JSAudioView = /** @class */ (function (_super) {
         this.fAudio.style.filter = "drop-shadow(" + val.color + " " + val.xOffset + "px " + val.yOffset + "px " + val.blur + "px)";
     };
     JSAudioView.prototype.updateSpecific = function (obj) {
-        AudioTools.updateConnections(obj, this);
+        AudioTools.updateConnections(obj.getAudioInfos(), this);
         var media = obj.getMediaInfos();
         if (media.playing)
             this.fAudio.play();
@@ -1750,7 +1756,36 @@ var JSAudioioView = /** @class */ (function (_super) {
         return new JSAudioioView(parent);
     };
     JSAudioioView.prototype.updateSpecific = function (obj) {
-        AudioTools.updateConnections(obj, this);
+        if (this.fAudioNode) {
+            var cnx = obj.getAudioInfos();
+            AudioTools.updateConnections(cnx, this);
+        }
+    };
+    JSAudioioView.init = function (id) {
+        var input = JSObjectView.getObjectView(id);
+        var obj = INScore.objects().adapter(input.getIObject());
+        input.initInput(obj);
+    };
+    JSAudioioView.prototype.initInput = function (obj) {
+        var _this = this;
+        if (obj.getName() != AIOScanner.kInputName)
+            return;
+        if (navigator.mediaDevices) {
+            navigator.mediaDevices.getUserMedia({ audio: true, video: false }).then(function (stream) {
+                _this.fAudioNode = AIOScanner.fAudioContext.createMediaStreamSource(stream);
+                _this.fRouter = new AudioRouting(_this.fAudioNode, _this.fAudioNode.channelCount, _this.toString());
+                AIOScanner.send(obj.getOSCAddress(), 0, _this.fAudioNode.channelCount);
+                inscore.postMessageStrStr(obj.getOSCAddress(), "event", "ready");
+            })
+                .catch(function (err) {
+                console.log("Can't get audio input device: " + err);
+                obj.event("error");
+            });
+        }
+        else {
+            console.log("Can't get audio input device: navigator.mediaDevices is not supported");
+            obj.event("error");
+        }
     };
     JSAudioioView.prototype.initView = function (obj) {
         var infos = obj.getIOInfos();
@@ -1759,8 +1794,6 @@ var JSAudioioView = /** @class */ (function (_super) {
         }
         if (infos.inputs)
             this.fAudioNode = AIOScanner.fOutput;
-        else if (infos.outputs)
-            this.fAudioNode = AIOScanner.fInput;
         if (this.fAudioNode)
             this.fRouter = new AudioRouting(this.fAudioNode, this.fAudioNode.channelCount, this.toString());
         return true;
@@ -1778,7 +1811,6 @@ var JSCurveView = /** @class */ (function (_super) {
     function JSCurveView(parent) {
         var _this = _super.call(this, parent) || this;
         _this.fCurve = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        _this.getElement().className = "inscore-curve";
         _this.fSVG.appendChild(_this.fCurve);
         return _this;
     }
@@ -1796,6 +1828,7 @@ var JSCurveView = /** @class */ (function (_super) {
             var bb = this.fSVG.getBBox();
             -this.updateObjectSize(obj, bb.width, bb.height);
         }
+        this.setID(obj);
         return true;
     };
     JSCurveView.prototype.relative2SceneCurve = function (x1, y1, x2, y2, x3, y3, x4, y4) {
@@ -1819,7 +1852,6 @@ var JSEllipseView = /** @class */ (function (_super) {
     function JSEllipseView(parent) {
         var _this = _super.call(this, parent) || this;
         _this.fEllipse = document.createElementNS('http://www.w3.org/2000/svg', 'ellipse');
-        _this.getElement().className = "inscore-ellipse";
         _this.fSVG.appendChild(_this.fEllipse);
         return _this;
     }
@@ -1827,6 +1859,10 @@ var JSEllipseView = /** @class */ (function (_super) {
     JSEllipseView.prototype.getSVGTarget = function () { return this.fEllipse; };
     JSEllipseView.prototype.toString = function () { return "JSEllipseView"; };
     JSEllipseView.prototype.getScale = function (scale) { return scale; };
+    JSEllipseView.prototype.updateSpecial = function (obj) {
+        this.setID(obj);
+        return true;
+    };
     JSEllipseView.prototype.updateSVGDimensions = function (w, h) {
         var rx = w / 2;
         var ry = h / 2;
@@ -1953,7 +1989,7 @@ var JSFaustView = /** @class */ (function (_super) {
     };
     JSFaustView.prototype.updateSpecific = function (obj) {
         if (this.fAudioNode) {
-            AudioTools.updateConnections(obj, this);
+            AudioTools.updateConnections(obj.getAudioInfos(), this);
             var data = obj.getFaustInfos(true, false);
             var compute = data.compute;
             if (compute != this.fCompute) {
@@ -1965,15 +2001,19 @@ var JSFaustView = /** @class */ (function (_super) {
             }
             var val = data.values;
             var n = val.size();
-            for (var i = 0; i < n; i++) {
+            var _loop_1 = function (i) {
                 var v = val.get(i);
                 // console.log ("JSFaustView.updateSpecific setParamValue ", v.address, v.value);
-                this.fAudioNode.setParamValue(v.address, v.value);
+                this_1.fAudioNode.setParamValue(v.address, v.value);
                 if (data.autoOff && (v.type == 0) && v.value) { // schedule the button off value
-                    var msg = inscore.newMessage();
-                    inscore.msgAddF(msg, 0);
-                    inscore.delayMessage(obj.getOSCAddress() + v.address, msg);
+                    var msg_1 = inscore.newMessage();
+                    inscore.msgAddF(msg_1, 0);
+                    setTimeout(function () { inscore.postMessage(obj.getOSCAddress() + v.address, msg_1); }, 50);
                 }
+            };
+            var this_1 = this;
+            for (var i = 0; i < n; i++) {
+                _loop_1(i);
             }
             if (this.fVoices) {
                 var node = this.fAudioNode;
@@ -2105,7 +2145,7 @@ var JSFaustView = /** @class */ (function (_super) {
                             return [2 /*return*/, JSFaustView.kPending];
                         }
                         JSFaustView.fCompilerLock = true;
-                        name = obj.getOSCAddress();
+                        name = obj.getID();
                         return [4 /*yield*/, this.makeFactory(name, code, voices)];
                     case 1:
                         done = _a.sent();
@@ -2239,18 +2279,29 @@ var JSFaustwView = /** @class */ (function (_super) {
     JSFaustwView.prototype.buildNodeFromWasm = function (obj, wasm, json, voices) {
         return __awaiter(this, void 0, void 0, function () {
             var _a, result;
+            var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
+                        if (JSFaustView.fCompilerLock) {
+                            setTimeout(function () {
+                                _this.buildNodeFromWasm(obj, wasm, json, voices);
+                            }, 20);
+                            return [2 /*return*/, JSFaustView.kPending];
+                        }
+                        JSFaustView.fCompilerLock = true;
                         _a = this;
                         return [4 /*yield*/, Faust.createGenerator().loadDSPFactory(wasm, json)];
                     case 1:
                         _a.fFactory = _b.sent();
-                        if (!this.fFactory)
+                        if (!this.fFactory) {
+                            JSFaustView.fCompilerLock = false;
                             return [2 /*return*/, JSFaustView.kFailed];
+                        }
                         return [4 /*yield*/, this.makeAudioNode(obj, "inscore", voices)];
                     case 2:
                         result = _b.sent();
+                        JSFaustView.fCompilerLock = false;
                         return [2 /*return*/, result];
                 }
             });
@@ -2275,7 +2326,6 @@ var JSGMNView = /** @class */ (function (_super) {
         _this.fGR = null;
         _this.fPage = 0;
         _this.fScalingFactor = 2.3;
-        _this.getElement().className = "inscore-gmn";
         _this.fGuido = guido;
         _this.fGR = null;
         _this.fAR = null;
@@ -2346,6 +2396,7 @@ var JSGMNView = /** @class */ (function (_super) {
         }
         else
             console.error(obj.getOSCAddress() + " failed to parse gmn code.");
+        this.setID(obj);
         obj.ready();
         return ret;
     };
@@ -2463,9 +2514,7 @@ var JSGMNfView = /** @class */ (function (_super) {
 var JSHtmlView = /** @class */ (function (_super) {
     __extends(JSHtmlView, _super);
     function JSHtmlView(parent) {
-        var _this = _super.call(this, document.createElement('div'), parent) || this;
-        _this.getElement().className = "inscore-html";
-        return _this;
+        return _super.call(this, document.createElement('div'), parent) || this;
     }
     JSHtmlView.prototype.clone = function (parent) {
         var obj = new JSHtmlView(parent);
@@ -2473,6 +2522,7 @@ var JSHtmlView = /** @class */ (function (_super) {
         return obj;
     };
     JSHtmlView.prototype.toString = function () { return "JSHtmlView"; };
+    JSHtmlView.prototype.setID = function (obj) { this.getElement().id = obj.getID(); };
     // CSS weight are numbers
     JSHtmlView.fontWeight2Num = function (weight) {
         switch (weight) {
@@ -2527,6 +2577,7 @@ var JSHtmlView = /** @class */ (function (_super) {
     JSHtmlView.prototype.updateSpecial = function (obj) {
         var infos = obj.getTextInfos();
         this.setHtml(obj, this.getText(infos.text));
+        this.setID(obj);
         return true;
     };
     return JSHtmlView;
@@ -2541,6 +2592,7 @@ var JSHtmlfView = /** @class */ (function (_super) {
     JSHtmlfView.prototype.toString = function () { return "JSHtmlfView"; };
     JSHtmlfView.prototype.updateSpecial = function (obj) {
         var _this = this;
+        this.setID(obj);
         TFileLoader.load(this.getElement(), obj.getFile()).then(function (text) {
             if (text) {
                 return _this.setHtml(obj, text);
@@ -2578,6 +2630,7 @@ var JSImageView = /** @class */ (function (_super) {
     JSImageView.prototype.getScale = function (scale) { return scale; };
     JSImageView.prototype.updateSpecial = function (obj) {
         this.fImage.src = obj.getFile();
+        this.fImage.id = obj.getID();
         return this.updateSizeASync(obj);
     };
     JSImageView.prototype.setShadow = function (elt, val) {
@@ -2589,11 +2642,13 @@ var JSImageView = /** @class */ (function (_super) {
 var JSLayerView = /** @class */ (function (_super) {
     __extends(JSLayerView, _super);
     function JSLayerView(parent) {
-        var _this = _super.call(this, document.createElement('div'), parent) || this;
-        _this.getElement().className = "inscore-layer";
-        return _this;
+        return _super.call(this, document.createElement('div'), parent) || this;
     }
     JSLayerView.prototype.clone = function (parent) { return new JSLayerView(parent); };
+    JSLayerView.prototype.updateSpecial = function (obj) {
+        this.getElement().id = obj.getID();
+        return true;
+    };
     JSLayerView.prototype.toString = function () { return "JSLayerView"; };
     JSLayerView.prototype.parentScale = function () { return 1; };
     return JSLayerView;
@@ -2604,7 +2659,6 @@ var JSLineView = /** @class */ (function (_super) {
     function JSLineView(parent) {
         var _this = _super.call(this, parent) || this;
         _this.fLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-        _this.getElement().className = "inscore-line";
         _this.fSVG.appendChild(_this.fLine);
         return _this;
     }
@@ -2626,6 +2680,7 @@ var JSLineView = /** @class */ (function (_super) {
         this.fLine.setAttribute('x2', x2.toString());
         this.fLine.setAttribute('y1', y1.toString());
         this.fLine.setAttribute('y2', y2.toString());
+        this.setID(obj);
         return true;
     };
     JSLineView.prototype.updatePenControl = function (pen) {
@@ -2646,9 +2701,7 @@ var JSLineView = /** @class */ (function (_super) {
 var JSPianoRollView = /** @class */ (function (_super) {
     __extends(JSPianoRollView, _super);
     function JSPianoRollView(parent, guido) {
-        var _this = _super.call(this, parent, guido) || this;
-        _this.getElement().className = "inscore-pianoroll";
-        return _this;
+        return _super.call(this, parent, guido) || this;
     }
     JSPianoRollView.prototype.clone = function (parent) { return new JSPianoRollView(parent, this.guido()); };
     JSPianoRollView.prototype.toString = function () { return "JSPianoRollView"; };
@@ -2712,7 +2765,6 @@ var JSPolygonView = /** @class */ (function (_super) {
     function JSPolygonView(parent) {
         var _this = _super.call(this, parent) || this;
         _this.fPolygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
-        _this.getElement().className = "inscore-polygon";
         _this.fSVG.appendChild(_this.fPolygon);
         return _this;
     }
@@ -2736,6 +2788,7 @@ var JSPolygonView = /** @class */ (function (_super) {
             strPoints += x + ',' + y + ' ';
         }
         this.fPolygon.setAttribute('points', strPoints);
+        this.setID(obj);
         return true;
     };
     return JSPolygonView;
@@ -2746,7 +2799,6 @@ var JSRectView = /** @class */ (function (_super) {
     function JSRectView(parent) {
         var _this = _super.call(this, parent) || this;
         _this.fRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-        _this.getElement().className = "inscore-rect";
         _this.fSVG.appendChild(_this.fRect);
         return _this;
     }
@@ -2762,6 +2814,7 @@ var JSRectView = /** @class */ (function (_super) {
         var radius = obj.getRadius();
         this.fRect.setAttribute('rx', radius.x.toString());
         this.fRect.setAttribute('ry', radius.y.toString());
+        this.setID(obj);
     };
     return JSRectView;
 }(JSSvgBase));
@@ -2769,9 +2822,7 @@ var JSRectView = /** @class */ (function (_super) {
 var JSSVGView = /** @class */ (function (_super) {
     __extends(JSSVGView, _super);
     function JSSVGView(parent) {
-        var _this = _super.call(this, parent) || this;
-        _this.getElement().className = "inscore-svg";
-        return _this;
+        return _super.call(this, parent) || this;
     }
     JSSVGView.prototype.clone = function (parent) { return new JSSVGView(parent); };
     JSSVGView.prototype.toString = function () { return "JSSVGView"; };
@@ -2787,6 +2838,7 @@ var JSSVGView = /** @class */ (function (_super) {
         this.fSVG.innerHTML = content;
         var bb = this.fSVG.getBBox();
         this.updateObjectSize(obj, bb.width + bb.x, bb.height + bb.y);
+        this.setID(obj);
         obj.ready();
         return true;
     };
@@ -2942,8 +2994,10 @@ var JSSceneView = /** @class */ (function (_super) {
         // for a yet unknown reason, removing the next line result in incorrect
         // children positionning (like if position becomes relative to the window)
         div.style.filter = "blur(0px)";
-        window.addEventListener("keydown", function (event) { obj.keyEvent('keyDown', event.key); }, { capture: false });
-        window.addEventListener("keyup", function (event) { obj.keyEvent('keyUp', event.key); }, { capture: false });
+        window.addEventListener("keydown", function (event) { if (event.key === ' ')
+            event.preventDefault(); obj.keyEvent('keyDown', event.key); }, { capture: false });
+        if (screen.orientation)
+            screen.orientation.addEventListener('change', function (e) { inscore.postMessageStr("/ITL/" + id, "refresh"); });
         MidiSetup.addListener(obj);
         return _this;
     }
@@ -3040,7 +3094,6 @@ var JSTextView = /** @class */ (function (_super) {
     __extends(JSTextView, _super);
     function JSTextView(parent) {
         var _this = _super.call(this, parent) || this;
-        _this.getElement().className = "inscore-txt";
         _this.getElement().style.whiteSpace = "nowrap";
         return _this;
     }
@@ -3065,6 +3118,7 @@ var JSTextfView = /** @class */ (function (_super) {
     JSTextfView.prototype.toString = function () { return "JSTextfView"; };
     JSTextfView.prototype.updateSpecial = function (obj) {
         var _this = this;
+        this.setID(obj);
         TFileLoader.load(this.getElement(), obj.getFile()).then(function (text) {
             if (text) {
                 return _this.setHtml(obj, _this.getText(text));
@@ -3088,7 +3142,7 @@ var JSVideoView = /** @class */ (function (_super) {
         var video = document.createElement('video');
         _this = _super.call(this, video, parent) || this;
         _this.fVideo = video;
-        _this.fFile = "";
+        _this.fVideo.preload = "auto";
         return _this;
     }
     JSVideoView.prototype.clone = function (parent) { return new JSVideoView(parent); };
@@ -3103,7 +3157,7 @@ var JSVideoView = /** @class */ (function (_super) {
         this.fVideo.style.filter = "drop-shadow(" + val.color + " " + val.xOffset + "px " + val.yOffset + "px " + val.blur + "px)";
     };
     JSVideoView.prototype.updateSpecific = function (obj) {
-        AudioTools.updateConnections(obj, this);
+        AudioTools.updateConnections(obj.getAudioInfos(), this);
         var media = obj.getMediaInfos();
         if (media.playing)
             this.fVideo.play();
@@ -3123,7 +3177,6 @@ var JSXMLView = /** @class */ (function (_super) {
     __extends(JSXMLView, _super);
     function JSXMLView(parent, xmllib, guido) {
         var _this = _super.call(this, parent, guido) || this;
-        _this.getElement().className = "inscore-gmn";
         _this.fXMLLib = xmllib;
         return _this;
     }

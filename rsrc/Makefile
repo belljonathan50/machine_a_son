@@ -8,7 +8,7 @@ FX      := $(INSTR).effects.txt
 
 $(TARGET) : $(DATES) makeffects.awk Makefile
 	@echo "#### ATTENTION ! Ne pas modifier : ce script est généré automatiquement" >  $@
-	cat $(FX) | awk -v cursor='/ITL/scene/cursor'  -f makeffects.awk >> $@
+	cat $(FX) | awk -f makeffects.awk >> $@
 
 help:
 	@echo "Build the inscore scripts for all instruments"

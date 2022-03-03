@@ -24,7 +24,7 @@ function makePage(i, date, duration, address, loc, cursor) {
 	print page " set img '" loc i ".png';"
 #	print page " date " date ";"
 	interval = time2interval(date, duration);
-	print page " map '([169, 3950[ [0, " height "[) (" interval ")';"
+	print page " map '([169, 3920[ [0, " height "[) (" interval ")';"
 #	print page " duration " duration ";"
 	end = date + duration;
 	print cursor " watch timeEnter " date " " end " ( " ;
