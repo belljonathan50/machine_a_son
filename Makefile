@@ -1,6 +1,6 @@
 
 INSTRS 	:= acc bas con mez sop
-TARGETS := $(INSTRS:%=public/%.html)
+TARGETS := $(INSTRS:%=public/inscore/%.inscore*) $(INSTRS:%=public/%.html)
 
 INSCORE := inscore
 INSTR	:= $(shell echo $(PART) | tr [A-Z] [a-z])
@@ -18,6 +18,7 @@ help:
 	@echo "                        # where instr is an instrument name"
 
 all:
+	make -C rsrc all
 	make -C public/pages all
 	make -C public/inscore
 	make PART=acc 
@@ -28,3 +29,6 @@ all:
 
 clean:
 	rm -f $(TARGETS)
+
+test:
+	echo $(TARGETS)

@@ -1,6 +1,6 @@
 
 INSTRS 	:= acc bas con mez sop 
-TARGETS := $(INSTRS:%=../inscore/%.inscore)
+TARGETS := $(INSTRS:%=../inscore/%.inscore) $(INSTRS:%=%.html)
 
 INSCORE := ../inscore
 TARGET  := $(INSCORE)/$(INSTR).inscore
@@ -22,11 +22,14 @@ help:
 	@echo "                        # where instr is an instrument name"
 
 all:
-	make INSTR=acc 
-	make INSTR=bas 
+	make INSTR=acc HEIGHT=608
+	make INSTR=bas HEIGHT=583
 	make INSTR=con HEIGHT=658
-	make INSTR=mez 
-	make INSTR=sop 
+	make INSTR=mez HEIGHT=652
+	make INSTR=sop HEIGHT=400
 
 clean:
 	rm -f $(TARGETS)
+
+test:
+	echo $(TARGETS)
