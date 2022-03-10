@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+		<link href="fonts/fonts.css" rel="stylesheet" />
+		<link href="nonet.css" rel="stylesheet" />
+		<script src="lib/libINScore.js"></script>
+		<script src="lib/INScoreJS.js"></script>
+		<script src="lib/libfaust-wasm.js"></script>
+		<script src="lib/FaustLibrary.js"></script>
+		<script src="lib/timesync.min.js"></script>
+		<script src="lib/comm.js"></script>
+		<script src="lib/client.js"></script>
+		<title>Nonet Effects</title>
+	</head>
+
+<body>
+<button id="lock" type="button" onclick="ready(this, 'Effects')">Please click</button>
+
+<div class="inscore" id="scene">
+<pre>
+	/ITL/scene watch AUDIOREADY ( /ITL/log write Audio ready, /ITL/scene/audio-* volume 0 );
+	/ITL/scene load "inscore/effects.inscore.txt";
+
+    /ITL/scene/cursor set rect 0.005 0.5;
+    /ITL/scene/cursor color red;
+
+    /ITL/scene watch TIMELINEREADY  ( /ITL/scene/tl y 0.2, /ITL/scene/sync cursor tl v );
+    /ITL/scene load 'inscore/timeline.inscore.txt';
+
+	/ITL/scene/tempo set rect 0.1 0.1;
+    /ITL/scene/tempo show 0;
+    /ITL/scene/tempo tempo 60;
+    /ITL/scene/tempo angle 1;
+
+	## faust part
+	/ITL/scene/faust_echo set faust 'import("stdfaust.lib"); 
+		process = vgroup("stereo echo", (ef.echo1s, ef.echo1s));';
+
+	/ITL/scene/faust_pshift	set faust 'import("stdfaust.lib");
+			pitchshifter = vgroup("Pitch Shifter", ef.transpose(
+											hslider("window (samples)", 1000, 50, 10000, 1),
+											hslider("xfade (samples)", 10, 1, 10000, 1),
+											hslider("shift (semitones) ", 0, -12, +12, 0.1)
+										  )
+						);	
+			process = pitchshifter;';
+
+	/ITL/scene/faust_freeverb set faust 'import("stdfaust.lib"); process = dm.freeverb_demo;';
+
+	/ITL/scene/faust_echo watch ready 		( /ITL/log write 'faust_echo ready', /ITL/scene/faust_echo connect audioOutput );
+	/ITL/scene/faust_freeverb watch ready 	( /ITL/log write 'faust_freeverb ready', /ITL/scene/faust_freeverb connect audioOutput );
+	/ITL/scene/faust_echo watch ready 		( /ITL/log write 'faust_echo ready', /ITL/scene/faust_echo connect audioOutput );
+	/ITL/scene/faust_* show 0;
+
+	/ITL/scene/faust_echo/stereo_echo/echo__1000/feedback  80;
+	/ITL/scene/faust_echo/stereo_echo/echo__1000/millisecond 100;
+	
+	/ITL/scene/wasm set txt "Get Wasm";
+    /ITL/scene/wasm fontSize 18;
+    /ITL/scene/wasm color white;
+    /ITL/scene/wasm y 0.5;
+    /ITL/scene/wasm watch mouseEnter ( /ITL/scene/wasm color blue );
+    /ITL/scene/wasm watch mouseLeave ( /ITL/scene/wasm color white );
+    /ITL/scene/wasm watch mouseDown  ( /ITL/scene/faust* get wasm );
+
+    /ITL/scene watch PLAY   ( 
+        /ITL/scene/cursor tempo '$(/ITL/scene/tempo get tempo)', 
+        /ITL/scene/audio-* rate '$(/ITL/scene/tempo get angle)', 
+        /ITL/scene/audio-* play 1,
+        /ITL/scene/javascript run 'play(1)'
+    );
+    /ITL/scene watch PAUSE  ( 
+        /ITL/scene/cursor tempo 0, 
+        /ITL/scene/audio-* play 0, 
+        /ITL/scene/javascript run 'play(0)'
+    );
+    /ITL/scene watch STOP   ( 
+        /ITL/scene/cursor tempo 0, 
+        /ITL/scene/cursor date 0,
+        /ITL/scene/audio play 0,
+        /ITL/scene/audio vdate 0,
+        /ITL/scene/javascript run 'play(0)'
+    );
+
+	/ITL/scene watch GOTO       ( /ITL/scene/cursor date '$1' '$2', /ITL/scene/audio-* vdate '$1' '$2' );
+    /ITL/scene watch GOTOF      ( /ITL/scene/cursor date '$1', /ITL/scene/audio-* vdate '$1' );
+    /ITL/scene watch GOTOMARK   ( /ITL/scene/cursor date '$1' '$2', /ITL/scene/audio-* vdate '$1' '$2' );
+
+	/ITL/scene watch PERCECHO  		( 
+		/ITL/scene/audio-gr1-percussion connect faust_echo,    
+		/ITL/scene/audio-gr1-percussion volume 1 );
+			
+	/ITL/scene watch PERCNOECHO  	( 
+		/ITL/scene/audio-gr1-percussion disconnect faust_echo, 
+		/ITL/scene/audio-gr1-percussion volume 0 );
+
+
+</pre>
+</div>
+</body>
+
+<script>
+    connectclient("Effects");
+</script>
+</html>
