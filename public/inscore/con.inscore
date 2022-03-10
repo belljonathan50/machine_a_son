@@ -1,0 +1,675 @@
+#### ATTENTION ! Ne pas modifier : ce script est généré automatiquement
+top = yorigin 1.3;
+bottom = yorigin -1.3;
+
+/ITL/scene/page_0 set img 'pages/con/0.png';
+/ITL/scene/page_0 map '([169, 3920[ [0, 658[) ([0:0:0, 0:10:0[)';
+/ITL/scene/cursor watch timeEnter 0 2.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_0 show 1,
+  /ITL/scene/page_1 show 1,
+  /ITL/scene/page_0 $top,
+  /ITL/scene/page_1 $bottom
+);
+
+/ITL/scene/page_1 set img 'pages/con/1.png';
+/ITL/scene/page_1 map '([169, 3920[ [0, 658[) ([0:10:0, 0:20:0[)';
+/ITL/scene/cursor watch timeEnter 2.5 5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_1 show 1,
+  /ITL/scene/page_2 show 1,
+  /ITL/scene/page_1 $bottom,
+  /ITL/scene/page_2 $top
+);
+
+/ITL/scene/page_2 set img 'pages/con/2.png';
+/ITL/scene/page_2 map '([169, 3920[ [0, 658[) ([0:20:0, 0:30:0[)';
+/ITL/scene/cursor watch timeEnter 5 7.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_2 show 1,
+  /ITL/scene/page_3 show 1,
+  /ITL/scene/page_2 $top,
+  /ITL/scene/page_3 $bottom
+);
+
+/ITL/scene/page_3 set img 'pages/con/3.png';
+/ITL/scene/page_3 map '([169, 3920[ [0, 658[) ([0:30:0, 0:40:0[)';
+/ITL/scene/cursor watch timeEnter 7.5 10 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_3 show 1,
+  /ITL/scene/page_4 show 1,
+  /ITL/scene/page_3 $bottom,
+  /ITL/scene/page_4 $top
+);
+
+/ITL/scene/page_4 set img 'pages/con/4.png';
+/ITL/scene/page_4 map '([169, 3920[ [0, 658[) ([0:40:0, 0:50:0[)';
+/ITL/scene/cursor watch timeEnter 10 12.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_4 show 1,
+  /ITL/scene/page_5 show 1,
+  /ITL/scene/page_4 $top,
+  /ITL/scene/page_5 $bottom
+);
+
+/ITL/scene/page_5 set img 'pages/con/5.png';
+/ITL/scene/page_5 map '([169, 3920[ [0, 658[) ([0:50:0, 1:0:0[)';
+/ITL/scene/cursor watch timeEnter 12.5 15 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_5 show 1,
+  /ITL/scene/page_6 show 1,
+  /ITL/scene/page_5 $bottom,
+  /ITL/scene/page_6 $top
+);
+
+/ITL/scene/page_6 set img 'pages/con/6.png';
+/ITL/scene/page_6 map '([169, 3920[ [0, 658[) ([1:0:0, 1:10:0[)';
+/ITL/scene/cursor watch timeEnter 15 17.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_6 show 1,
+  /ITL/scene/page_7 show 1,
+  /ITL/scene/page_6 $top,
+  /ITL/scene/page_7 $bottom
+);
+
+/ITL/scene/page_7 set img 'pages/con/7.png';
+/ITL/scene/page_7 map '([169, 3920[ [0, 658[) ([1:10:0, 1:20:0[)';
+/ITL/scene/cursor watch timeEnter 17.5 20 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_7 show 1,
+  /ITL/scene/page_8 show 1,
+  /ITL/scene/page_7 $bottom,
+  /ITL/scene/page_8 $top
+);
+
+/ITL/scene/page_8 set img 'pages/con/8.png';
+/ITL/scene/page_8 map '([169, 3920[ [0, 658[) ([1:20:0, 1:30:0[)';
+/ITL/scene/cursor watch timeEnter 20 22.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_8 show 1,
+  /ITL/scene/page_9 show 1,
+  /ITL/scene/page_8 $top,
+  /ITL/scene/page_9 $bottom
+);
+
+/ITL/scene/page_9 set img 'pages/con/9.png';
+/ITL/scene/page_9 map '([169, 3920[ [0, 658[) ([1:30:0, 1:40:0[)';
+/ITL/scene/cursor watch timeEnter 22.5 25 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_9 show 1,
+  /ITL/scene/page_10 show 1,
+  /ITL/scene/page_9 $bottom,
+  /ITL/scene/page_10 $top
+);
+
+/ITL/scene/page_10 set img 'pages/con/10.png';
+/ITL/scene/page_10 map '([169, 3920[ [0, 658[) ([1:40:0, 1:50:0[)';
+/ITL/scene/cursor watch timeEnter 25 27.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_10 show 1,
+  /ITL/scene/page_11 show 1,
+  /ITL/scene/page_10 $top,
+  /ITL/scene/page_11 $bottom
+);
+
+/ITL/scene/page_11 set img 'pages/con/11.png';
+/ITL/scene/page_11 map '([169, 3920[ [0, 658[) ([1:50:0, 2:0:0[)';
+/ITL/scene/cursor watch timeEnter 27.5 30 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_11 show 1,
+  /ITL/scene/page_12 show 1,
+  /ITL/scene/page_11 $bottom,
+  /ITL/scene/page_12 $top
+);
+
+/ITL/scene/page_12 set img 'pages/con/12.png';
+/ITL/scene/page_12 map '([169, 3920[ [0, 658[) ([2:0:0, 2:10:0[)';
+/ITL/scene/cursor watch timeEnter 30 32.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_12 show 1,
+  /ITL/scene/page_13 show 1,
+  /ITL/scene/page_12 $top,
+  /ITL/scene/page_13 $bottom
+);
+
+/ITL/scene/page_13 set img 'pages/con/13.png';
+/ITL/scene/page_13 map '([169, 3920[ [0, 658[) ([2:10:0, 2:20:0[)';
+/ITL/scene/cursor watch timeEnter 32.5 35 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_13 show 1,
+  /ITL/scene/page_14 show 1,
+  /ITL/scene/page_13 $bottom,
+  /ITL/scene/page_14 $top
+);
+
+/ITL/scene/page_14 set img 'pages/con/14.png';
+/ITL/scene/page_14 map '([169, 3920[ [0, 658[) ([2:20:0, 2:30:0[)';
+/ITL/scene/cursor watch timeEnter 35. 37.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_14 show 1,
+  /ITL/scene/page_15 show 1,
+  /ITL/scene/page_14 $top,
+  /ITL/scene/page_15 $bottom
+);
+
+/ITL/scene/page_15 set img 'pages/con/15.png';
+/ITL/scene/page_15 map '([169, 3920[ [0, 658[) ([2:30:0, 2:40:0[)';
+/ITL/scene/cursor watch timeEnter 37.5 40 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_15 show 1,
+  /ITL/scene/page_16 show 1,
+  /ITL/scene/page_15 $bottom,
+  /ITL/scene/page_16 $top
+);
+
+/ITL/scene/page_16 set img 'pages/con/16.png';
+/ITL/scene/page_16 map '([169, 3920[ [0, 658[) ([2:40:0, 2:50:0[)';
+/ITL/scene/cursor watch timeEnter 40 42.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_16 show 1,
+  /ITL/scene/page_17 show 1,
+  /ITL/scene/page_16 $top,
+  /ITL/scene/page_17 $bottom
+);
+
+/ITL/scene/page_17 set img 'pages/con/17.png';
+/ITL/scene/page_17 map '([169, 3920[ [0, 658[) ([2:50:0, 3:0:0[)';
+/ITL/scene/cursor watch timeEnter 42.5 45 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_17 show 1,
+  /ITL/scene/page_18 show 1,
+  /ITL/scene/page_17 $bottom,
+  /ITL/scene/page_18 $top
+);
+
+/ITL/scene/page_18 set img 'pages/con/18.png';
+/ITL/scene/page_18 map '([169, 3920[ [0, 658[) ([3:0:0, 3:10:0[)';
+/ITL/scene/cursor watch timeEnter 45 47.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_18 show 1,
+  /ITL/scene/page_19 show 1,
+  /ITL/scene/page_18 $top,
+  /ITL/scene/page_19 $bottom
+);
+
+/ITL/scene/page_19 set img 'pages/con/19.png';
+/ITL/scene/page_19 map '([169, 3920[ [0, 658[) ([3:10:0, 3:20:0[)';
+/ITL/scene/cursor watch timeEnter 47.5 50 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_19 show 1,
+  /ITL/scene/page_20 show 1,
+  /ITL/scene/page_19 $bottom,
+  /ITL/scene/page_20 $top
+);
+
+/ITL/scene/page_20 set img 'pages/con/20.png';
+/ITL/scene/page_20 map '([169, 3920[ [0, 658[) ([3:20:0, 3:30:0[)';
+/ITL/scene/cursor watch timeEnter 50 52.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_20 show 1,
+  /ITL/scene/page_21 show 1,
+  /ITL/scene/page_20 $top,
+  /ITL/scene/page_21 $bottom
+);
+
+/ITL/scene/page_21 set img 'pages/con/21.png';
+/ITL/scene/page_21 map '([169, 3920[ [0, 658[) ([3:30:0, 3:40:0[)';
+/ITL/scene/cursor watch timeEnter 52.5 55 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_21 show 1,
+  /ITL/scene/page_22 show 1,
+  /ITL/scene/page_21 $bottom,
+  /ITL/scene/page_22 $top
+);
+
+/ITL/scene/page_22 set img 'pages/con/22.png';
+/ITL/scene/page_22 map '([169, 3920[ [0, 658[) ([3:40:0, 3:50:0[)';
+/ITL/scene/cursor watch timeEnter 55 57.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_22 show 1,
+  /ITL/scene/page_23 show 1,
+  /ITL/scene/page_22 $top,
+  /ITL/scene/page_23 $bottom
+);
+
+/ITL/scene/page_23 set img 'pages/con/23.png';
+/ITL/scene/page_23 map '([169, 3920[ [0, 658[) ([3:50:0, 4:0:0[)';
+/ITL/scene/cursor watch timeEnter 57.5 60 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_23 show 1,
+  /ITL/scene/page_24 show 1,
+  /ITL/scene/page_23 $bottom,
+  /ITL/scene/page_24 $top
+);
+
+/ITL/scene/page_24 set img 'pages/con/24.png';
+/ITL/scene/page_24 map '([169, 3920[ [0, 658[) ([4:0:0, 4:10:0[)';
+/ITL/scene/cursor watch timeEnter 60 62.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_24 show 1,
+  /ITL/scene/page_25 show 1,
+  /ITL/scene/page_24 $top,
+  /ITL/scene/page_25 $bottom
+);
+
+/ITL/scene/page_25 set img 'pages/con/25.png';
+/ITL/scene/page_25 map '([169, 3920[ [0, 658[) ([4:10:0, 4:20:0[)';
+/ITL/scene/cursor watch timeEnter 62.5 65 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_25 show 1,
+  /ITL/scene/page_26 show 1,
+  /ITL/scene/page_25 $bottom,
+  /ITL/scene/page_26 $top
+);
+
+/ITL/scene/page_26 set img 'pages/con/26.png';
+/ITL/scene/page_26 map '([169, 3920[ [0, 658[) ([4:20:0, 4:30:0[)';
+/ITL/scene/cursor watch timeEnter 65 67.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_26 show 1,
+  /ITL/scene/page_27 show 1,
+  /ITL/scene/page_26 $top,
+  /ITL/scene/page_27 $bottom
+);
+
+/ITL/scene/page_27 set img 'pages/con/27.png';
+/ITL/scene/page_27 map '([169, 3920[ [0, 658[) ([4:30:0, 4:40:0[)';
+/ITL/scene/cursor watch timeEnter 67.5 70 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_27 show 1,
+  /ITL/scene/page_28 show 1,
+  /ITL/scene/page_27 $bottom,
+  /ITL/scene/page_28 $top
+);
+
+/ITL/scene/page_28 set img 'pages/con/28.png';
+/ITL/scene/page_28 map '([169, 3920[ [0, 658[) ([4:40:0, 4:50:0[)';
+/ITL/scene/cursor watch timeEnter 70 72.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_28 show 1,
+  /ITL/scene/page_29 show 1,
+  /ITL/scene/page_28 $top,
+  /ITL/scene/page_29 $bottom
+);
+
+/ITL/scene/page_29 set img 'pages/con/29.png';
+/ITL/scene/page_29 map '([169, 3920[ [0, 658[) ([4:50:0, 5:0:0[)';
+/ITL/scene/cursor watch timeEnter 72.5 75 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_29 show 1,
+  /ITL/scene/page_30 show 1,
+  /ITL/scene/page_29 $bottom,
+  /ITL/scene/page_30 $top
+);
+
+/ITL/scene/page_30 set img 'pages/con/30.png';
+/ITL/scene/page_30 map '([169, 3920[ [0, 658[) ([5:0:0, 5:10:0[)';
+/ITL/scene/cursor watch timeEnter 75 77.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_30 show 1,
+  /ITL/scene/page_31 show 1,
+  /ITL/scene/page_30 $top,
+  /ITL/scene/page_31 $bottom
+);
+
+/ITL/scene/page_31 set img 'pages/con/31.png';
+/ITL/scene/page_31 map '([169, 3920[ [0, 658[) ([5:10:0, 5:20:0[)';
+/ITL/scene/cursor watch timeEnter 77.5 80 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_31 show 1,
+  /ITL/scene/page_32 show 1,
+  /ITL/scene/page_31 $bottom,
+  /ITL/scene/page_32 $top
+);
+
+/ITL/scene/page_32 set img 'pages/con/32.png';
+/ITL/scene/page_32 map '([169, 3920[ [0, 658[) ([5:20:0, 5:30:0[)';
+/ITL/scene/cursor watch timeEnter 80 82.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_32 show 1,
+  /ITL/scene/page_33 show 1,
+  /ITL/scene/page_32 $top,
+  /ITL/scene/page_33 $bottom
+);
+
+/ITL/scene/page_33 set img 'pages/con/33.png';
+/ITL/scene/page_33 map '([169, 3920[ [0, 658[) ([5:30:0, 5:40:0[)';
+/ITL/scene/cursor watch timeEnter 82.5 85 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_33 show 1,
+  /ITL/scene/page_34 show 1,
+  /ITL/scene/page_33 $bottom,
+  /ITL/scene/page_34 $top
+);
+
+/ITL/scene/page_34 set img 'pages/con/34.png';
+/ITL/scene/page_34 map '([169, 3920[ [0, 658[) ([5:40:0, 5:50:0[)';
+/ITL/scene/cursor watch timeEnter 85 87.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_34 show 1,
+  /ITL/scene/page_35 show 1,
+  /ITL/scene/page_34 $top,
+  /ITL/scene/page_35 $bottom
+);
+
+/ITL/scene/page_35 set img 'pages/con/35.png';
+/ITL/scene/page_35 map '([169, 3920[ [0, 658[) ([5:50:0, 6:0:0[)';
+/ITL/scene/cursor watch timeEnter 87.5 90 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_35 show 1,
+  /ITL/scene/page_36 show 1,
+  /ITL/scene/page_35 $bottom,
+  /ITL/scene/page_36 $top
+);
+
+/ITL/scene/page_36 set img 'pages/con/36.png';
+/ITL/scene/page_36 map '([169, 3920[ [0, 658[) ([6:0:0, 6:10:0[)';
+/ITL/scene/cursor watch timeEnter 90 92.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_36 show 1,
+  /ITL/scene/page_37 show 1,
+  /ITL/scene/page_36 $top,
+  /ITL/scene/page_37 $bottom
+);
+
+/ITL/scene/page_37 set img 'pages/con/37.png';
+/ITL/scene/page_37 map '([169, 3920[ [0, 658[) ([6:10:0, 6:20:0[)';
+/ITL/scene/cursor watch timeEnter 92.5 95 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_37 show 1,
+  /ITL/scene/page_38 show 1,
+  /ITL/scene/page_37 $bottom,
+  /ITL/scene/page_38 $top
+);
+
+/ITL/scene/page_38 set img 'pages/con/38.png';
+/ITL/scene/page_38 map '([169, 3920[ [0, 658[) ([6:20:0, 6:30:0[)';
+/ITL/scene/cursor watch timeEnter 95 97.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_38 show 1,
+  /ITL/scene/page_39 show 1,
+  /ITL/scene/page_38 $top,
+  /ITL/scene/page_39 $bottom
+);
+
+/ITL/scene/page_39 set img 'pages/con/39.png';
+/ITL/scene/page_39 map '([169, 3920[ [0, 658[) ([6:30:0, 6:40:0[)';
+/ITL/scene/cursor watch timeEnter 97.5 100 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_39 show 1,
+  /ITL/scene/page_40 show 1,
+  /ITL/scene/page_39 $bottom,
+  /ITL/scene/page_40 $top
+);
+
+/ITL/scene/page_40 set img 'pages/con/40.png';
+/ITL/scene/page_40 map '([169, 3920[ [0, 658[) ([6:40:0, 6:50:0[)';
+/ITL/scene/cursor watch timeEnter 100 102.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_40 show 1,
+  /ITL/scene/page_41 show 1,
+  /ITL/scene/page_40 $top,
+  /ITL/scene/page_41 $bottom
+);
+
+/ITL/scene/page_41 set img 'pages/con/41.png';
+/ITL/scene/page_41 map '([169, 3920[ [0, 658[) ([6:50:0, 7:0:0[)';
+/ITL/scene/cursor watch timeEnter 102.5 105 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_41 show 1,
+  /ITL/scene/page_42 show 1,
+  /ITL/scene/page_41 $bottom,
+  /ITL/scene/page_42 $top
+);
+
+/ITL/scene/page_42 set img 'pages/con/42.png';
+/ITL/scene/page_42 map '([169, 3920[ [0, 658[) ([7:0:0, 7:10:0[)';
+/ITL/scene/cursor watch timeEnter 105 107.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_42 show 1,
+  /ITL/scene/page_43 show 1,
+  /ITL/scene/page_42 $top,
+  /ITL/scene/page_43 $bottom
+);
+
+/ITL/scene/page_43 set img 'pages/con/43.png';
+/ITL/scene/page_43 map '([169, 3920[ [0, 658[) ([7:10:0, 7:20:0[)';
+/ITL/scene/cursor watch timeEnter 107.5 110 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_43 show 1,
+  /ITL/scene/page_44 show 1,
+  /ITL/scene/page_43 $bottom,
+  /ITL/scene/page_44 $top
+);
+
+/ITL/scene/page_44 set img 'pages/con/44.png';
+/ITL/scene/page_44 map '([169, 3920[ [0, 658[) ([7:20:0, 7:30:0[)';
+/ITL/scene/cursor watch timeEnter 110 112.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_44 show 1,
+  /ITL/scene/page_45 show 1,
+  /ITL/scene/page_44 $top,
+  /ITL/scene/page_45 $bottom
+);
+
+/ITL/scene/page_45 set img 'pages/con/45.png';
+/ITL/scene/page_45 map '([169, 3920[ [0, 658[) ([7:30:0, 7:40:0[)';
+/ITL/scene/cursor watch timeEnter 112.5 115 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_45 show 1,
+  /ITL/scene/page_46 show 1,
+  /ITL/scene/page_45 $bottom,
+  /ITL/scene/page_46 $top
+);
+
+/ITL/scene/page_46 set img 'pages/con/46.png';
+/ITL/scene/page_46 map '([169, 3920[ [0, 658[) ([7:40:0, 7:50:0[)';
+/ITL/scene/cursor watch timeEnter 115 117.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_46 show 1,
+  /ITL/scene/page_47 show 1,
+  /ITL/scene/page_46 $top,
+  /ITL/scene/page_47 $bottom
+);
+
+/ITL/scene/page_47 set img 'pages/con/47.png';
+/ITL/scene/page_47 map '([169, 3920[ [0, 658[) ([7:50:0, 8:0:0[)';
+/ITL/scene/cursor watch timeEnter 117.5 120 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_47 show 1,
+  /ITL/scene/page_48 show 1,
+  /ITL/scene/page_47 $bottom,
+  /ITL/scene/page_48 $top
+);
+
+/ITL/scene/page_48 set img 'pages/con/48.png';
+/ITL/scene/page_48 map '([169, 3920[ [0, 658[) ([8:0:0, 8:10:0[)';
+/ITL/scene/cursor watch timeEnter 120 122.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_48 show 1,
+  /ITL/scene/page_49 show 1,
+  /ITL/scene/page_48 $top,
+  /ITL/scene/page_49 $bottom
+);
+
+/ITL/scene/page_49 set img 'pages/con/49.png';
+/ITL/scene/page_49 map '([169, 3920[ [0, 658[) ([8:10:0, 8:20:0[)';
+/ITL/scene/cursor watch timeEnter 122.5 125 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_49 show 1,
+  /ITL/scene/page_50 show 1,
+  /ITL/scene/page_49 $bottom,
+  /ITL/scene/page_50 $top
+);
+
+/ITL/scene/page_50 set img 'pages/con/50.png';
+/ITL/scene/page_50 map '([169, 3920[ [0, 658[) ([8:20:0, 8:30:0[)';
+/ITL/scene/cursor watch timeEnter 125 127.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_50 show 1,
+  /ITL/scene/page_51 show 1,
+  /ITL/scene/page_50 $top,
+  /ITL/scene/page_51 $bottom
+);
+
+/ITL/scene/page_51 set img 'pages/con/51.png';
+/ITL/scene/page_51 map '([169, 3920[ [0, 658[) ([8:30:0, 8:40:0[)';
+/ITL/scene/cursor watch timeEnter 127.5 130 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_51 show 1,
+  /ITL/scene/page_52 show 1,
+  /ITL/scene/page_51 $bottom,
+  /ITL/scene/page_52 $top
+);
+
+/ITL/scene/page_52 set img 'pages/con/52.png';
+/ITL/scene/page_52 map '([169, 3920[ [0, 658[) ([8:40:0, 8:50:0[)';
+/ITL/scene/cursor watch timeEnter 130 132.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_52 show 1,
+  /ITL/scene/page_53 show 1,
+  /ITL/scene/page_52 $top,
+  /ITL/scene/page_53 $bottom
+);
+
+/ITL/scene/page_53 set img 'pages/con/53.png';
+/ITL/scene/page_53 map '([169, 3920[ [0, 658[) ([8:50:0, 9:0:0[)';
+/ITL/scene/cursor watch timeEnter 132.5 135 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_53 show 1,
+  /ITL/scene/page_54 show 1,
+  /ITL/scene/page_53 $bottom,
+  /ITL/scene/page_54 $top
+);
+
+/ITL/scene/page_54 set img 'pages/con/54.png';
+/ITL/scene/page_54 map '([169, 3920[ [0, 658[) ([9:0:0, 9:10:0[)';
+/ITL/scene/cursor watch timeEnter 135 137.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_54 show 1,
+  /ITL/scene/page_55 show 1,
+  /ITL/scene/page_54 $top,
+  /ITL/scene/page_55 $bottom
+);
+
+/ITL/scene/page_55 set img 'pages/con/55.png';
+/ITL/scene/page_55 map '([169, 3920[ [0, 658[) ([9:10:0, 9:20:0[)';
+/ITL/scene/cursor watch timeEnter 137.5 140 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_55 show 1,
+  /ITL/scene/page_56 show 1,
+  /ITL/scene/page_55 $bottom,
+  /ITL/scene/page_56 $top
+);
+
+/ITL/scene/page_56 set img 'pages/con/56.png';
+/ITL/scene/page_56 map '([169, 3920[ [0, 658[) ([9:20:0, 9:30:0[)';
+/ITL/scene/cursor watch timeEnter 140 142.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_56 show 1,
+  /ITL/scene/page_57 show 1,
+  /ITL/scene/page_56 $top,
+  /ITL/scene/page_57 $bottom
+);
+
+/ITL/scene/page_57 set img 'pages/con/57.png';
+/ITL/scene/page_57 map '([169, 3920[ [0, 658[) ([9:30:0, 9:40:0[)';
+/ITL/scene/cursor watch timeEnter 142.5 145 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_57 show 1,
+  /ITL/scene/page_58 show 1,
+  /ITL/scene/page_57 $bottom,
+  /ITL/scene/page_58 $top
+);
+
+/ITL/scene/page_58 set img 'pages/con/58.png';
+/ITL/scene/page_58 map '([169, 3920[ [0, 658[) ([9:40:0, 9:50:0[)';
+/ITL/scene/cursor watch timeEnter 145 147.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_58 show 1,
+  /ITL/scene/page_59 show 1,
+  /ITL/scene/page_58 $top,
+  /ITL/scene/page_59 $bottom
+);
+
+/ITL/scene/page_59 set img 'pages/con/59.png';
+/ITL/scene/page_59 map '([169, 3920[ [0, 658[) ([9:50:0, 10:0:0[)';
+/ITL/scene/cursor watch timeEnter 147.5 150 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_59 show 1,
+  /ITL/scene/page_60 show 1,
+  /ITL/scene/page_59 $bottom,
+  /ITL/scene/page_60 $top
+);
+
+/ITL/scene/page_60 set img 'pages/con/60.png';
+/ITL/scene/page_60 map '([169, 3920[ [0, 658[) ([10:0:0, 10:10:0[)';
+/ITL/scene/cursor watch timeEnter 150 152.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_60 show 1,
+  /ITL/scene/page_61 show 1,
+  /ITL/scene/page_60 $top,
+  /ITL/scene/page_61 $bottom
+);
+
+/ITL/scene/page_61 set img 'pages/con/61.png';
+/ITL/scene/page_61 map '([169, 3920[ [0, 658[) ([10:10:0, 10:20:0[)';
+/ITL/scene/cursor watch timeEnter 152.5 155 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_61 show 1,
+  /ITL/scene/page_62 show 1,
+  /ITL/scene/page_61 $bottom,
+  /ITL/scene/page_62 $top
+);
+
+/ITL/scene/page_62 set img 'pages/con/62.png';
+/ITL/scene/page_62 map '([169, 3920[ [0, 658[) ([10:20:0, 10:30:0[)';
+/ITL/scene/cursor watch timeEnter 155 157.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_62 show 1,
+  /ITL/scene/page_63 show 1,
+  /ITL/scene/page_62 $top,
+  /ITL/scene/page_63 $bottom
+);
+
+/ITL/scene/page_63 set img 'pages/con/63.png';
+/ITL/scene/page_63 map '([169, 3920[ [0, 658[) ([10:30:0, 10:40:0[)';
+/ITL/scene/cursor watch timeEnter 157.5 160 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_63 show 1,
+  /ITL/scene/page_64 show 1,
+  /ITL/scene/page_63 $bottom,
+  /ITL/scene/page_64 $top
+);
+
+/ITL/scene/page_64 set img 'pages/con/64.png';
+/ITL/scene/page_64 map '([169, 3920[ [0, 658[) ([10:40:0, 10:50:0[)';
+/ITL/scene/cursor watch timeEnter 160 162.5 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_64 show 1,
+  /ITL/scene/page_65 show 1,
+  /ITL/scene/page_64 $top,
+  /ITL/scene/page_65 $bottom
+);
+
+/ITL/scene/page_65 set img 'pages/con/65.png';
+/ITL/scene/page_65 map '([169, 3920[ [0, 658[) ([10:50:0, 11:0:0[)';
+/ITL/scene/cursor watch timeEnter 162.5 165 ( 
+  /ITL/scene/page_* show 0,
+  /ITL/scene/page_65 show 1,
+  /ITL/scene/page_66 show 1,
+  /ITL/scene/page_65 $bottom,
+  /ITL/scene/page_66 $top
+);
+
+/ITL/scene/cursor watch timeEnter 165 265 ( /ITL/scene event STOP );
+
+/ITL/scene/page_* show 0;
+/ITL/scene/page_* width 1.95;
+/ITL/scene/page_0 show 1;
+/ITL/scene/page_1 show 1;
+/ITL/scene/page_0 $top;
+/ITL/scene/page_1 $bottom;
+/ITL/scene/page_* watch mouseDown ( /ITL/scene event GOTO '$date');
+/ITL/scene/page_* watch mouseMove ( /ITL/scene event GOTO '$date');
+/ITL/scene event PAGEREADY;

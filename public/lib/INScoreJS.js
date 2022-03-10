@@ -2145,7 +2145,7 @@ var JSFaustView = /** @class */ (function (_super) {
                             return [2 /*return*/, JSFaustView.kPending];
                         }
                         JSFaustView.fCompilerLock = true;
-                        name = obj.getOSCAddress();
+                        name = obj.getID();
                         return [4 /*yield*/, this.makeFactory(name, code, voices)];
                     case 1:
                         done = _a.sent();
@@ -2279,18 +2279,29 @@ var JSFaustwView = /** @class */ (function (_super) {
     JSFaustwView.prototype.buildNodeFromWasm = function (obj, wasm, json, voices) {
         return __awaiter(this, void 0, void 0, function () {
             var _a, result;
+            var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
+                        if (JSFaustView.fCompilerLock) {
+                            setTimeout(function () {
+                                _this.buildNodeFromWasm(obj, wasm, json, voices);
+                            }, 20);
+                            return [2 /*return*/, JSFaustView.kPending];
+                        }
+                        JSFaustView.fCompilerLock = true;
                         _a = this;
                         return [4 /*yield*/, Faust.createGenerator().loadDSPFactory(wasm, json)];
                     case 1:
                         _a.fFactory = _b.sent();
-                        if (!this.fFactory)
+                        if (!this.fFactory) {
+                            JSFaustView.fCompilerLock = false;
                             return [2 /*return*/, JSFaustView.kFailed];
+                        }
                         return [4 /*yield*/, this.makeAudioNode(obj, "inscore", voices)];
                     case 2:
                         result = _b.sent();
+                        JSFaustView.fCompilerLock = false;
                         return [2 /*return*/, result];
                 }
             });

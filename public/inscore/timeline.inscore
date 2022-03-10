@@ -1,0 +1,34 @@
+
+/ITL/scene/tl set rect 1.6 0.07;
+/ITL/scene/tl penWidth 1;
+/ITL/scene/tl color grey;
+/ITL/scene/tl duration 165;
+
+/ITL/scene/m0 set txt 1;
+/ITL/scene/m2 set txt 3;
+/ITL/scene/m4 set txt 5;
+/ITL/scene/m6 set txt 7;
+/ITL/scene/m8 set txt 9;
+/ITL/scene/mf set txt '11';
+fsize = ($OSId == 6 ? 1 : 18);
+/ITL/scene/m* fontSize $fsize;
+/ITL/scene/m* scale 0.5;
+
+/ITL/scene/m0 date 15;
+/ITL/scene/m2 date 45;
+/ITL/scene/m4 date 75;
+/ITL/scene/m6 date 105;
+/ITL/scene/m8 date 135;
+/ITL/scene/mf date 164.9999;
+
+/ITL/scene/sync m* tl syncTop;
+/ITL/scene/m* dy -0.3;
+
+/ITL/scene/tl watch mouseDown ( /ITL/scene event GOTO '$date');
+/ITL/scene/tl watch mouseMove ( /ITL/scene event GOTO '$date');
+
+/ITL/scene event TIMELINEREADY;
+
+__END__
+
+/ITL/scene/* del;

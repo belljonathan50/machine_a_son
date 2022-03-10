@@ -1,0 +1,583 @@
+
+
+/ITL/scene/faust_echo 	set faustw  'wasm/echo.wasm' 	'wasm/echo.json';
+/ITL/scene/faust_eq   	set faustw  'wasm/eq.wasm' 		'wasm/eq.json';
+/ITL/scene/faust_radio 	set faustw  'wasm/radio.wasm' 	'wasm/radio.json';
+/ITL/scene/faust_reverb set faustw  'wasm/reverb.wasm' 	'wasm/reverb.json';
+/ITL/scene/faust_shift 	set faustw  'wasm/shift.wasm' 	'wasm/shift.json';
+/ITL/scene/faust_vocoder set faustw 'wasm/vocoder.wasm' 'wasm/vocoder.json';
+/ITL/scene/faust_* show 0;
+/ITL/scene/faust_* compute 0;
+/ITL/scene/faust_* connect audioOutput;
+/ITL/scene/audioInput watch ready ( /ITL/scene/audioInput connect faust_* ); 
+/ITL/scene/audioInput watch error ( /ITL/log write "Cannot initialise audio input" ); 
+/ITL/scene/audioInput init;
+
+/ITL/scene watch CUT ( /ITL/scene/faust_* compute 0 );
+
+/ITL/scene watch VOCODER (
+	/ITL/scene/faust_vocoder/My_Vocoder/Excitation/Freq '$1',
+	/ITL/scene/faust_vocoder/My_Vocoder/Excitation/Gain '$2',
+	/ITL/scene/faust_vocoder/My_Vocoder/Vocoder/Attack '$3',
+	/ITL/scene/faust_vocoder/My_Vocoder/Vocoder/BW '$4',
+	/ITL/scene/faust_vocoder/My_Vocoder/Vocoder/Release '$5',
+    /ITL/scene/faust_vocoder compute 1
+);
+
+/ITL/scene watch ECHO (
+	/ITL/scene/faust_echo/echo__1000/feedback '$1',
+	/ITL/scene/faust_echo/echo__1000/millisecond '$2',
+	/ITL/scene/faust_echo compute 1
+);
+
+#==================================================
+# SHIFT 1/ shifting -24 24 2/ window 50 10000 3/ xfade 1 10000 
+#================================================== 
+/ITL/scene watch SHIFT (
+	/ITL/scene/faust_shift/Pitch_Shifter/shifting '$1',
+	/ITL/scene/faust_shift/Pitch_Shifter/window '$2',
+	/ITL/scene/faust_shift/Pitch_Shifter/xfade '$3',
+    /ITL/scene/faust_shift compute 1
+);
+
+#==================================================
+# REVERB 1/ damps 0. 1. 2/ roomsize 0. 1. 3/ wet 0. 1.
+#================================================== 
+/ITL/scene watch REVERB (
+	/ITL/scene/faust_reverb/Freeverb/0x00/Damp '$1',
+	/ITL/scene/faust_reverb/Freeverb/0x00/RoomSize '$2',
+	/ITL/scene/faust_reverb/Freeverb/Wet '$3',
+	/ITL/scene/faust_reverb compute 1
+);
+
+
+#==================================================
+# SHIFTREVERB 1/ shifting -24 24 2/ window 50 10000 3/ xfade 1 10000 4/ damps 0. 1. 5/ roomsize 0. 1. 6/ wet 0. 1.
+#================================================== 
+/ITL/scene watch SHIFTREVERB (
+	/ITL/scene/faust_shift connect faust_reverb,
+	/ITL/scene/faust_shift disconnect audioOutput,
+	/ITL/scene/faust_shift/Pitch_Shifter/shifting '$1',
+	/ITL/scene/faust_shift/Pitch_Shifter/window 10000,
+	/ITL/scene/faust_shift/Pitch_Shifter/xfade 10000,
+	/ITL/scene/faust_reverb/Freeverb/0x00/Damp 0.9,
+	/ITL/scene/faust_reverb/Freeverb/0x00/RoomSize 0.9,
+	/ITL/scene/faust_reverb/Freeverb/0x00/Stereo_Spread 0.9,
+	/ITL/scene/faust_reverb/Freeverb/Wet '$2',
+	/ITL/scene/faust_shift compute 1,
+	/ITL/scene/faust_reverb compute 1
+);
+
+/ITL/scene watch RADIO (
+	/ITL/scene/faust_radio/FaustDSP/Q  '$1',
+	/ITL/scene/faust_radio/FaustDSP/freq  '$2',
+	/ITL/scene/faust_radio compute 1
+);
+
+
+#==================================================
+# RADIOECHO 1/ Q 20s good     2/ freq 0 - 0.5  -  1      3/ milliseconds     4/ feedback 0 100
+#==================================================
+/ITL/scene watch RADIOECHO (
+	/ITL/scene/faust_echo disconnect audioOutput,
+	/ITL/scene/faust_echo connect faust_radio,
+	/ITL/scene/faust_radio/FaustDSP/Q  '$1',
+	/ITL/scene/faust_radio/FaustDSP/freq  '$2',
+	/ITL/scene/faust_echo/echo__1000/millisecond '$3',
+	/ITL/scene/faust_echo/echo__1000/feedback '$4',
+	/ITL/scene/faust_echo compute 1,
+	/ITL/scene/faust_radio compute 1
+);
+
+
+/ITL/scene watch NOVOCODER 	( /ITL/scene/faust_vocoder compute 0 );
+/ITL/scene watch NOECHO 	( /ITL/scene/faust_echo compute 0 );
+/ITL/scene watch NOSHIFT 	( /ITL/scene/faust_shift compute 0 );
+/ITL/scene watch NOREVERB 	( /ITL/scene/faust_shift compute 0 );
+/ITL/scene watch NORADIO 	( /ITL/scene/faust_radio compute 0 );
+/ITL/scene watch NOSHIFTREVERB 	( 
+	/ITL/scene/faust_shift compute 0, 
+	/ITL/scene/faust_reverb compute 0,
+	/ITL/scene/faust_shift connect audioOutput,
+	/ITL/scene/faust_shift disconnect faust_reverb
+);
+/ITL/scene watch NORADIOECHO 	( 
+	/ITL/scene/faust_echo compute 0, 
+	/ITL/scene/faust_radio compute 0,
+	/ITL/scene/faust_echo connect audioOutput,
+	/ITL/scene/faust_echo disconnect faust_radio
+);
+
+/ITL/scene event FAUSTREADY; 
+
+/ITL/scene/faust_echo 	set faustw  'wasm/echo.wasm' 	'wasm/echo.json';
+/ITL/scene/faust_eq   	set faustw  'wasm/eq.wasm' 		'wasm/eq.json';
+/ITL/scene/faust_radio 	set faustw  'wasm/radio.wasm' 	'wasm/radio.json';
+/ITL/scene/faust_reverb set faustw  'wasm/reverb.wasm' 	'wasm/reverb.json';
+/ITL/scene/faust_shift 	set faustw  'wasm/shift.wasm' 	'wasm/shift.json';
+/ITL/scene/faust_vocoder set faustw 'wasm/vocoder.wasm' 'wasm/vocoder.json';
+/ITL/scene/faust_* show 0;
+/ITL/scene/faust_* compute 0;
+/ITL/scene/faust_* connect audioOutput;
+/ITL/scene/audioInput watch ready ( /ITL/scene/audioInput connect faust_* ); 
+/ITL/scene/audioInput watch error ( /ITL/log write "Cannot initialise audio input" ); 
+/ITL/scene/audioInput init;
+
+
+/ITL/scene watch VOCODER (
+	/ITL/log write "enter VOCODER",
+	/ITL/scene/faust_vocoder/My_Vocoder/Excitation/Freq '$1',
+	/ITL/scene/faust_vocoder/My_Vocoder/Excitation/Gain '$2',
+	/ITL/scene/faust_vocoder/My_Vocoder/Vocoder/Attack '$3',
+	/ITL/scene/faust_vocoder/My_Vocoder/Vocoder/BW '$4',
+	/ITL/scene/faust_vocoder/My_Vocoder/Vocoder/Release '$5',
+    /ITL/scene/faust_vocoder compute 1
+);
+
+/ITL/scene watch ECHO (
+	/ITL/log write "enter ECHO",
+	/ITL/scene/faust_echo/echo__1000/feedback '$1',
+	/ITL/scene/faust_echo/echo__1000/millisecond '$2',
+	/ITL/scene/faust_echo compute 1
+);
+
+#==================================================
+# SHIFT 1/ shifting -24 24 2/ window 50 10000 3/ xfade 1 10000 
+#================================================== 
+/ITL/scene watch SHIFT (
+	/ITL/log write "enter SHIFT",
+	/ITL/scene/faust_shift/Pitch_Shifter/shifting '$1',
+	/ITL/scene/faust_shift/Pitch_Shifter/window '$2',
+	/ITL/scene/faust_shift/Pitch_Shifter/xfade '$3',
+    /ITL/scene/faust_shift compute 1
+);
+
+#==================================================
+# REVERB 1/ damps 0. 1. 2/ roomsize 0. 1. 3/ wet 0. 1.
+#================================================== 
+/ITL/scene watch REVERB (
+	/ITL/log write "enter REVERB",
+	/ITL/scene/faust_reverb/Freeverb/0x00/Damp '$1',
+	/ITL/scene/faust_reverb/Freeverb/0x00/RoomSize '$2',
+	/ITL/scene/faust_reverb/Freeverb/Wet '$3',
+	/ITL/scene/faust_reverb compute 1
+);
+
+
+#==================================================
+# SHIFTREVERB 1/ shifting -24 24 2/ window 50 10000 3/ xfade 1 10000 4/ damps 0. 1. 5/ roomsize 0. 1. 6/ wet 0. 1.
+#================================================== 
+/ITL/scene watch SHIFTREVERB (
+	/ITL/log write "enter SHIFTREVERB",
+	/ITL/scene/faust_shift connect faust_reverb,
+	/ITL/scene/faust_shift disconnect audioOutput,
+	/ITL/scene/faust_shift/Pitch_Shifter/shifting '$1',
+	/ITL/scene/faust_shift/Pitch_Shifter/window 10000,
+	/ITL/scene/faust_shift/Pitch_Shifter/xfade 10000,
+	/ITL/scene/faust_reverb/Freeverb/0x00/Damp 0.9,
+	/ITL/scene/faust_reverb/Freeverb/0x00/RoomSize 0.9,
+	/ITL/scene/faust_reverb/Freeverb/0x00/Stereo_Spread 0.9,
+	/ITL/scene/faust_reverb/Freeverb/Wet '$2',
+	/ITL/scene/faust_shift compute 1,
+	/ITL/scene/faust_reverb compute 1
+);
+
+/ITL/scene watch RADIO (
+	/ITL/log write "enter RADIO",
+	/ITL/scene/faust_radio/FaustDSP/Q  '$1',
+	/ITL/scene/faust_radio/FaustDSP/freq  '$2',
+	/ITL/scene/faust_radio compute 1
+);
+
+
+#==================================================
+# RADIOECHO 1/ Q 20s good     2/ freq 0 - 0.5  -  1      3/ milliseconds     4/ feedback 0 100
+#==================================================
+/ITL/scene watch RADIOECHO (
+	/ITL/log write "enter RADIOECHO",
+	/ITL/scene/faust_echo disconnect audioOutput,
+	/ITL/scene/faust_echo connect faust_radio,
+	/ITL/scene/faust_radio/FaustDSP/Q  '$1',
+	/ITL/scene/faust_radio/FaustDSP/freq  '$2',
+	/ITL/scene/faust_echo/echo__1000/millisecond '$3',
+	/ITL/scene/faust_echo/echo__1000/feedback '$4',
+	/ITL/scene/faust_echo compute 1,
+	/ITL/scene/faust_radio compute 1
+);
+
+
+/ITL/scene watch NOVOCODER 	( /ITL/log write "leave VOCODER",/ITL/scene/faust_vocoder compute 0 );
+/ITL/scene watch NOECHO 	( /ITL/log write "leave ECHO", /ITL/scene/faust_echo compute 0 );
+/ITL/scene watch NOSHIFT 	( /ITL/log write "leave SHIFT", /ITL/scene/faust_shift compute 0 );
+/ITL/scene watch NOREVERB 	( /ITL/log write "leave REVERB", /ITL/scene/faust_shift compute 0 );
+/ITL/scene watch NORADIO 	( /ITL/log write "leave RADIO", /ITL/scene/faust_radio compute 0 );
+/ITL/scene watch NOSHIFTREVERB 	( 
+	/ITL/log write "leave SHIFTREVERB",
+	/ITL/scene/faust_shift compute 0, 
+	/ITL/scene/faust_reverb compute 0,
+	/ITL/scene/faust_shift connect audioOutput,
+	/ITL/scene/faust_shift disconnect faust_reverb
+);
+/ITL/scene watch NORADIOECHO 	( 
+	/ITL/log write "leave RADIOECHO",
+	/ITL/scene/faust_echo compute 0, 
+	/ITL/scene/faust_radio compute 0,
+	/ITL/scene/faust_echo connect audioOutput,
+	/ITL/scene/faust_echo disconnect faust_radio
+);
+
+/ITL/scene event FAUSTREADY; 
+
+/ITL/scene/faust_echo 	set faustw  'wasm/echo.wasm' 	'wasm/echo.json';
+/ITL/scene/faust_eq   	set faustw  'wasm/eq.wasm' 		'wasm/eq.json';
+/ITL/scene/faust_radio 	set faustw  'wasm/radio.wasm' 	'wasm/radio.json';
+/ITL/scene/faust_reverb set faustw  'wasm/reverb.wasm' 	'wasm/reverb.json';
+/ITL/scene/faust_shift 	set faustw  'wasm/shift.wasm' 	'wasm/shift.json';
+/ITL/scene/faust_vocoder set faustw 'wasm/vocoder.wasm' 'wasm/vocoder.json';
+/ITL/scene/faust_* show 0;
+/ITL/scene/faust_* compute 0;
+/ITL/scene/faust_* connect audioOutput;
+/ITL/scene/audioInput watch ready ( /ITL/log write 'audio input ready', /ITL/scene/audioInput connect 'faust_*' ); 
+/ITL/scene/audioInput watch error ( /ITL/log write "Cannot initialise audio input" ); 
+/ITL/scene/audioInput init;
+
+
+/ITL/scene watch VOCODER (
+	/ITL/log write "enter VOCODER",
+	/ITL/scene/faust_vocoder/My_Vocoder/Excitation/Freq '$1',
+	/ITL/scene/faust_vocoder/My_Vocoder/Excitation/Gain '$2',
+	/ITL/scene/faust_vocoder/My_Vocoder/Vocoder/Attack '$3',
+	/ITL/scene/faust_vocoder/My_Vocoder/Vocoder/BW '$4',
+	/ITL/scene/faust_vocoder/My_Vocoder/Vocoder/Release '$5',
+    /ITL/scene/faust_vocoder compute 1
+);
+
+/ITL/scene watch ECHO (
+	/ITL/log write "enter ECHO",
+	/ITL/scene/faust_echo/echo__1000/feedback '$1',
+	/ITL/scene/faust_echo/echo__1000/millisecond '$2',
+	/ITL/scene/faust_echo compute 1
+);
+
+#==================================================
+# SHIFT 1/ shifting -24 24 2/ window 50 10000 3/ xfade 1 10000 
+#================================================== 
+/ITL/scene watch SHIFT (
+	/ITL/log write "enter SHIFT",
+	/ITL/scene/faust_shift/Pitch_Shifter/shifting '$1',
+	/ITL/scene/faust_shift/Pitch_Shifter/window '$2',
+	/ITL/scene/faust_shift/Pitch_Shifter/xfade '$3',
+    /ITL/scene/faust_shift compute 1
+);
+
+#==================================================
+# REVERB 1/ damps 0. 1. 2/ roomsize 0. 1. 3/ wet 0. 1.
+#================================================== 
+/ITL/scene watch REVERB (
+	/ITL/log write "enter REVERB",
+	/ITL/scene/faust_reverb/Freeverb/0x00/Damp '$1',
+	/ITL/scene/faust_reverb/Freeverb/0x00/RoomSize '$2',
+	/ITL/scene/faust_reverb/Freeverb/Wet '$3',
+	/ITL/scene/faust_reverb compute 1
+);
+
+
+#==================================================
+# SHIFTREVERB 1/ shifting -24 24 2/ window 50 10000 3/ xfade 1 10000 4/ damps 0. 1. 5/ roomsize 0. 1. 6/ wet 0. 1.
+#================================================== 
+/ITL/scene watch SHIFTREVERB (
+	/ITL/log write "enter SHIFTREVERB",
+	/ITL/scene/faust_shift connect faust_reverb,
+	/ITL/scene/faust_shift disconnect audioOutput,
+	/ITL/scene/faust_shift/Pitch_Shifter/shifting '$1',
+	/ITL/scene/faust_shift/Pitch_Shifter/window 10000,
+	/ITL/scene/faust_shift/Pitch_Shifter/xfade 10000,
+	/ITL/scene/faust_reverb/Freeverb/0x00/Damp 0.9,
+	/ITL/scene/faust_reverb/Freeverb/0x00/RoomSize 0.9,
+	/ITL/scene/faust_reverb/Freeverb/0x00/Stereo_Spread 0.9,
+	/ITL/scene/faust_reverb/Freeverb/Wet '$2',
+	/ITL/scene/faust_shift compute 1,
+	/ITL/scene/faust_reverb compute 1
+);
+
+/ITL/scene watch RADIO (
+	/ITL/log write "enter RADIO",
+	/ITL/scene/faust_radio/FaustDSP/Q  '$1',
+	/ITL/scene/faust_radio/FaustDSP/freq  '$2',
+	/ITL/scene/faust_radio compute 1
+);
+
+
+#==================================================
+# RADIOECHO 1/ Q 20s good     2/ freq 0 - 0.5  -  1      3/ milliseconds     4/ feedback 0 100
+#==================================================
+/ITL/scene watch RADIOECHO (
+	/ITL/log write "enter RADIOECHO",
+	/ITL/scene/faust_echo disconnect audioOutput,
+	/ITL/scene/faust_echo connect faust_radio,
+	/ITL/scene/faust_radio/FaustDSP/Q  '$1',
+	/ITL/scene/faust_radio/FaustDSP/freq  '$2',
+	/ITL/scene/faust_echo/echo__1000/millisecond '$3',
+	/ITL/scene/faust_echo/echo__1000/feedback '$4',
+	/ITL/scene/faust_echo compute 1,
+	/ITL/scene/faust_radio compute 1
+);
+
+
+/ITL/scene watch NOVOCODER 	( /ITL/log write "leave VOCODER",/ITL/scene/faust_vocoder compute 0 );
+/ITL/scene watch NOECHO 	( /ITL/log write "leave ECHO", /ITL/scene/faust_echo compute 0 );
+/ITL/scene watch NOSHIFT 	( /ITL/log write "leave SHIFT", /ITL/scene/faust_shift compute 0 );
+/ITL/scene watch NOREVERB 	( /ITL/log write "leave REVERB", /ITL/scene/faust_shift compute 0 );
+/ITL/scene watch NORADIO 	( /ITL/log write "leave RADIO", /ITL/scene/faust_radio compute 0 );
+/ITL/scene watch NOSHIFTREVERB 	( 
+	/ITL/log write "leave SHIFTREVERB",
+	/ITL/scene/faust_shift compute 0, 
+	/ITL/scene/faust_reverb compute 0,
+	/ITL/scene/faust_shift connect audioOutput,
+	/ITL/scene/faust_shift disconnect faust_reverb
+);
+/ITL/scene watch NORADIOECHO 	( 
+	/ITL/log write "leave RADIOECHO",
+	/ITL/scene/faust_echo compute 0, 
+	/ITL/scene/faust_radio compute 0,
+	/ITL/scene/faust_echo connect audioOutput,
+	/ITL/scene/faust_echo disconnect faust_radio
+);
+
+/ITL/scene event FAUSTREADY; 
+
+/ITL/scene/faust_echo 	set faustw  'wasm/echo.wasm' 	'wasm/echo.json';
+/ITL/scene/faust_eq   	set faustw  'wasm/eq.wasm' 		'wasm/eq.json';
+/ITL/scene/faust_radio 	set faustw  'wasm/radio.wasm' 	'wasm/radio.json';
+/ITL/scene/faust_reverb set faustw  'wasm/reverb.wasm' 	'wasm/reverb.json';
+/ITL/scene/faust_shift 	set faustw  'wasm/shift.wasm' 	'wasm/shift.json';
+/ITL/scene/faust_vocoder set faustw 'wasm/vocoder.wasm' 'wasm/vocoder.json';
+/ITL/scene/faust_* show 0;
+/ITL/scene/faust_* compute 0;
+/ITL/scene/faust_* connect audioOutput;
+/ITL/scene/audioInput watch ready ( /ITL/log write 'audio input ready', /ITL/scene/audioInput connect 'faust_*' ); 
+/ITL/scene/audioInput watch error ( /ITL/log write "Cannot initialise audio input" ); 
+/ITL/scene/audioInput init;
+
+
+/ITL/scene watch VOCODER (
+	/ITL/log write "enter VOCODER",
+	/ITL/scene/faust_vocoder/My_Vocoder/Excitation/Freq '$1',
+	/ITL/scene/faust_vocoder/My_Vocoder/Excitation/Gain '$2',
+	/ITL/scene/faust_vocoder/My_Vocoder/Vocoder/Attack '$3',
+	/ITL/scene/faust_vocoder/My_Vocoder/Vocoder/BW '$4',
+	/ITL/scene/faust_vocoder/My_Vocoder/Vocoder/Release '$5',
+    /ITL/scene/faust_vocoder compute 1
+);
+
+/ITL/scene watch ECHO (
+	/ITL/log write "enter ECHO",
+	/ITL/scene/faust_echo/echo__1000/feedback '$1',
+	/ITL/scene/faust_echo/echo__1000/millisecond '$2',
+	/ITL/scene/faust_echo compute 1
+);
+
+#==================================================
+# SHIFT 1/ shifting -24 24 2/ window 50 10000 3/ xfade 1 10000 
+#================================================== 
+/ITL/scene watch SHIFT (
+	/ITL/log write "enter SHIFT",
+	/ITL/scene/faust_shift/Pitch_Shifter/shifting '$1',
+	/ITL/scene/faust_shift/Pitch_Shifter/window '$2',
+	/ITL/scene/faust_shift/Pitch_Shifter/xfade '$3',
+    /ITL/scene/faust_shift compute 1
+);
+
+#==================================================
+# REVERB 1/ damps 0. 1. 2/ roomsize 0. 1. 3/ wet 0. 1.
+#================================================== 
+/ITL/scene watch REVERB (
+	/ITL/log write "enter REVERB",
+	/ITL/scene/faust_reverb/Freeverb/0x00/Damp '$1',
+	/ITL/scene/faust_reverb/Freeverb/0x00/RoomSize '$2',
+	/ITL/scene/faust_reverb/Freeverb/Wet '$3',
+	/ITL/scene/faust_reverb compute 1
+);
+
+
+#==================================================
+# SHIFTREVERB 1/ shifting -24 24 2/ window 50 10000 3/ xfade 1 10000 4/ damps 0. 1. 5/ roomsize 0. 1. 6/ wet 0. 1.
+#================================================== 
+/ITL/scene watch SHIFTREVERB (
+	/ITL/log write "enter SHIFTREVERB",
+	/ITL/scene/faust_shift connect faust_reverb,
+	/ITL/scene/faust_shift disconnect audioOutput,
+	/ITL/scene/faust_shift/Pitch_Shifter/shifting '$1',
+	/ITL/scene/faust_shift/Pitch_Shifter/window 10000,
+	/ITL/scene/faust_shift/Pitch_Shifter/xfade 10000,
+	/ITL/scene/faust_reverb/Freeverb/0x00/Damp 0.9,
+	/ITL/scene/faust_reverb/Freeverb/0x00/RoomSize 0.9,
+	/ITL/scene/faust_reverb/Freeverb/0x00/Stereo_Spread 0.9,
+	/ITL/scene/faust_reverb/Freeverb/Wet '$2',
+	/ITL/scene/faust_shift compute 1,
+	/ITL/scene/faust_reverb compute 1
+);
+
+/ITL/scene watch RADIO (
+	/ITL/log write "enter RADIO",
+	/ITL/scene/faust_radio/FaustDSP/Q  '$1',
+	/ITL/scene/faust_radio/FaustDSP/freq  '$2',
+	/ITL/scene/faust_radio compute 1
+);
+
+
+#==================================================
+# RADIOECHO 1/ Q 20s good     2/ freq 0 - 0.5  -  1      3/ milliseconds     4/ feedback 0 100
+#==================================================
+/ITL/scene watch RADIOECHO (
+	/ITL/log write "enter RADIOECHO",
+	/ITL/scene/faust_echo disconnect audioOutput,
+	/ITL/scene/faust_echo connect faust_radio,
+	/ITL/scene/faust_radio/FaustDSP/Q  '$1',
+	/ITL/scene/faust_radio/FaustDSP/freq  '$2',
+	/ITL/scene/faust_echo/echo__1000/millisecond '$3',
+	/ITL/scene/faust_echo/echo__1000/feedback '$4',
+	/ITL/scene/faust_echo compute 1,
+	/ITL/scene/faust_radio compute 1
+);
+
+
+/ITL/scene watch NOVOCODER 	( /ITL/log write "leave VOCODER",/ITL/scene/faust_vocoder compute 0 );
+/ITL/scene watch NOECHO 	( /ITL/log write "leave ECHO", /ITL/scene/faust_echo compute 0 );
+/ITL/scene watch NOSHIFT 	( /ITL/log write "leave SHIFT", /ITL/scene/faust_shift compute 0 );
+/ITL/scene watch NOREVERB 	( /ITL/log write "leave REVERB", /ITL/scene/faust_reverb compute 0 );
+/ITL/scene watch NORADIO 	( /ITL/log write "leave RADIO", /ITL/scene/faust_radio compute 0 );
+/ITL/scene watch NOSHIFTREVERB 	( 
+	/ITL/log write "leave SHIFTREVERB",
+	/ITL/scene/faust_shift compute 0, 
+	/ITL/scene/faust_reverb compute 0,
+	/ITL/scene/faust_shift connect audioOutput,
+	/ITL/scene/faust_shift disconnect faust_reverb
+);
+/ITL/scene watch NORADIOECHO 	( 
+	/ITL/log write "leave RADIOECHO",
+	/ITL/scene/faust_echo compute 0, 
+	/ITL/scene/faust_radio compute 0,
+	/ITL/scene/faust_echo connect audioOutput,
+	/ITL/scene/faust_echo disconnect faust_radio
+);
+
+/ITL/scene event FAUSTREADY; 
+
+/ITL/scene/faust_echo 	set faustw  'wasm/echo.wasm' 	'wasm/echo.json';
+/ITL/scene/faust_eq   	set faustw  'wasm/eq.wasm' 		'wasm/eq.json';
+/ITL/scene/faust_radio 	set faustw  'wasm/radio.wasm' 	'wasm/radio.json';
+/ITL/scene/faust_reverb set faustw  'wasm/reverb.wasm' 	'wasm/reverb.json';
+/ITL/scene/faust_shift 	set faustw  'wasm/shift.wasm' 	'wasm/shift.json';
+/ITL/scene/faust_vocoder set faustw 'wasm/vocoder.wasm' 'wasm/vocoder.json';
+/ITL/scene/faust_* show 0;
+/ITL/scene/faust_* compute 0;
+/ITL/scene/faust_* connect audioOutput;
+/ITL/scene/audioInput watch ready ( /ITL/log write 'audio input ready', /ITL/scene/audioInput connect 'faust_*' ); 
+/ITL/scene/audioInput watch error ( /ITL/log write "Cannot initialise audio input" ); 
+/ITL/scene/audioInput init;
+
+
+/ITL/scene watch VOCODER (
+	/ITL/log write "enter VOCODER" '$1' '$2' '$3' '$4' '$5',
+	/ITL/scene/faust_vocoder/My_Vocoder/Excitation/Freq '$1',
+	/ITL/scene/faust_vocoder/My_Vocoder/Excitation/Gain '$2',
+	/ITL/scene/faust_vocoder/My_Vocoder/Vocoder/Attack '$3',
+	/ITL/scene/faust_vocoder/My_Vocoder/Vocoder/BW '$4',
+	/ITL/scene/faust_vocoder/My_Vocoder/Vocoder/Release '$5',
+    /ITL/scene/faust_vocoder compute 1
+);
+
+/ITL/scene watch ECHO (
+	/ITL/log write "enter ECHO" '$1' '$2',
+	/ITL/scene/faust_echo/echo__1000/feedback '$1',
+	/ITL/scene/faust_echo/echo__1000/millisecond '$2',
+	/ITL/scene/faust_echo compute 1
+);
+
+#==================================================
+# SHIFT 1/ shifting -24 24 2/ window 50 10000 3/ xfade 1 10000 
+#================================================== 
+/ITL/scene watch SHIFT (
+	/ITL/log write "enter SHIFT" '$1' '$2' '$3',
+	/ITL/scene/faust_shift/Pitch_Shifter/shifting '$1',
+	/ITL/scene/faust_shift/Pitch_Shifter/window '$2',
+	/ITL/scene/faust_shift/Pitch_Shifter/xfade '$3',
+    /ITL/scene/faust_shift compute 1
+);
+
+#==================================================
+# REVERB 1/ damps 0. 1. 2/ roomsize 0. 1. 3/ wet 0. 1.
+#================================================== 
+/ITL/scene watch REVERB (
+	/ITL/log write "enter REVERB" '$1' '$2' '$3',
+	/ITL/scene/faust_reverb/Freeverb/0x00/Damp '$1',
+	/ITL/scene/faust_reverb/Freeverb/0x00/RoomSize '$2',
+	/ITL/scene/faust_reverb/Freeverb/Wet '$3',
+	/ITL/scene/faust_reverb compute 1
+);
+
+
+#==================================================
+# SHIFTREVERB 1/ shifting -24 24 2/ window 50 10000 3/ xfade 1 10000 4/ damps 0. 1. 5/ roomsize 0. 1. 6/ wet 0. 1.
+#================================================== 
+/ITL/scene watch SHIFTREVERB (
+	/ITL/log write "enter SHIFTREVERB" '$1' '$2',
+	/ITL/scene/faust_shift connect faust_reverb,
+	/ITL/scene/faust_shift disconnect audioOutput,
+	/ITL/scene/faust_shift/Pitch_Shifter/shifting '$1',
+	/ITL/scene/faust_shift/Pitch_Shifter/window 10000,
+	/ITL/scene/faust_shift/Pitch_Shifter/xfade 10000,
+	/ITL/scene/faust_reverb/Freeverb/0x00/Damp 0.9,
+	/ITL/scene/faust_reverb/Freeverb/0x00/RoomSize 0.9,
+	/ITL/scene/faust_reverb/Freeverb/0x00/Stereo_Spread 0.9,
+	/ITL/scene/faust_reverb/Freeverb/Wet '$2',
+	/ITL/scene/faust_shift compute 1,
+	/ITL/scene/faust_reverb compute 1
+);
+
+/ITL/scene watch RADIO (
+	/ITL/log write "enter RADIO" '$1' '$2',
+	/ITL/scene/faust_radio/FaustDSP/Q  '$1',
+	/ITL/scene/faust_radio/FaustDSP/freq  '$2',
+	/ITL/scene/faust_radio compute 1
+);
+
+
+#==================================================
+# RADIOECHO 1/ Q 20s good     2/ freq 0 - 0.5  -  1      3/ milliseconds     4/ feedback 0 100
+#==================================================
+/ITL/scene watch RADIOECHO (
+	/ITL/log write "enter RADIOECHO" '$1' '$2' '$3' '$4',
+	/ITL/scene/faust_echo disconnect audioOutput,
+	/ITL/scene/faust_echo connect faust_radio,
+	/ITL/scene/faust_radio/FaustDSP/Q  '$1',
+	/ITL/scene/faust_radio/FaustDSP/freq  '$2',
+	/ITL/scene/faust_echo/echo__1000/millisecond '$3',
+	/ITL/scene/faust_echo/echo__1000/feedback '$4',
+	/ITL/scene/faust_echo compute 1,
+	/ITL/scene/faust_radio compute 1
+);
+
+
+/ITL/scene watch NOVOCODER 	( /ITL/log write "leave VOCODER",/ITL/scene/faust_vocoder compute 0 );
+/ITL/scene watch NOECHO 	( /ITL/log write "leave ECHO", /ITL/scene/faust_echo compute 0 );
+/ITL/scene watch NOSHIFT 	( /ITL/log write "leave SHIFT", /ITL/scene/faust_shift compute 0 );
+/ITL/scene watch NOREVERB 	( /ITL/log write "leave REVERB", /ITL/scene/faust_reverb compute 0 );
+/ITL/scene watch NORADIO 	( /ITL/log write "leave RADIO", /ITL/scene/faust_radio compute 0 );
+/ITL/scene watch NOSHIFTREVERB 	( 
+	/ITL/log write "leave SHIFTREVERB",
+	/ITL/scene/faust_shift compute 0, 
+	/ITL/scene/faust_reverb compute 0,
+	/ITL/scene/faust_shift connect audioOutput,
+	/ITL/scene/faust_shift disconnect faust_reverb
+);
+/ITL/scene watch NORADIOECHO 	( 
+	/ITL/log write "leave RADIOECHO",
+	/ITL/scene/faust_echo compute 0, 
+	/ITL/scene/faust_radio compute 0,
+	/ITL/scene/faust_echo connect audioOutput,
+	/ITL/scene/faust_echo disconnect faust_radio
+);
+
+/ITL/scene event FAUSTREADY; 

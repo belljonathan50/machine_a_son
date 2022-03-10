@@ -1,0 +1,622 @@
+#### ATTENTION ! Ne pas modifier : ce script est généré automatiquement
+/ITL/scene/cursorECHO set rect 0.01 0.01;
+/ITL/scene/cursorRADIO set rect 0.01 0.01;
+/ITL/scene/cursorREVERB set rect 0.01 0.01;
+/ITL/scene/cursorSHIFT set rect 0.01 0.01;
+/ITL/scene/cursorSHIFTREVERB set rect 0.01 0.01;
+/ITL/scene/cursorVOCODER set rect 0.01 0.01;
+/ITL/scene/cursor[A-Z]* show 0;
+
+/ITL/scene/cursorREVERB watch timeEnter 0.525 1.365 (  /ITL/scene event REVERB 0.96 0.82 0.3);
+/ITL/scene/cursorREVERB watch timeLeave 0.525 1.365 (  /ITL/scene event NOREVERB 0.96 0.82 0.3);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 1.478 2.318 (  /ITL/scene event RADIO 25 0.83);
+/ITL/scene/cursorRADIO watch timeLeave 1.478 2.318 (  /ITL/scene event NORADIO 25 0.83);
+
+
+/ITL/scene/cursorECHO watch timeEnter 2.4325 3.5225 (  /ITL/scene event ECHO 24 714);
+/ITL/scene/cursorECHO watch timeLeave 2.4325 3.5225 (  /ITL/scene event NOECHO 24 714);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 3.944 4.784 (  /ITL/scene event SHIFT -15 8537 6572);
+/ITL/scene/cursorSHIFT watch timeLeave 3.944 4.784 (  /ITL/scene event NOSHIFT -15 8537 6572);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 4.903 5.993 (  /ITL/scene event REVERB 0.97 0.37 0.06);
+/ITL/scene/cursorREVERB watch timeLeave 4.903 5.993 (  /ITL/scene event NOREVERB 0.97 0.37 0.06);
+
+
+/ITL/scene/cursorECHO watch timeEnter 6.49675 7.33675 (  /ITL/scene event ECHO 3 747);
+/ITL/scene/cursorECHO watch timeLeave 6.49675 7.33675 (  /ITL/scene event NOECHO 3 747);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 7.451 8.291 (  /ITL/scene event RADIO 9 0.08);
+/ITL/scene/cursorRADIO watch timeLeave 7.451 8.291 (  /ITL/scene event NORADIO 9 0.08);
+
+
+/ITL/scene/cursorECHO watch timeEnter 8.4055 9.12775 (  /ITL/scene event ECHO 93 1436);
+/ITL/scene/cursorECHO watch timeLeave 8.4055 9.12775 (  /ITL/scene event NOECHO 93 1436);
+
+
+/ITL/scene/cursorECHO watch timeEnter 9.14425 9.41825 (  /ITL/scene event ECHO 63 53);
+/ITL/scene/cursorECHO watch timeLeave 9.14425 9.41825 (  /ITL/scene event NOECHO 63 53);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 10.7368 11.431 (  /ITL/scene event RADIO 27 0.37);
+/ITL/scene/cursorRADIO watch timeLeave 10.7368 11.431 (  /ITL/scene event NORADIO 27 0.37);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 11.4473 11.7212 (  /ITL/scene event RADIO 8 0.33);
+/ITL/scene/cursorRADIO watch timeLeave 11.4473 11.7212 (  /ITL/scene event NORADIO 8 0.33);
+
+
+/ITL/scene/cursorVOCODER watch timeEnter 13.0397 13.8797 (  /ITL/scene event VOCODER 69 0.23 0.97 0.51 1.54);
+/ITL/scene/cursorVOCODER watch timeLeave 13.0397 13.8797 (  /ITL/scene event NOVOCODER 69 0.23 0.97 0.51 1.54);
+
+
+/ITL/scene/cursorECHO watch timeEnter 13.9942 14.8343 (  /ITL/scene event ECHO 18 359);
+/ITL/scene/cursorECHO watch timeLeave 13.9942 14.8343 (  /ITL/scene event NOECHO 18 359);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 14.9485 16.0385 (  /ITL/scene event SHIFT -24 3062 7415);
+/ITL/scene/cursorSHIFT watch timeLeave 14.9485 16.0385 (  /ITL/scene event NOSHIFT -24 3062 7415);
+
+
+/ITL/scene/cursorECHO watch timeEnter 16.343 17.6363 (  /ITL/scene event ECHO 85 1773);
+/ITL/scene/cursorECHO watch timeLeave 16.343 17.6363 (  /ITL/scene event NOECHO 85 1773);
+
+
+/ITL/scene/cursorSHIFTREVERB watch timeEnter 18.0607 18.415 (  /ITL/scene event SHIFTREVERB 5 3101 4144 0.98 0.77 0.85);
+/ITL/scene/cursorSHIFTREVERB watch timeLeave 18.0607 18.415 (  /ITL/scene event NOSHIFTREVERB 5 3101 4144 0.98 0.77 0.85);
+
+
+/ITL/scene/cursorVOCODER watch timeEnter 18.4138 18.4138 (  /ITL/scene event VOCODER 54 0.67 1 0.11 0.48);
+/ITL/scene/cursorVOCODER watch timeLeave 18.4138 18.4138 (  /ITL/scene event NOVOCODER 54 0.67 1 0.11 0.48);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 18.6715 19.5448 (  /ITL/scene event SHIFT -18 5160 6140);
+/ITL/scene/cursorSHIFT watch timeLeave 18.6715 19.5448 (  /ITL/scene event NOSHIFT -18 5160 6140);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 20.7297 21.2293 (  /ITL/scene event REVERB 0.89 0.89 0.47);
+/ITL/scene/cursorREVERB watch timeLeave 20.7297 21.2293 (  /ITL/scene event NOREVERB 0.89 0.89 0.47);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 21.2443 21.6273 (  /ITL/scene event REVERB 0.64 0.02 0.01);
+/ITL/scene/cursorREVERB watch timeLeave 21.2443 21.6273 (  /ITL/scene event NOREVERB 0.64 0.02 0.01);
+
+
+/ITL/scene/cursorECHO watch timeEnter 21.8724 22.4815 (  /ITL/scene event ECHO 67 858);
+/ITL/scene/cursorECHO watch timeLeave 21.8724 22.4815 (  /ITL/scene event NOECHO 67 858);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 22.8442 23.7465 (  /ITL/scene event SHIFT -16 4265 5868);
+/ITL/scene/cursorSHIFT watch timeLeave 22.8442 23.7465 (  /ITL/scene event NOSHIFT -16 4265 5868);
+
+
+/ITL/scene/cursorSHIFTREVERB watch timeEnter 23.8474 24.7497 (  /ITL/scene event SHIFTREVERB 5 6080 7559 0.81 0.31 0.15);
+/ITL/scene/cursorSHIFTREVERB watch timeLeave 23.8474 24.7497 (  /ITL/scene event NOSHIFTREVERB 5 6080 7559 0.81 0.31 0.15);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 25.0057 25.3888 (  /ITL/scene event SHIFT 17 8784 5206);
+/ITL/scene/cursorSHIFT watch timeLeave 25.0057 25.3888 (  /ITL/scene event NOSHIFT 17 8784 5206);
+
+
+/ITL/scene/cursorECHO watch timeEnter 25.846 26.4552 (  /ITL/scene event ECHO 59 919);
+/ITL/scene/cursorECHO watch timeLeave 25.846 26.4552 (  /ITL/scene event NOECHO 59 919);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 26.6977 27.2617 (  /ITL/scene event SHIFT -14 6533 1950);
+/ITL/scene/cursorSHIFT watch timeLeave 26.6977 27.2617 (  /ITL/scene event NOSHIFT -14 6533 1950);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 27.284 27.848 (  /ITL/scene event RADIO 7 0.07);
+/ITL/scene/cursorRADIO watch timeLeave 27.284 27.848 (  /ITL/scene event NORADIO 7 0.07);
+
+
+/ITL/scene/cursorSHIFTREVERB watch timeEnter 27.2642 27.828 (  /ITL/scene event SHIFTREVERB 12 298 1996 0.58 0.31 0.37);
+/ITL/scene/cursorSHIFTREVERB watch timeLeave 27.2642 27.828 (  /ITL/scene event NOSHIFTREVERB 12 298 1996 0.58 0.31 0.37);
+
+
+/ITL/scene/cursorECHO watch timeEnter 27.9363 28.4363 (  /ITL/scene event ECHO 73 1028);
+/ITL/scene/cursorECHO watch timeLeave 27.9363 28.4363 (  /ITL/scene event NOECHO 73 1028);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 28.5505 29.463 (  /ITL/scene event SHIFT -5 9038 9998);
+/ITL/scene/cursorSHIFT watch timeLeave 28.5505 29.463 (  /ITL/scene event NOSHIFT -5 9038 9998);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 29.805 30.369 (  /ITL/scene event REVERB 0.96 0.82 0.3);
+/ITL/scene/cursorREVERB watch timeLeave 29.805 30.369 (  /ITL/scene event NOREVERB 0.96 0.82 0.3);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 30.4575 30.9575 (  /ITL/scene event RADIO 25 0.83);
+/ITL/scene/cursorRADIO watch timeLeave 30.4575 30.9575 (  /ITL/scene event NORADIO 25 0.83);
+
+
+/ITL/scene/cursorECHO watch timeEnter 31.159 31.723 (  /ITL/scene event ECHO 24 714);
+/ITL/scene/cursorECHO watch timeLeave 31.159 31.723 (  /ITL/scene event NOECHO 24 714);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 31.8115 32.3115 (  /ITL/scene event SHIFT -15 8537 6572);
+/ITL/scene/cursorSHIFT watch timeLeave 31.8115 32.3115 (  /ITL/scene event NOSHIFT -15 8537 6572);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 32.29 33.1932 (  /ITL/scene event REVERB 0.97 0.37 0.06);
+/ITL/scene/cursorREVERB watch timeLeave 32.29 33.1932 (  /ITL/scene event NOREVERB 0.97 0.37 0.06);
+
+
+/ITL/scene/cursorECHO watch timeEnter 33.5198 34.6088 (  /ITL/scene event ECHO 3 747);
+/ITL/scene/cursorECHO watch timeLeave 33.5198 34.6088 (  /ITL/scene event NOECHO 3 747);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 34.8935 36.1075 (  /ITL/scene event RADIO 9 0.08);
+/ITL/scene/cursorRADIO watch timeLeave 34.8935 36.1075 (  /ITL/scene event NORADIO 9 0.08);
+
+
+/ITL/scene/cursorECHO watch timeEnter 36.5983 36.9675 (  /ITL/scene event ECHO 93 1436);
+/ITL/scene/cursorECHO watch timeLeave 36.5983 36.9675 (  /ITL/scene event NOECHO 93 1436);
+
+
+/ITL/scene/cursorECHO watch timeEnter 36.9667 37.876 (  /ITL/scene event ECHO 63 53);
+/ITL/scene/cursorECHO watch timeLeave 36.9667 37.876 (  /ITL/scene event NOECHO 63 53);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 37.8916 38.0885 (  /ITL/scene event RADIO 27 0.37);
+/ITL/scene/cursorRADIO watch timeLeave 37.8916 38.0885 (  /ITL/scene event NORADIO 27 0.37);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 38.7698 39.7863 (  /ITL/scene event RADIO 8 0.33);
+/ITL/scene/cursorRADIO watch timeLeave 38.7698 39.7863 (  /ITL/scene event NORADIO 8 0.33);
+
+
+/ITL/scene/cursorVOCODER watch timeEnter 40.0952 41.5968 (  /ITL/scene event VOCODER 69 0.23 0.97 0.51 1.54);
+/ITL/scene/cursorVOCODER watch timeLeave 40.0952 41.5968 (  /ITL/scene event NOVOCODER 69 0.23 0.97 0.51 1.54);
+
+
+/ITL/scene/cursorECHO watch timeEnter 41.8297 42.199 (  /ITL/scene event ECHO 18 359);
+/ITL/scene/cursorECHO watch timeLeave 41.8297 42.199 (  /ITL/scene event NOECHO 18 359);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 42.1983 43.1475 (  /ITL/scene event SHIFT -24 3062 7415);
+/ITL/scene/cursorSHIFT watch timeLeave 42.1983 43.1475 (  /ITL/scene event NOSHIFT -24 3062 7415);
+
+
+/ITL/scene/cursorECHO watch timeEnter 43.1123 44.2925 (  /ITL/scene event ECHO 85 1773);
+/ITL/scene/cursorECHO watch timeLeave 43.1123 44.2925 (  /ITL/scene event NOECHO 85 1773);
+
+
+/ITL/scene/cursorSHIFTREVERB watch timeEnter 44.5427 44.694 (  /ITL/scene event SHIFTREVERB 5 3101 4144 0.98 0.77 0.85);
+/ITL/scene/cursorSHIFTREVERB watch timeLeave 44.5427 44.694 (  /ITL/scene event NOSHIFTREVERB 5 3101 4144 0.98 0.77 0.85);
+
+
+/ITL/scene/cursorVOCODER watch timeEnter 44.8073 45.0598 (  /ITL/scene event VOCODER 54 0.67 1 0.11 0.48);
+/ITL/scene/cursorVOCODER watch timeLeave 44.8073 45.0598 (  /ITL/scene event NOVOCODER 54 0.67 1 0.11 0.48);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 45.2993 45.4505 (  /ITL/scene event SHIFT -18 5160 6140);
+/ITL/scene/cursorSHIFT watch timeLeave 45.2993 45.4505 (  /ITL/scene event NOSHIFT -18 5160 6140);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 45.5637 45.8162 (  /ITL/scene event REVERB 0.89 0.89 0.47);
+/ITL/scene/cursorREVERB watch timeLeave 45.5637 45.8162 (  /ITL/scene event NOREVERB 0.89 0.89 0.47);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 46.2646 46.5425 (  /ITL/scene event REVERB 0.64 0.02 0.01);
+/ITL/scene/cursorREVERB watch timeLeave 46.2646 46.5425 (  /ITL/scene event NOREVERB 0.64 0.02 0.01);
+
+
+/ITL/scene/cursorECHO watch timeEnter 46.8538 47.1923 (  /ITL/scene event ECHO 67 858);
+/ITL/scene/cursorECHO watch timeLeave 46.8538 47.1923 (  /ITL/scene event NOECHO 67 858);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 47.9934 48.8975 (  /ITL/scene event SHIFT -16 4265 5868);
+/ITL/scene/cursorSHIFT watch timeLeave 47.9934 48.8975 (  /ITL/scene event NOSHIFT -16 4265 5868);
+
+
+/ITL/scene/cursorSHIFTREVERB watch timeEnter 49.1241 50.0658 (  /ITL/scene event SHIFTREVERB 5 6080 7559 0.81 0.31 0.15);
+/ITL/scene/cursorSHIFTREVERB watch timeLeave 49.1241 50.0658 (  /ITL/scene event NOSHIFTREVERB 5 6080 7559 0.81 0.31 0.15);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 50.5664 51.0643 (  /ITL/scene event SHIFT 17 8784 5206);
+/ITL/scene/cursorSHIFT watch timeLeave 50.5664 51.0643 (  /ITL/scene event NOSHIFT 17 8784 5206);
+
+
+/ITL/scene/cursorECHO watch timeEnter 51.0723 51.7315 (  /ITL/scene event ECHO 59 919);
+/ITL/scene/cursorECHO watch timeLeave 51.0723 51.7315 (  /ITL/scene event NOECHO 59 919);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 52.0826 53.6172 (  /ITL/scene event SHIFT -14 6533 1950);
+/ITL/scene/cursorSHIFT watch timeLeave 52.0826 53.6172 (  /ITL/scene event NOSHIFT -14 6533 1950);
+
+
+/ITL/scene/cursorSHIFTREVERB watch timeEnter 53.8278 54.1662 (  /ITL/scene event SHIFTREVERB 12 298 1996 0.58 0.31 0.37);
+/ITL/scene/cursorSHIFTREVERB watch timeLeave 53.8278 54.1662 (  /ITL/scene event NOSHIFTREVERB 12 298 1996 0.58 0.31 0.37);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 54.3195 54.5588 (  /ITL/scene event RADIO 7 0.07);
+/ITL/scene/cursorRADIO watch timeLeave 54.3195 54.5588 (  /ITL/scene event NORADIO 7 0.07);
+
+
+/ITL/scene/cursorECHO watch timeEnter 54.5718 54.9102 (  /ITL/scene event ECHO 73 1028);
+/ITL/scene/cursorECHO watch timeLeave 54.5718 54.9102 (  /ITL/scene event NOECHO 73 1028);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 55.076 55.3152 (  /ITL/scene event SHIFT -5 9038 9998);
+/ITL/scene/cursorSHIFT watch timeLeave 55.076 55.3152 (  /ITL/scene event NOSHIFT -5 9038 9998);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 55.5195 55.986 (  /ITL/scene event REVERB 0.96 0.82 0.3);
+/ITL/scene/cursorREVERB watch timeLeave 55.5195 55.986 (  /ITL/scene event NOREVERB 0.96 0.82 0.3);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 56.8339 57.4838 (  /ITL/scene event RADIO 25 0.83);
+/ITL/scene/cursorRADIO watch timeLeave 56.8339 57.4838 (  /ITL/scene event NORADIO 25 0.83);
+
+
+/ITL/scene/cursorECHO watch timeEnter 57.4955 58.3663 (  /ITL/scene event ECHO 24 714);
+/ITL/scene/cursorECHO watch timeLeave 57.4955 58.3663 (  /ITL/scene event NOECHO 24 714);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 59.1553 60.0845 (  /ITL/scene event SHIFT -15 8537 6572);
+/ITL/scene/cursorSHIFT watch timeLeave 59.1553 60.0845 (  /ITL/scene event NOSHIFT -15 8537 6572);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 60.0737 60.5367 (  /ITL/scene event REVERB 0.97 0.37 0.06);
+/ITL/scene/cursorREVERB watch timeLeave 60.0737 60.5367 (  /ITL/scene event NOREVERB 0.97 0.37 0.06);
+
+
+/ITL/scene/cursorECHO watch timeEnter 61.3802 61.9525 (  /ITL/scene event ECHO 3 747);
+/ITL/scene/cursorECHO watch timeLeave 61.3802 61.9525 (  /ITL/scene event NOECHO 3 747);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 62.2172 63.2338 (  /ITL/scene event RADIO 9 0.08);
+/ITL/scene/cursorRADIO watch timeLeave 62.2172 63.2338 (  /ITL/scene event NORADIO 9 0.08);
+
+
+/ITL/scene/cursorECHO watch timeEnter 63.9472 64.5195 (  /ITL/scene event ECHO 93 1436);
+/ITL/scene/cursorECHO watch timeLeave 63.9472 64.5195 (  /ITL/scene event NOECHO 93 1436);
+
+
+/ITL/scene/cursorECHO watch timeEnter 64.7212 65.7378 (  /ITL/scene event ECHO 63 53);
+/ITL/scene/cursorECHO watch timeLeave 64.7212 65.7378 (  /ITL/scene event NOECHO 63 53);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 66.0155 66.9013 (  /ITL/scene event RADIO 27 0.37);
+/ITL/scene/cursorRADIO watch timeLeave 66.0155 66.9013 (  /ITL/scene event NORADIO 27 0.37);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 67.0767 67.8185 (  /ITL/scene event RADIO 8 0.33);
+/ITL/scene/cursorRADIO watch timeLeave 67.0767 67.8185 (  /ITL/scene event NORADIO 8 0.33);
+
+
+/ITL/scene/cursorVOCODER watch timeEnter 69.033 69.9622 (  /ITL/scene event VOCODER 69 0.23 0.97 0.51 1.54);
+/ITL/scene/cursorVOCODER watch timeLeave 69.033 69.9622 (  /ITL/scene event NOVOCODER 69 0.23 0.97 0.51 1.54);
+
+
+/ITL/scene/cursorECHO watch timeEnter 70.326 71.0938 (  /ITL/scene event ECHO 18 359);
+/ITL/scene/cursorECHO watch timeLeave 70.326 71.0938 (  /ITL/scene event NOECHO 18 359);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 71.115 71.9147 (  /ITL/scene event SHIFT -24 3062 7415);
+/ITL/scene/cursorSHIFT watch timeLeave 71.115 71.9147 (  /ITL/scene event NOSHIFT -24 3062 7415);
+
+
+/ITL/scene/cursorECHO watch timeEnter 71.9494 72.749 (  /ITL/scene event ECHO 85 1773);
+/ITL/scene/cursorECHO watch timeLeave 71.9494 72.749 (  /ITL/scene event NOECHO 85 1773);
+
+
+/ITL/scene/cursorSHIFTREVERB watch timeEnter 72.857 73.7295 (  /ITL/scene event SHIFTREVERB 5 3101 4144 0.98 0.77 0.85);
+/ITL/scene/cursorSHIFTREVERB watch timeLeave 72.857 73.7295 (  /ITL/scene event NOSHIFTREVERB 5 3101 4144 0.98 0.77 0.85);
+
+
+/ITL/scene/cursorVOCODER watch timeEnter 74.228 75.1012 (  /ITL/scene event VOCODER 54 0.67 1 0.11 0.48);
+/ITL/scene/cursorVOCODER watch timeLeave 74.228 75.1012 (  /ITL/scene event NOVOCODER 54 0.67 1 0.11 0.48);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 75.2843 76.164 (  /ITL/scene event SHIFT -18 5160 6140);
+/ITL/scene/cursorSHIFT watch timeLeave 75.2843 76.164 (  /ITL/scene event NOSHIFT -18 5160 6140);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 76.3758 77.1178 (  /ITL/scene event REVERB 0.89 0.89 0.47);
+/ITL/scene/cursorREVERB watch timeLeave 76.3758 77.1178 (  /ITL/scene event NOREVERB 0.89 0.89 0.47);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 77.698 78.5777 (  /ITL/scene event REVERB 0.64 0.02 0.01);
+/ITL/scene/cursorREVERB watch timeLeave 77.698 78.5777 (  /ITL/scene event NOREVERB 0.64 0.02 0.01);
+
+
+/ITL/scene/cursorECHO watch timeEnter 78.6997 79.5795 (  /ITL/scene event ECHO 67 858);
+/ITL/scene/cursorECHO watch timeLeave 78.6997 79.5795 (  /ITL/scene event NOECHO 67 858);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 80.0973 80.977 (  /ITL/scene event SHIFT -16 4265 5868);
+/ITL/scene/cursorSHIFT watch timeLeave 80.0973 80.977 (  /ITL/scene event NOSHIFT -16 4265 5868);
+
+
+/ITL/scene/cursorSHIFTREVERB watch timeEnter 81.4687 82.3978 (  /ITL/scene event SHIFTREVERB 5 6080 7559 0.81 0.31 0.15);
+/ITL/scene/cursorSHIFTREVERB watch timeLeave 81.4687 82.3978 (  /ITL/scene event NOSHIFTREVERB 5 6080 7559 0.81 0.31 0.15);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 82.3115 83.6155 (  /ITL/scene event SHIFT 17 8784 5206);
+/ITL/scene/cursorSHIFT watch timeLeave 82.3115 83.6155 (  /ITL/scene event NOSHIFT 17 8784 5206);
+
+
+/ITL/scene/cursorECHO watch timeEnter 84.1586 84.8482 (  /ITL/scene event ECHO 59 919);
+/ITL/scene/cursorECHO watch timeLeave 84.1586 84.8482 (  /ITL/scene event NOECHO 59 919);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 84.9172 86.5525 (  /ITL/scene event SHIFT -14 6533 1950);
+/ITL/scene/cursorSHIFT watch timeLeave 84.9172 86.5525 (  /ITL/scene event NOSHIFT -14 6533 1950);
+
+
+/ITL/scene/cursorSHIFTREVERB watch timeEnter 86.9453 88.2625 (  /ITL/scene event SHIFTREVERB 12 298 1996 0.58 0.31 0.37);
+/ITL/scene/cursorSHIFTREVERB watch timeLeave 86.9453 88.2625 (  /ITL/scene event NOSHIFTREVERB 12 298 1996 0.58 0.31 0.37);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 88.4758 89.405 (  /ITL/scene event RADIO 7 0.07);
+/ITL/scene/cursorRADIO watch timeLeave 88.4758 89.405 (  /ITL/scene event NORADIO 7 0.07);
+
+
+/ITL/scene/cursorECHO watch timeEnter 89.5068 90.35 (  /ITL/scene event ECHO 73 1028);
+/ITL/scene/cursorECHO watch timeLeave 89.5068 90.35 (  /ITL/scene event NOECHO 73 1028);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 90.36 91.203 (  /ITL/scene event SHIFT -5 9038 9998);
+/ITL/scene/cursorSHIFT watch timeLeave 90.36 91.203 (  /ITL/scene event NOSHIFT -5 9038 9998);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 91.2903 92.5935 (  /ITL/scene event REVERB 0.96 0.82 0.3);
+/ITL/scene/cursorREVERB watch timeLeave 91.2903 92.5935 (  /ITL/scene event NOREVERB 0.96 0.82 0.3);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 92.6205 93.8895 (  /ITL/scene event RADIO 25 0.83);
+/ITL/scene/cursorRADIO watch timeLeave 92.6205 93.8895 (  /ITL/scene event NORADIO 25 0.83);
+
+
+/ITL/scene/cursorECHO watch timeEnter 93.9488 95.1472 (  /ITL/scene event ECHO 24 714);
+/ITL/scene/cursorECHO watch timeLeave 93.9488 95.1472 (  /ITL/scene event NOECHO 24 714);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 95.5039 95.932 (  /ITL/scene event SHIFT -15 8537 6572);
+/ITL/scene/cursorSHIFT watch timeLeave 95.5039 95.932 (  /ITL/scene event NOSHIFT -15 8537 6572);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 96.0696 96.4977 (  /ITL/scene event REVERB 0.97 0.37 0.06);
+/ITL/scene/cursorREVERB watch timeLeave 96.0696 96.4977 (  /ITL/scene event NOREVERB 0.97 0.37 0.06);
+
+
+/ITL/scene/cursorECHO watch timeEnter 96.7938 97.6988 (  /ITL/scene event ECHO 3 747);
+/ITL/scene/cursorECHO watch timeLeave 96.7938 97.6988 (  /ITL/scene event NOECHO 3 747);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 98.469 99.3983 (  /ITL/scene event RADIO 9 0.08);
+/ITL/scene/cursorRADIO watch timeLeave 98.469 99.3983 (  /ITL/scene event NORADIO 9 0.08);
+
+
+/ITL/scene/cursorECHO watch timeEnter 99.5545 100.127 (  /ITL/scene event ECHO 93 1436);
+/ITL/scene/cursorECHO watch timeLeave 99.5545 100.127 (  /ITL/scene event NOECHO 93 1436);
+
+
+/ITL/scene/cursorECHO watch timeEnter 100.97 101.353 (  /ITL/scene event ECHO 63 53);
+/ITL/scene/cursorECHO watch timeLeave 100.97 101.353 (  /ITL/scene event NOECHO 63 53);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 101.811 102.194 (  /ITL/scene event RADIO 27 0.37);
+/ITL/scene/cursorRADIO watch timeLeave 101.811 102.194 (  /ITL/scene event NORADIO 27 0.37);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 102.449 103.122 (  /ITL/scene event RADIO 8 0.33);
+/ITL/scene/cursorRADIO watch timeLeave 102.449 103.122 (  /ITL/scene event NORADIO 8 0.33);
+
+
+/ITL/scene/cursorVOCODER watch timeEnter 103.267 103.941 (  /ITL/scene event VOCODER 69 0.23 0.97 0.51 1.54);
+/ITL/scene/cursorVOCODER watch timeLeave 103.267 103.941 (  /ITL/scene event NOVOCODER 69 0.23 0.97 0.51 1.54);
+
+
+/ITL/scene/cursorECHO watch timeEnter 104.161 104.998 (  /ITL/scene event ECHO 18 359);
+/ITL/scene/cursorECHO watch timeLeave 104.161 104.998 (  /ITL/scene event NOECHO 18 359);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 105.048 105.885 (  /ITL/scene event SHIFT -24 3062 7415);
+/ITL/scene/cursorSHIFT watch timeLeave 105.048 105.885 (  /ITL/scene event NOSHIFT -24 3062 7415);
+
+
+/ITL/scene/cursorECHO watch timeEnter 106.35 107.112 (  /ITL/scene event ECHO 85 1773);
+/ITL/scene/cursorECHO watch timeLeave 106.35 107.112 (  /ITL/scene event NOECHO 85 1773);
+
+
+/ITL/scene/cursorSHIFTREVERB watch timeEnter 107.132 107.894 (  /ITL/scene event SHIFTREVERB 5 3101 4144 0.98 0.77 0.85);
+/ITL/scene/cursorSHIFTREVERB watch timeLeave 107.132 107.894 (  /ITL/scene event NOSHIFTREVERB 5 3101 4144 0.98 0.77 0.85);
+
+
+/ITL/scene/cursorVOCODER watch timeEnter 107.949 108.349 (  /ITL/scene event VOCODER 54 0.67 1 0.11 0.48);
+/ITL/scene/cursorVOCODER watch timeLeave 107.949 108.349 (  /ITL/scene event NOVOCODER 54 0.67 1 0.11 0.48);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 109.444 110.205 (  /ITL/scene event SHIFT -18 5160 6140);
+/ITL/scene/cursorSHIFT watch timeLeave 109.444 110.205 (  /ITL/scene event NOSHIFT -18 5160 6140);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 110.298 110.572 (  /ITL/scene event REVERB 0.89 0.89 0.47);
+/ITL/scene/cursorREVERB watch timeLeave 110.298 110.572 (  /ITL/scene event NOREVERB 0.89 0.89 0.47);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 111.185 111.399 (  /ITL/scene event REVERB 0.64 0.02 0.01);
+/ITL/scene/cursorREVERB watch timeLeave 111.185 111.399 (  /ITL/scene event NOREVERB 0.64 0.02 0.01);
+
+
+/ITL/scene/cursorECHO watch timeEnter 112.545 113.307 (  /ITL/scene event ECHO 67 858);
+/ITL/scene/cursorECHO watch timeLeave 112.545 113.307 (  /ITL/scene event NOECHO 67 858);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 113.328 114.089 (  /ITL/scene event SHIFT -16 4265 5868);
+/ITL/scene/cursorSHIFT watch timeLeave 113.328 114.089 (  /ITL/scene event NOSHIFT -16 4265 5868);
+
+
+/ITL/scene/cursorSHIFTREVERB watch timeEnter 114.144 114.451 (  /ITL/scene event SHIFTREVERB 5 6080 7559 0.81 0.31 0.15);
+/ITL/scene/cursorSHIFTREVERB watch timeLeave 114.144 114.451 (  /ITL/scene event NOSHIFTREVERB 5 6080 7559 0.81 0.31 0.15);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 115.228 116.502 (  /ITL/scene event SHIFT 17 8784 5206);
+/ITL/scene/cursorSHIFT watch timeLeave 115.228 116.502 (  /ITL/scene event NOSHIFT 17 8784 5206);
+
+
+/ITL/scene/cursorECHO watch timeEnter 116.511 117.1 (  /ITL/scene event ECHO 59 919);
+/ITL/scene/cursorECHO watch timeLeave 116.511 117.1 (  /ITL/scene event NOECHO 59 919);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 117.306 118.948 (  /ITL/scene event SHIFT -14 6533 1950);
+/ITL/scene/cursorSHIFT watch timeLeave 117.306 118.948 (  /ITL/scene event NOSHIFT -14 6533 1950);
+
+
+/ITL/scene/cursorSHIFTREVERB watch timeEnter 119.541 120.255 (  /ITL/scene event SHIFTREVERB 12 298 1996 0.58 0.31 0.37);
+/ITL/scene/cursorSHIFTREVERB watch timeLeave 119.541 120.255 (  /ITL/scene event NOSHIFTREVERB 12 298 1996 0.58 0.31 0.37);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 120.379 122.02 (  /ITL/scene event RADIO 7 0.07);
+/ITL/scene/cursorRADIO watch timeLeave 120.379 122.02 (  /ITL/scene event NORADIO 7 0.07);
+
+
+/ITL/scene/cursorECHO watch timeEnter 122.055 122.769 (  /ITL/scene event ECHO 73 1028);
+/ITL/scene/cursorECHO watch timeLeave 122.055 122.769 (  /ITL/scene event NOECHO 73 1028);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 122.858 123.448 (  /ITL/scene event SHIFT -5 9038 9998);
+/ITL/scene/cursorSHIFT watch timeLeave 122.858 123.448 (  /ITL/scene event NOSHIFT -5 9038 9998);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 123.826 124.415 (  /ITL/scene event REVERB 0.96 0.82 0.3);
+/ITL/scene/cursorREVERB watch timeLeave 123.826 124.415 (  /ITL/scene event NOREVERB 0.96 0.82 0.3);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 124.602 126.243 (  /ITL/scene event RADIO 25 0.83);
+/ITL/scene/cursorRADIO watch timeLeave 124.602 126.243 (  /ITL/scene event NORADIO 25 0.83);
+
+
+/ITL/scene/cursorECHO watch timeEnter 126.196 126.579 (  /ITL/scene event ECHO 24 714);
+/ITL/scene/cursorECHO watch timeLeave 126.196 126.579 (  /ITL/scene event NOECHO 24 714);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 126.753 127.182 (  /ITL/scene event SHIFT -15 8537 6572);
+/ITL/scene/cursorSHIFT watch timeLeave 126.753 127.182 (  /ITL/scene event NOSHIFT -15 8537 6572);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 127.308 127.881 (  /ITL/scene event REVERB 0.97 0.37 0.06);
+/ITL/scene/cursorREVERB watch timeLeave 127.308 127.881 (  /ITL/scene event NOREVERB 0.97 0.37 0.06);
+
+
+/ITL/scene/cursorECHO watch timeEnter 127.921 128.859 (  /ITL/scene event ECHO 3 747);
+/ITL/scene/cursorECHO watch timeLeave 127.921 128.859 (  /ITL/scene event NOECHO 3 747);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 129.075 129.831 (  /ITL/scene event RADIO 9 0.08);
+/ITL/scene/cursorRADIO watch timeLeave 129.075 129.831 (  /ITL/scene event NORADIO 9 0.08);
+
+
+/ITL/scene/cursorECHO watch timeEnter 129.871 130.41 (  /ITL/scene event ECHO 93 1436);
+/ITL/scene/cursorECHO watch timeLeave 129.871 130.41 (  /ITL/scene event NOECHO 93 1436);
+
+
+/ITL/scene/cursorECHO watch timeEnter 130.381 130.922 (  /ITL/scene event ECHO 63 53);
+/ITL/scene/cursorECHO watch timeLeave 130.381 130.922 (  /ITL/scene event NOECHO 63 53);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 130.957 131.45 (  /ITL/scene event RADIO 27 0.37);
+/ITL/scene/cursorRADIO watch timeLeave 130.957 131.45 (  /ITL/scene event NORADIO 27 0.37);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 131.833 132.522 (  /ITL/scene event RADIO 8 0.33);
+/ITL/scene/cursorRADIO watch timeLeave 131.833 132.522 (  /ITL/scene event NORADIO 8 0.33);
+
+
+/ITL/scene/cursorVOCODER watch timeEnter 132.401 132.913 (  /ITL/scene event VOCODER 69 0.23 0.97 0.51 1.54);
+/ITL/scene/cursorVOCODER watch timeLeave 132.401 132.913 (  /ITL/scene event NOVOCODER 69 0.23 0.97 0.51 1.54);
+
+
+/ITL/scene/cursorECHO watch timeEnter 134.784 135.256 (  /ITL/scene event ECHO 18 359);
+/ITL/scene/cursorECHO watch timeLeave 134.784 135.256 (  /ITL/scene event NOECHO 18 359);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 135.519 137.154 (  /ITL/scene event SHIFT -24 3062 7415);
+/ITL/scene/cursorSHIFT watch timeLeave 135.519 137.154 (  /ITL/scene event NOSHIFT -24 3062 7415);
+
+
+/ITL/scene/cursorECHO watch timeEnter 137.31 138.945 (  /ITL/scene event ECHO 85 1773);
+/ITL/scene/cursorECHO watch timeLeave 137.31 138.945 (  /ITL/scene event NOECHO 85 1773);
+
+
+/ITL/scene/cursorSHIFTREVERB watch timeEnter 139.171 140.805 (  /ITL/scene event SHIFTREVERB 5 3101 4144 0.98 0.77 0.85);
+/ITL/scene/cursorSHIFTREVERB watch timeLeave 139.171 140.805 (  /ITL/scene event NOSHIFTREVERB 5 3101 4144 0.98 0.77 0.85);
+
+
+/ITL/scene/cursorVOCODER watch timeEnter 140.855 142.489 (  /ITL/scene event VOCODER 54 0.67 1 0.11 0.48);
+/ITL/scene/cursorVOCODER watch timeLeave 140.855 142.489 (  /ITL/scene event NOVOCODER 54 0.67 1 0.11 0.48);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 143.109 143.648 (  /ITL/scene event SHIFT -18 5160 6140);
+/ITL/scene/cursorSHIFT watch timeLeave 143.109 143.648 (  /ITL/scene event NOSHIFT -18 5160 6140);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 144.224 145.858 (  /ITL/scene event REVERB 0.89 0.89 0.47);
+/ITL/scene/cursorREVERB watch timeLeave 144.224 145.858 (  /ITL/scene event NOREVERB 0.89 0.89 0.47);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 146.315 146.839 (  /ITL/scene event REVERB 0.64 0.02 0.01);
+/ITL/scene/cursorREVERB watch timeLeave 146.315 146.839 (  /ITL/scene event NOREVERB 0.64 0.02 0.01);
+
+
+/ITL/scene/cursorECHO watch timeEnter 146.96 147.336 (  /ITL/scene event ECHO 67 858);
+/ITL/scene/cursorECHO watch timeLeave 146.96 147.336 (  /ITL/scene event NOECHO 67 858);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 147.37 147.91 (  /ITL/scene event SHIFT -16 4265 5868);
+/ITL/scene/cursorSHIFT watch timeLeave 147.37 147.91 (  /ITL/scene event NOSHIFT -16 4265 5868);
+
+
+/ITL/scene/cursorSHIFTREVERB watch timeEnter 148.03 148.573 (  /ITL/scene event SHIFTREVERB 5 6080 7559 0.81 0.31 0.15);
+/ITL/scene/cursorSHIFTREVERB watch timeLeave 148.03 148.573 (  /ITL/scene event NOSHIFTREVERB 5 6080 7559 0.81 0.31 0.15);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 148.677 149.219 (  /ITL/scene event SHIFT 17 8784 5206);
+/ITL/scene/cursorSHIFT watch timeLeave 148.677 149.219 (  /ITL/scene event NOSHIFT 17 8784 5206);
+
+
+/ITL/scene/cursorECHO watch timeEnter 149.358 151.399 (  /ITL/scene event ECHO 59 919);
+/ITL/scene/cursorECHO watch timeLeave 149.358 151.399 (  /ITL/scene event NOECHO 59 919);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 151.441 151.874 (  /ITL/scene event SHIFT -14 6533 1950);
+/ITL/scene/cursorSHIFT watch timeLeave 151.441 151.874 (  /ITL/scene event NOSHIFT -14 6533 1950);
+
+
+/ITL/scene/cursorSHIFTREVERB watch timeEnter 152.676 153.232 (  /ITL/scene event SHIFTREVERB 12 298 1996 0.58 0.31 0.37);
+/ITL/scene/cursorSHIFTREVERB watch timeLeave 152.676 153.232 (  /ITL/scene event NOSHIFTREVERB 12 298 1996 0.58 0.31 0.37);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 153.421 153.901 (  /ITL/scene event RADIO 7 0.07);
+/ITL/scene/cursorRADIO watch timeLeave 153.421 153.901 (  /ITL/scene event NORADIO 7 0.07);
+
+
+/ITL/scene/cursorECHO watch timeEnter 153.996 154.763 (  /ITL/scene event ECHO 73 1028);
+/ITL/scene/cursorECHO watch timeLeave 153.996 154.763 (  /ITL/scene event NOECHO 73 1028);
+
+
+/ITL/scene/cursorSHIFT watch timeEnter 155.5 157.134 (  /ITL/scene event SHIFT -5 9038 9998);
+/ITL/scene/cursorSHIFT watch timeLeave 155.5 157.134 (  /ITL/scene event NOSHIFT -5 9038 9998);
+
+
+/ITL/scene/cursorREVERB watch timeEnter 157.416 158.982 (  /ITL/scene event REVERB 0.96 0.82 0.3);
+/ITL/scene/cursorREVERB watch timeLeave 157.416 158.982 (  /ITL/scene event NOREVERB 0.96 0.82 0.3);
+
+
+/ITL/scene/cursorRADIO watch timeEnter 159.337 160.972 (  /ITL/scene event RADIO 25 0.83);
+/ITL/scene/cursorRADIO watch timeLeave 159.337 160.972 (  /ITL/scene event NORADIO 25 0.83);
+
+
+/ITL/scene/cursorECHO watch timeEnter 161.702 163.459 (  /ITL/scene event ECHO 24 714);
+/ITL/scene/cursorECHO watch timeLeave 161.702 163.459 (  /ITL/scene event NOECHO 24 714);
+
+
+/ITL/scene event EFFECTREADY;
