@@ -1,0 +1,23 @@
+
+/ITL/scene/title set txt "Nonet Effects";
+/ITL/scene/title fontSize 38;
+/ITL/scene/title color white;
+/ITL/scene/title y -0.7;
+
+
+
+/ITL/scene/audio-all set audio "audio/all.mp3";
+
+/ITL/scene/audio-* disconnect audioOutput;
+
+
+
+/ITL/scene event AUDIOREADY;
+/ITL/scene/title set txt "Nonet Effects";
+/ITL/scene/title fontSize 38;
+/ITL/scene/title color white;
+/ITL/scene/title y -0.7;
+
+
+
+/ITL/scene event AUDIOREADY;
