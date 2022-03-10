@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+		<link href="fonts/fonts.css" rel="stylesheet" />
+		<link href="nonet.css" rel="stylesheet" />
+		<script src="lib/libINScore.js"></script>
+		<script src="lib/INScoreJS.js"></script>
+		<script src="lib/FaustLibrary.js"></script>
+		<script src="lib/timesync.min.js"></script>
+		<script src="lib/comm.js"></script>
+		<script src="lib/client.js"></script>
+		<title>Nonet Effects</title>
+	</head>
+
+<body>
+<div class="inscore" id="scene">
+<pre>
+	/ITL/scene watch AUDIOREADY ( /ITL/log write Audio ready );
+	/ITL/scene load "inscore/effects.inscore.txt";
+
+	/ITL/scene watch FAUSTREADY ( /ITL/log write Faust ready );
+	/ITL/scene load "inscore/faustwasm.inscore.txt";
+
+</pre>
+</div>
+</body>
+
+<script>
+    connectclient("Effects");
+</script>
+</html>
