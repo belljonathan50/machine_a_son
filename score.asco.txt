@@ -1,2422 +1,1617 @@
-BPM 60
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 0
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 1
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 2
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 3
-NOTE C#2 1 second_note
-	seek 4
-NOTE D2 1 third_note
-	seek 5
-
-NOTE C2 1 first_note
-	seek 6
-NOTE C#2 1 second_note
-	seek 7
-NOTE D2 1 third_note
-	seek 8
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 9
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 10
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 11
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 12
-NOTE C#2 1 second_note
-	seek 13
-NOTE D2 1 third_note
-	seek 14
-
-NOTE C2 1 first_note
-	seek 15
-NOTE C#2 1 second_note
-	seek 16
-NOTE D2 1 third_note
-	seek 17
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 18
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 19
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 20
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 21
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 22
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 23
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 24
-NOTE C#2 1 second_note
-	seek 25
-NOTE D2 1 third_note
-	seek 26
-
-NOTE C2 1 first_note
-	seek 27
-NOTE C#2 1 second_note
-	seek 28
-NOTE D2 1 third_note
-	seek 29
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 30
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 31
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 32
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 33
-NOTE C#2 1 second_note
-	seek 34
-NOTE D2 1 third_note
-	seek 35
-
-NOTE C2 1 first_note
-	seek 36
-NOTE C#2 1 second_note
-	seek 37
-NOTE D2 1 third_note
-	seek 38
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 39
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 40
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 41
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 42
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 43
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 44
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 45
-NOTE C#2 1 second_note
-	seek 46
-NOTE D2 1 third_note
-	seek 47
-
-NOTE C2 1 first_note
-	seek 48
-NOTE C#2 1 second_note
-	seek 49
-NOTE D2 1 third_note
-	seek 50
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 51
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 52
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 53
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 54
-NOTE C#2 1 second_note
-	seek 55
-NOTE D2 1 third_note
-	seek 56
-
-NOTE C2 1 first_note
-	seek 57
-NOTE C#2 1 second_note
-	seek 58
-NOTE D2 1 third_note
-	seek 59
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 60
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 61
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 62
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 63
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 64
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 65
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 66
-NOTE C#2 1 second_note
-	seek 67
-NOTE D2 1 third_note
-	seek 68
-
-NOTE C2 1 first_note
-	seek 69
-NOTE C#2 1 second_note
-	seek 70
-NOTE D2 1 third_note
-	seek 71
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 72
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 73
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 74
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 75
-NOTE C#2 1 second_note
-	seek 76
-NOTE D2 1 third_note
-	seek 77
-
-NOTE C2 1 first_note
-	seek 78
-NOTE C#2 1 second_note
-	seek 79
-NOTE D2 1 third_note
-	seek 80
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 81
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 82
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 83
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 84
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 85
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 86
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 87
-NOTE C#2 1 second_note
-	seek 88
-NOTE D2 1 third_note
-	seek 89
-
-NOTE C2 1 first_note
-	seek 90
-NOTE C#2 1 second_note
-	seek 91
-NOTE D2 1 third_note
-	seek 92
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 93
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 94
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 95
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 96
-NOTE C#2 1 second_note
-	seek 97
-NOTE D2 1 third_note
-	seek 98
-
-NOTE C2 1 first_note
-	seek 99
-NOTE C#2 1 second_note
-	seek 100
-NOTE D2 1 third_note
-	seek 101
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 102
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 103
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 104
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 105
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 106
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 107
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 108
-NOTE C#2 1 second_note
-	seek 109
-NOTE D2 1 third_note
-	seek 110
-
-NOTE C2 1 first_note
-	seek 111
-NOTE C#2 1 second_note
-	seek 112
-NOTE D2 1 third_note
-	seek 113
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 114
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 115
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 116
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 117
-NOTE C#2 1 second_note
-	seek 118
-NOTE D2 1 third_note
-	seek 119
-
-NOTE C2 1 first_note
-	seek 120
-NOTE C#2 1 second_note
-	seek 121
-NOTE D2 1 third_note
-	seek 122
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 123
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 124
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 125
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 126
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 127
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 128
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 129
-NOTE C#2 1 second_note
-	seek 130
-NOTE D2 1 third_note
-	seek 131
-
-NOTE C2 1 first_note
-	seek 132
-NOTE C#2 1 second_note
-	seek 133
-NOTE D2 1 third_note
-	seek 134
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 135
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 136
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 137
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 138
-NOTE C#2 1 second_note
-	seek 139
-NOTE D2 1 third_note
-	seek 140
-
-NOTE C2 1 first_note
-	seek 141
-NOTE C#2 1 second_note
-	seek 142
-NOTE D2 1 third_note
-	seek 143
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 144
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 145
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 146
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 147
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 148
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 149
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 150
-NOTE C#2 1 second_note
-	seek 151
-NOTE D2 1 third_note
-	seek 152
-
-NOTE C2 1 first_note
-	seek 153
-NOTE C#2 1 second_note
-	seek 154
-NOTE D2 1 third_note
-	seek 155
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 156
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 157
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 158
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 159
-NOTE C#2 1 second_note
-	seek 160
-NOTE D2 1 third_note
-	seek 161
-
-NOTE C2 1 first_note
-	seek 162
-NOTE C#2 1 second_note
-	seek 163
-NOTE D2 1 third_note
-	seek 164
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 165
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 166
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 167
-
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 168
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 169
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 170
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 171
-NOTE C#2 1 second_note
-	seek 172
-NOTE D2 1 third_note
-	seek 173
-
-NOTE C2 1 first_note
-	seek 174
-NOTE C#2 1 second_note
-	seek 175
-NOTE D2 1 third_note
-	seek 176
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 177
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 178
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 179
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 180
-NOTE C#2 1 second_note
-	seek 181
-NOTE D2 1 third_note
-	seek 182
-
-NOTE C2 1 first_note
-	seek 183
-NOTE C#2 1 second_note
-	seek 184
-NOTE D2 1 third_note
-	seek 185
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 186
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 187
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 188
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 189
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 190
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 191
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 192
-NOTE C#2 1 second_note
-	seek 193
-NOTE D2 1 third_note
-	seek 194
-
-NOTE C2 1 first_note
-	seek 195
-NOTE C#2 1 second_note
-	seek 196
-NOTE D2 1 third_note
-	seek 197
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 198
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 199
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 200
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 201
-NOTE C#2 1 second_note
-	seek 202
-NOTE D2 1 third_note
-	seek 203
-
-NOTE C2 1 first_note
-	seek 204
-NOTE C#2 1 second_note
-	seek 205
-NOTE D2 1 third_note
-	seek 206
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 207
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 208
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 209
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 210
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 211
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 212
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 213
-NOTE C#2 1 second_note
-	seek 214
-NOTE D2 1 third_note
-	seek 215
-
-NOTE C2 1 first_note
-	seek 216
-NOTE C#2 1 second_note
-	seek 217
-NOTE D2 1 third_note
-	seek 218
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 219
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 220
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 221
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 222
-NOTE C#2 1 second_note
-	seek 223
-NOTE D2 1 third_note
-	seek 224
-
-NOTE C2 1 first_note
-	seek 225
-NOTE C#2 1 second_note
-	seek 226
-NOTE D2 1 third_note
-	seek 227
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 228
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 229
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 230
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 231
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 232
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 233
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 234
-NOTE C#2 1 second_note
-	seek 235
-NOTE D2 1 third_note
-	seek 236
-
-NOTE C2 1 first_note
-	seek 237
-NOTE C#2 1 second_note
-	seek 238
-NOTE D2 1 third_note
-	seek 239
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 240
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 241
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 242
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 243
-NOTE C#2 1 second_note
-	seek 244
-NOTE D2 1 third_note
-	seek 245
-
-NOTE C2 1 first_note
-	seek 246
-NOTE C#2 1 second_note
-	seek 247
-NOTE D2 1 third_note
-	seek 248
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 249
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 250
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 251
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 252
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 253
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 254
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 255
-NOTE C#2 1 second_note
-	seek 256
-NOTE D2 1 third_note
-	seek 257
-
-NOTE C2 1 first_note
-	seek 258
-NOTE C#2 1 second_note
-	seek 259
-NOTE D2 1 third_note
-	seek 260
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 261
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 262
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 263
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 264
-NOTE C#2 1 second_note
-	seek 265
-NOTE D2 1 third_note
-	seek 266
-
-NOTE C2 1 first_note
-	seek 267
-NOTE C#2 1 second_note
-	seek 268
-NOTE D2 1 third_note
-	seek 269
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 270
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 271
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 272
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 273
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 274
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 275
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 276
-NOTE C#2 1 second_note
-	seek 277
-NOTE D2 1 third_note
-	seek 278
-
-NOTE C2 1 first_note
-	seek 279
-NOTE C#2 1 second_note
-	seek 280
-NOTE D2 1 third_note
-	seek 281
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 282
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 283
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 284
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 285
-NOTE C#2 1 second_note
-	seek 286
-NOTE D2 1 third_note
-	seek 287
-
-NOTE C2 1 first_note
-	seek 288
-NOTE C#2 1 second_note
-	seek 289
-NOTE D2 1 third_note
-	seek 290
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 291
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 292
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 293
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 294
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 295
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 296
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 297
-NOTE C#2 1 second_note
-	seek 298
-NOTE D2 1 third_note
-	seek 299
-
-NOTE C2 1 first_note
-	seek 300
-NOTE C#2 1 second_note
-	seek 301
-NOTE D2 1 third_note
-	seek 302
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 303
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 304
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 305
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 306
-NOTE C#2 1 second_note
-	seek 307
-NOTE D2 1 third_note
-	seek 308
-
-NOTE C2 1 first_note
-	seek 309
-NOTE C#2 1 second_note
-	seek 310
-NOTE D2 1 third_note
-	seek 311
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 312
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 313
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 314
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 315
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 316
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 317
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 318
-NOTE C#2 1 second_note
-	seek 319
-NOTE D2 1 third_note
-	seek 320
-
-NOTE C2 1 first_note
-	seek 321
-NOTE C#2 1 second_note
-	seek 322
-NOTE D2 1 third_note
-	seek 323
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 324
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 325
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 326
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 327
-NOTE C#2 1 second_note
-	seek 328
-NOTE D2 1 third_note
-	seek 329
-
-NOTE C2 1 first_note
-	seek 330
-NOTE C#2 1 second_note
-	seek 331
-NOTE D2 1 third_note
-	seek 332
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 333
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 334
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 335
-
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 336
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 337
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 338
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 339
-NOTE C#2 1 second_note
-	seek 340
-NOTE D2 1 third_note
-	seek 341
-
-NOTE C2 1 first_note
-	seek 342
-NOTE C#2 1 second_note
-	seek 343
-NOTE D2 1 third_note
-	seek 344
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 345
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 346
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 347
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 348
-NOTE C#2 1 second_note
-	seek 349
-NOTE D2 1 third_note
-	seek 350
-
-NOTE C2 1 first_note
-	seek 351
-NOTE C#2 1 second_note
-	seek 352
-NOTE D2 1 third_note
-	seek 353
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 354
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 355
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 356
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 357
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 358
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 359
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 360
-NOTE C#2 1 second_note
-	seek 361
-NOTE D2 1 third_note
-	seek 362
-
-NOTE C2 1 first_note
-	seek 363
-NOTE C#2 1 second_note
-	seek 364
-NOTE D2 1 third_note
-	seek 364
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 365
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 366
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 367
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 368
-NOTE C#2 1 second_note
-	seek 369
-NOTE D2 1 third_note
-	seek 370
-
-NOTE C2 1 first_note
-	seek 371
-NOTE C#2 1 second_note
-	seek 372
-NOTE D2 1 third_note
-	seek 373
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 374
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 375
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 376
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 377
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 378
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 379
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 380
-NOTE C#2 1 second_note
-	seek 381
-NOTE D2 1 third_note
-	seek 382
-
-NOTE C2 1 first_note
-	seek 383
-NOTE C#2 1 second_note
-	seek 384
-NOTE D2 1 third_note
-	seek 385
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 386
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 387
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 388
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 389
-NOTE C#2 1 second_note
-	seek 390
-NOTE D2 1 third_note
-	seek 391
-
-NOTE C2 1 first_note
-	seek 392
-NOTE C#2 1 second_note
-	seek 393
-NOTE D2 1 third_note
-	seek 394
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 395
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 396
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 397
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 398
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 399
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 400
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 401
-NOTE C#2 1 second_note
-	seek 402
-NOTE D2 1 third_note
-	seek 403
-
-NOTE C2 1 first_note
-	seek 404
-NOTE C#2 1 second_note
-	seek 405
-NOTE D2 1 third_note
-	seek 406
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 407
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 408
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 409
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 410
-NOTE C#2 1 second_note
-	seek 411
-NOTE D2 1 third_note
-	seek 412
-
-NOTE C2 1 first_note
-	seek 413
-NOTE C#2 1 second_note
-	seek 414
-NOTE D2 1 third_note
-	seek 415
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 416
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 417
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 418
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 419
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 420
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 421
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 422
-NOTE C#2 1 second_note
-	seek 423
-NOTE D2 1 third_note
-	seek 424
-
-NOTE C2 1 first_note
-	seek 425
-NOTE C#2 1 second_note
-	seek 426
-NOTE D2 1 third_note
-	seek 427
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 428
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 429
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 430
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 431
-NOTE C#2 1 second_note
-	seek 432
-NOTE D2 1 third_note
-	seek 433
-
-NOTE C2 1 first_note
-	seek 434
-NOTE C#2 1 second_note
-	seek 435
-NOTE D2 1 third_note
-	seek 436
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 437
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 438
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 439
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 440
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 441
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 442
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 443
-NOTE C#2 1 second_note
-	seek 444
-NOTE D2 1 third_note
-	seek 445
-
-NOTE C2 1 first_note
-	seek 446
-NOTE C#2 1 second_note
-	seek 447
-NOTE D2 1 third_note
-	seek 448
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 449
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 450
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 451
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 452
-NOTE C#2 1 second_note
-	seek 453
-NOTE D2 1 third_note
-	seek 454
-
-NOTE C2 1 first_note
-	seek 455
-NOTE C#2 1 second_note
-	seek 456
-NOTE D2 1 third_note
-	seek 457
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 458
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 459
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 460
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 461
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 462
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 463
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 464
-NOTE C#2 1 second_note
-	seek 465
-NOTE D2 1 third_note
-	seek 466
-
-NOTE C2 1 first_note
-	seek 467
-NOTE C#2 1 second_note
-	seek 468
-NOTE D2 1 third_note
-	seek 469
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 470
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 471
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 472
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 473
-NOTE C#2 1 second_note
-	seek 474
-NOTE D2 1 third_note
-	seek 475
-
-NOTE C2 1 first_note
-	seek 476
-NOTE C#2 1 second_note
-	seek 477
-NOTE D2 1 third_note
-	seek 478
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 479
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 480
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 481
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 482
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 483
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 484
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 485
-NOTE C#2 1 second_note
-	seek 486
-NOTE D2 1 third_note
-	seek 487
-
-NOTE C2 1 first_note
-	seek 488
-NOTE C#2 1 second_note
-	seek 489
-NOTE D2 1 third_note
-	seek 490
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 491
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 492
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 493
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 494
-NOTE C#2 1 second_note
-	seek 495
-NOTE D2 1 third_note
-	seek 496
-
-NOTE C2 1 first_note
-	seek 497
-NOTE C#2 1 second_note
-	seek 498
-NOTE D2 1 third_note
-	seek 499
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 450
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 451
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 452
-
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 453
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 454
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 455
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 456
-NOTE C#2 1 second_note
-	seek 457
-NOTE D2 1 third_note
-	seek 458
-
-NOTE C2 1 first_note
-	seek 459
-NOTE C#2 1 second_note
-	seek 460
-NOTE D2 1 third_note
-	seek 461
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 462
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 463
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 464
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 465
-NOTE C#2 1 second_note
-	seek 466
-NOTE D2 1 third_note
-	seek 467
-
-NOTE C2 1 first_note
-	seek 468
-NOTE C#2 1 second_note
-	seek 469
-NOTE D2 1 third_note
-	seek 470
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 471
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 472
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 472
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 473
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 474
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 475
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 476
-NOTE C#2 1 second_note
-	seek 477
-NOTE D2 1 third_note
-	seek 478
-
-NOTE C2 1 first_note
-	seek 479
-NOTE C#2 1 second_note
-	seek 480
-NOTE D2 1 third_note
-	seek 481
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 482
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 483
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 484
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 485
-NOTE C#2 1 second_note
-	seek 486
-NOTE D2 1 third_note
-	seek 487
-
-NOTE C2 1 first_note
-	seek 488
-NOTE C#2 1 second_note
-	seek 489
-NOTE D2 1 third_note
-	seek 490
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 491
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 492
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 493
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 494
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 495
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 496
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 497
-NOTE C#2 1 second_note
-	seek 498
-NOTE D2 1 third_note
-	seek 499
-
-NOTE C2 1 first_note
-	seek 500
-NOTE C#2 1 second_note
-	seek 501
-NOTE D2 1 third_note
-	seek 502
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 503
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 504
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 505
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 506
-NOTE C#2 1 second_note
-	seek 507
-NOTE D2 1 third_note
-	seek 508
-
-NOTE C2 1 first_note
-	seek 509
-NOTE C#2 1 second_note
-	seek 510
-NOTE D2 1 third_note
-	seek 511
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 512
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 513
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 514
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 515
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 516
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 517
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 518
-NOTE C#2 1 second_note
-	seek 519
-NOTE D2 1 third_note
-	seek 520
-
-NOTE C2 1 first_note
-	seek 521
-NOTE C#2 1 second_note
-	seek 522
-NOTE D2 1 third_note
-	seek 523
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 524
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 525
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 526
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 527
-NOTE C#2 1 second_note
-	seek 528
-NOTE D2 1 third_note
-	seek 529
-
-NOTE C2 1 first_note
-	seek 530
-NOTE C#2 1 second_note
-	seek 531
-NOTE D2 1 third_note
-	seek 532
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 533
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 534
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 535
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 536
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 537
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 538
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 539
-NOTE C#2 1 second_note
-	seek 540
-NOTE D2 1 third_note
-	seek 541
-
-NOTE C2 1 first_note
-	seek 542
-NOTE C#2 1 second_note
-	seek 543
-NOTE D2 1 third_note
-	seek 543
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 544
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 545
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 546
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 547
-NOTE C#2 1 second_note
-	seek 548
-NOTE D2 1 third_note
-	seek 549
-
-NOTE C2 1 first_note
-	seek 550
-NOTE C#2 1 second_note
-	seek 551
-NOTE D2 1 third_note
-	seek 552
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 553
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 554
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 555
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 556
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 557
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 558
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 559
-NOTE C#2 1 second_note
-	seek 560
-NOTE D2 1 third_note
-	seek 561
-
-NOTE C2 1 first_note
-	seek 562
-NOTE C#2 1 second_note
-	seek 563
-NOTE D2 1 third_note
-	seek 564
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 565
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 566
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 567
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 568
-NOTE C#2 1 second_note
-	seek 569
-NOTE D2 1 third_note
-	seek 570
-
-NOTE C2 1 first_note
-	seek 571
-NOTE C#2 1 second_note
-	seek 572
-NOTE D2 1 third_note
-	seek 573
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 574
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 575
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 576
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 577
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 578
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 579
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 580
-NOTE C#2 1 second_note
-	seek 581
-NOTE D2 1 third_note
-	seek 582
-
-NOTE C2 1 first_note
-	seek 583
-NOTE C#2 1 second_note
-	seek 584
-NOTE D2 1 third_note
-	seek 585
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 586
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 587
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 588
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 589
-NOTE C#2 1 second_note
-	seek 560
-NOTE D2 1 third_note
-	seek 561
-
-NOTE C2 1 first_note
-	seek 562
-NOTE C#2 1 second_note
-	seek 563
-NOTE D2 1 third_note
-	seek 564
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 565
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 566
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 567
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 568
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 569
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 570
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 571
-NOTE C#2 1 second_note
-	seek 572
-NOTE D2 1 third_note
-	seek 573
-
-NOTE C2 1 first_note
-	seek 574
-NOTE C#2 1 second_note
-	seek 575
-NOTE D2 1 third_note
-	seek 576
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 577
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 578
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 579
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 580
-NOTE C#2 1 second_note
-	seek 581
-NOTE D2 1 third_note
-	seek 852
-
-NOTE C2 1 first_note
-	seek 853
-NOTE C#2 1 second_note
-	seek 854
-NOTE D2 1 third_note
-	seek 855
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 586
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 587
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 588
-
-
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 547
-NOTE C#2 1 second_note
-	seek 548
-NOTE D2 1 third_note
-	seek 549
-
-NOTE C2 1 first_note
-	seek 550
-NOTE C#2 1 second_note
-	seek 551
-NOTE D2 1 third_note
-	seek 552
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 553
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 554
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 555
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 556
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 557
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 558
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 559
-NOTE C#2 1 second_note
-	seek 560
-NOTE D2 1 third_note
-	seek 561
-
-NOTE C2 1 first_note
-	seek 562
-NOTE C#2 1 second_note
-	seek 563
-NOTE D2 1 third_note
-	seek 564
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 565
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 566
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 567
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 568
-NOTE C#2 1 second_note
-	seek 569
-NOTE D2 1 third_note
-	seek 570
-
-NOTE C2 1 first_note
-	seek 571
-NOTE C#2 1 second_note
-	seek 572
-NOTE D2 1 third_note
-	seek 573
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 574
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 575
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 576
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 577
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 578
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 579
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 580
-NOTE C#2 1 second_note
-	seek 581
-NOTE D2 1 third_note
-	seek 582
-
-NOTE C2 1 first_note
-	seek 583
-NOTE C#2 1 second_note
-	seek 584
-NOTE D2 1 third_note
-	seek 585
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 586
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 587
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 588
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 589
-NOTE C#2 1 second_note
-	seek 590
-NOTE D2 1 third_note
-	seek 591
-
-NOTE C2 1 first_note
-	seek 592
-NOTE C#2 1 second_note
-	seek 593
-NOTE D2 1 third_note
-	seek 594
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 595
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 596
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 597
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 598
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 599
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 600
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 601
-NOTE C#2 1 second_note
-	seek 602
-NOTE D2 1 third_note
-	seek 603
-
-NOTE C2 1 first_note
-	seek 604
-NOTE C#2 1 second_note
-	seek 605
-NOTE D2 1 third_note
-	seek 606
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 607
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 608
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 609
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 610
-NOTE C#2 1 second_note
-	seek 611
-NOTE D2 1 third_note
-	seek 612
-
-NOTE C2 1 first_note
-	seek 613
-NOTE C#2 1 second_note
-	seek 614
-NOTE D2 1 third_note
-	seek 615
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 616
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 617
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 618
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 619
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 620
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 621
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 622
-NOTE C#2 1 second_note
-	seek 623
-NOTE D2 1 third_note
-	seek 624
-
-NOTE C2 1 first_note
-	seek 625
-NOTE C#2 1 second_note
-	seek 626
-NOTE D2 1 third_note
-	seek 627
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 628
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 629
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 630
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 631
-NOTE C#2 1 second_note
-	seek 632
-NOTE D2 1 third_note
-	seek 633
-
-NOTE C2 1 first_note
-	seek 634
-NOTE C#2 1 second_note
-	seek 635
-NOTE D2 1 third_note
-	seek 636
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 637
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 638
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 639
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 640
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 641
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 642
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 643
-NOTE C#2 1 second_note
-	seek 644
-NOTE D2 1 third_note
-	seek 645
-
-NOTE C2 1 first_note
-	seek 646
-NOTE C#2 1 second_note
-	seek 647
-NOTE D2 1 third_note
-	seek 648
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 649
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 650
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 651
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 652
-NOTE C#2 1 second_note
-	seek 653
-NOTE D2 1 third_note
-	seek 654
-
-NOTE C2 1 first_note
-	seek 655
-NOTE C#2 1 second_note
-	seek 656
-NOTE D2 1 third_note
-	seek 657
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 658
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 659
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 660
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 661
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 662
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 663
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 664
-NOTE C#2 1 second_note
-	seek 665
-NOTE D2 1 third_note
-	seek 666
-
-NOTE C2 1 first_note
-	seek 667
-NOTE C#2 1 second_note
-	seek 668
-NOTE D2 1 third_note
-	seek 669
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 670
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 671
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 672
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 673
-NOTE C#2 1 second_note
-	seek 674
-NOTE D2 1 third_note
-	seek 675
-
-NOTE C2 1 first_note
-	seek 676
-NOTE C#2 1 second_note
-	seek 677
-NOTE D2 1 third_note
-	seek 678
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 679
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 680
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 681
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 682
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 683
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 684
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 685
-NOTE C#2 1 second_note
-	seek 686
-NOTE D2 1 third_note
-	seek 687
-
-NOTE C2 1 first_note
-	seek 688
-NOTE C#2 1 second_note
-	seek 689
-NOTE D2 1 third_note
-	seek 690
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 691
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 692
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 693
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 694
-NOTE C#2 1 second_note
-	seek 695
-NOTE D2 1 third_note
-	seek 696
-
-NOTE C2 1 first_note
-	seek 697
-NOTE C#2 1 second_note
-	seek 698
-NOTE D2 1 third_note
-	seek 699
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 700
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 701
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 702
-
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 703
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 704
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 705
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 706
-NOTE C#2 1 second_note
-	seek 707
-NOTE D2 1 third_note
-	seek 708
-
-NOTE C2 1 first_note
-	seek 709
-NOTE C#2 1 second_note
-	seek 710
-NOTE D2 1 third_note
-	seek 711
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 712
-NOTE C#2 1 second_note
-	ex_01 dosiredo
-	seek 713
-NOTE D2 1 third_note
-	ex_01 sisolala
-	seek 714
-
-NOTE C2 1 first_note
-	ex_01 solasi
-	seek 715
-NOTE C#2 1 second_note
-	seek 716
-NOTE D2 1 third_note
-	seek 717
-
-NOTE C2 1 first_note
-	seek 718
-NOTE C#2 1 second_note
-	seek 719
-NOTE D2 1 third_note
-	seek 720
+
+NOTE C2 1 _0
+	controlplayback PLAY
+	detectedrate 60
+	oscsend plateau 192.168.0.106 : 8050 "/plateau"
+	oscsend particules 192.168.0.106 : 8050 "/particules"
+
+	oscsend camstring 192.168.0.106 : 8050 "/camstring"
+  	oscsend cambrass 192.168.0.106 : 8050 "/cambrass"
+  	oscsend camwood 192.168.0.106 : 8050 "/camwood"
+  	oscsend camavatar 192.168.0.106 : 8050 "/camavatar"
+  	oscsend camback 192.168.0.106 : 8050 "/camback"
+  	oscsend camtravel 192.168.0.106 : 8050 "/camtravel"
+	oscsend camavatar 192.168.0.106 : 8050 "/camavatar"
+  	oscsend camavatar2 192.168.0.106 : 8050 "/camavatar2"
+  	oscsend camneur 192.168.0.106 : 8050 "/camneur"
+  	oscsend camneur2 192.168.0.106 : 8050 "/camneur2"
+
+  	oscsend color 192.168.0.106 : 8050 "/color"
+
+  	oscsend rotor1 192.168.0.106 : 8050 "/rotor1"
+  	oscsend line1 192.168.0.106 : 8050 "/line1"
+  	oscsend rail1 192.168.0.106 : 8050 "/line1"
+
+  	oscsend camup 192.168.0.106 : 8050 "/camup"
+  	oscsend rotorup 192.168.0.106 : 8050 "/rotorup"
+  	oscsend railup 192.168.0.106 : 8050 "/railup"
+
+
+  	  	oscsend camleft 192.168.0.106 : 8050 "/camleft"
+  	oscsend rotorleft 192.168.0.106 : 8050 "/rotorleft"
+  	oscsend railleft 192.168.0.106 : 8050 "/railleft"
+
+  	  	oscsend camright 192.168.0.106 : 8050 "/camright"
+  	oscsend rotorright 192.168.0.106 : 8050 "/rotorright"
+  	oscsend railrightline 192.168.0.106 : 8050 "/railrightline"
+  	oscsend railright 192.168.0.106 : 8050 "/railright"
+
+	
+    camright 1
+
+    color 0 0 0 
+    
+NOTE C#2 1 _1
+	color 1 1 1
+NOTE D2 1 _2
+
+	
+	
+NOTE C2 1 _3
+	
+	
+NOTE C#2 1 _4
+	
+
+NOTE D2 1 _5
+ 	
+NOTE C2 1 _6
+color 0 1 1 
+	
+	
+NOTE C#2 1 _7
+color 1 1 0 
+	
+	camstring 1
+NOTE D2 1 _8
+	
+
+NOTE C2 1 _9
+NOTE C#2 1 _10
+NOTE D2 1 _11
+	
+
+NOTE C2 1 _12
+NOTE C#2 1 _13
+NOTE D2 1 _14
+	
+	
+	
+NOTE C2 1 _15	
+NOTE C#2 1 _16
+NOTE D2 1 _17
+
+
+NOTE C2 1 _18
+NOTE C#2 1 _19
+NOTE D2 1 _20
+	
+	
+
+NOTE C2 1 _21
+NOTE C#2 1 _22
+   camavatar 1
+NOTE D2 1 _23
+	
+	
+NOTE C2 1 _24
+NOTE C#2 1 _25	
+NOTE D2 1 _26
+	camstring 1
+
+
+
+NOTE C2 1 _27
+NOTE C#2 1 _28
+	color 0 0 0
+NOTE D2 1 _29
+
+
+NOTE C2 1 _30
+NOTE C#2 1 _31
+NOTE D2 1 _32
+	
+NOTE C2 1 _33
+NOTE C#2 1 _34
+NOTE D2 1 _35
+	
+
+NOTE C2 1 _36
+NOTE C#2 1 _37
+	camback 1	
+NOTE D2 1 _38
+	
+
+NOTE C2 1 _39
+NOTE C#2 1 _40
+	
+NOTE D2 1 _41
+	
+
+NOTE C2 1 _42
+	
+NOTE C#2 1 _43
+NOTE D2 1 _44
+	
+
+NOTE C2 1 _45
+NOTE C#2 1 _46
+NOTE D2 1 _47
+	
+
+NOTE C2 1 _48
+NOTE C#2 1 _49
+NOTE D2 1 _50
+	
+
+NOTE C2 1 _51
+	
+NOTE C#2 1 _52
+NOTE D2 1 _53
+
+
+NOTE C2 1 _54
+NOTE C#2 1 _55
+	
+NOTE D2 1 _56
+	
+	
+
+NOTE C2 1 _57
+NOTE C#2 1 _58
+NOTE D2 1 _59
+
+	color 0.3 1 0.7 0.1
+	camup 1
+
+NOTE C2 1 _60
+	
+NOTE C#2 1 _61
+    railright 4
+	camright 1
+NOTE D2 1 _62
+	
+	
+
+NOTE C2 1 _63
+NOTE C#2 1 _64
+NOTE D2 1 _65
+
+NOTE C2 1 _66
+NOTE C#2 1 _67
+NOTE D2 1 _68
+	
+
+NOTE C2 1 _69
+NOTE C#2 1 _70
+	camavatar 1
+NOTE D2 1 _71
+	color 0.1 0.3 1
+
+NOTE C2 1 _72
+NOTE C#2 1 _73
+NOTE D2 1 _74
+	camup 1
+
+NOTE C2 1 _75
+NOTE C#2 1 _76
+NOTE D2 1 _77
+
+NOTE C2 1 _78
+NOTE C#2 1 _79
+NOTE D2 1 _80
+	
+
+
+NOTE C2 1 _81
+	color 1 0.1 0.1
+NOTE C#2 1 _82
+NOTE D2 1 _83
+	color 0.1 0.2 0.1
+
+NOTE C2 1 _84
+
+NOTE C#2 1 _85
+	
+	
+NOTE D2 1 _86
+
+NOTE C2 1 _87
+	color 0.1 0.2 0.1
+	
+NOTE C#2 1 _88
+NOTE D2 1 _89
+
+NOTE C2 1 _90
+	camtravel 1
+NOTE C#2 1 _91
+NOTE D2 1 _92
+
+NOTE C2 1 _93
+	
+NOTE C#2 1 _94
+NOTE D2 1 _95
+
+NOTE C2 1 _96
+NOTE C#2 1 _97
+NOTE D2 1 _98
+
+NOTE C2 1 _99
+	color 0.5 0.5 0.5
+NOTE C#2 1 _100
+	camavatar 1
+NOTE D2 1 _101
+color 0 1 0.7
+
+NOTE C2 1 _102
+NOTE C#2 1 _103
+NOTE D2 1 _104
+
+
+NOTE C2 1 _105
+NOTE C#2 1 _106
+NOTE D2 1 _107
+
+NOTE C2 1 _108
+NOTE C#2 1 _109
+NOTE D2 1 _110
+	camup 1
+	
+NOTE C2 1 _111
+NOTE C#2 1 _112
+NOTE D2 1 _113
+		color 0.1 0.1 0.1
+
+
+NOTE C2 1 _114
+NOTE C#2 1 _115
+NOTE D2 1 _116
+	
+NOTE C2 1 _117
+	camavatar2 1
+ color 1 1 0.5
+NOTE C#2 1 _118
+NOTE D2 1 _119
+
+NOTE C2 1 _120
+	color 0.5 0.6 0.1
+	camback 1
+NOTE C#2 1 _121
+NOTE D2 1 _122
+
+NOTE C2 1 _123
+NOTE C#2 1 _124
+NOTE D2 1 _125
+	
+NOTE C2 1 _126
+NOTE C#2 1 _127
+NOTE D2 1 _128
+     color 1 0.1 0.1
+
+NOTE C2 1 _129
+NOTE C#2 1 _130
+NOTE D2 1 _131
+
+NOTE C2 1 _132
+NOTE C#2 1 _133
+NOTE D2 1 _134
+
+NOTE C2 1 _135
+	camtravel 1
+	color 0.3 0.6 0.9
+NOTE C#2 1 _136
+NOTE D2 1 _137
+
+NOTE C2 1 _138
+NOTE C#2 1 _139
+NOTE D2 1 _140
+
+NOTE C2 1 _141
+NOTE C#2 1 _142
+NOTE D2 1 _143
+
+NOTE C2 1 _144
+NOTE C#2 1 _145
+NOTE D2 1 _146
+  camup 1
+	
+
+NOTE C2 1 _147
+NOTE C#2 1 _148
+NOTE D2 1 _149
+
+NOTE C2 1 _150
+NOTE C#2 1 _151
+NOTE D2 1 _152
+	color 0.4 0.1 0.1
+
+NOTE C2 1 _153
+NOTE C#2 1 _154
+NOTE D2 1 _155
+
+NOTE C2 1 _156
+NOTE C#2 1 _157
+NOTE D2 1 _158
+	camback 1
+
+NOTE C2 1 _159
+NOTE C#2 1 _160
+NOTE D2 1 _161
+
+NOTE C2 1 _162
+NOTE C#2 1 _163
+	camup 1
+	color 0.4 1 1
+NOTE D2 1 _164
+
+
+NOTE C2 1 _165
+	cambrass 1
+NOTE C#2 1 _166
+
+NOTE D2 1 _167
+	
+
+NOTE C2 1 _168
+NOTE C#2 1 _169
+NOTE D2 1 _170
+	
+
+NOTE C2 1 _171
+	
+NOTE C#2 1 _172
+	camtravel 1
+	color 0 0 0
+NOTE D2 1 _173
+
+
+
+NOTE C2 1 _174
+NOTE C#2 1 _175
+NOTE D2 1 _176
+	color 3 3 3
+	
+
+NOTE C2 1 _177
+NOTE C#2 1 _178
+NOTE D2 1 _179
+	
+
+NOTE C2 1 _180
+NOTE C#2 1 _181
+color 1 1 1
+  
+	camright 1
+NOTE D2 1 _182
+	
+NOTE C2 1 _183
+NOTE C#2 1 _184
+NOTE D2 1 _185
+	camstring 1
+
+NOTE C2 1 _186
+NOTE C#2 1 _187
+NOTE D2 1 _188
+
+	
+
+NOTE C2 1 _189
+NOTE C#2 1 _190
+NOTE D2 1 _191
+	color 0 0.5 0
+
+NOTE C2 1 _192
+NOTE C#2 1 _193
+NOTE D2 1 _194
+	camback 1
+
+NOTE C2 1 _195
+NOTE C#2 1 _196
+NOTE D2 1 _197
+
+NOTE C2 1 _198
+NOTE C#2 1 _199
+NOTE D2 1 _200
+
+
+NOTE C2 1 _201
+NOTE C#2 1 _202
+NOTE D2 1 _203
+
+NOTE C2 1 _204
+NOTE C#2 1 _205
+NOTE D2 1 _206
+	camtravel 1
+	color 1 1 0
+
+NOTE C2 1 _207
+
+NOTE C#2 1 _208
+NOTE D2 1 _209
+	
+
+NOTE C2 1 _210
+	
+NOTE C#2 1 _211
+NOTE D2 1 _212
+
+NOTE C2 1 _213
+NOTE C#2 1 _214
+	
+NOTE D2 1 _215
+
+NOTE C2 1 _216
+
+NOTE C#2 1 _217
+NOTE D2 1 _218
+
+NOTE C2 1 _219
+	color 0 0 1
+NOTE C#2 1 _220
+	camavatar 1
+NOTE D2 1 _221
+
+NOTE C2 1 _222
+	plateau 1 1 5
+NOTE C#2 1 _223
+	camwood 1
+NOTE D2 1 _224
+	
+
+NOTE C2 1 _225
+NOTE C#2 1 _226
+NOTE D2 1 _227
+
+NOTE C2 1 _228
+	camstring 1
+NOTE C#2 1 _229
+NOTE D2 1 _230
+	
+	
+NOTE C2 1 _231
+NOTE C#2 1 _232
+NOTE D2 1 _233
+
+NOTE C2 1 _234
+NOTE C#2 1 _235
+NOTE D2 1 _236
+	
+NOTE C2 1 _237
+NOTE C#2 1 _238
+NOTE D2 1 _239
+
+NOTE C2 1 _240
+NOTE C#2 1 _241
+NOTE D2 1 _242
+
+NOTE C2 1 _234
+	camleft 1
+NOTE C#2 1 _244
+NOTE D2 1 _245
+	
+	
+NOTE C2 1 _246
+NOTE C#2 1 _247
+NOTE D2 1 _248
+     camavatar2 1
+
+NOTE C2 1 _249
+NOTE C#2 1 _250
+NOTE D2 1 _251
+
+NOTE C2 1 _252
+NOTE C#2 1 _253
+NOTE D2 1 _254
+
+NOTE C2 1 _255
+NOTE C#2 1 _256
+NOTE D2 1 _257
+
+NOTE C2 1 _258
+NOTE C#2 1 _259
+	camwood 1
+NOTE D2 1 _260
+
+NOTE C2 1 _261
+NOTE C#2 1 _262
+NOTE D2 1 _263
+
+NOTE C2 1 _264
+NOTE C#2 1 _265
+NOTE D2 1 _266
+
+NOTE C2 1 _267
+NOTE C#2 1 _268
+NOTE D2 1 _269
+
+NOTE C2 1 _270
+NOTE C#2 1 _271
+NOTE D2 1 _272
+
+NOTE C2 1 _273
+NOTE C#2 1 _274
+NOTE D2 1 _275
+
+NOTE C2 1 _276
+NOTE C#2 1 _277
+NOTE D2 1 _278
+	camback 1
+
+NOTE C2 1 _279
+NOTE C#2 1 _280
+NOTE D2 1 _281
+
+NOTE C2 1 _282
+NOTE C#2 1 _283
+NOTE D2 1 _284
+
+NOTE C2 1 _285
+NOTE C#2 1 _286
+NOTE D2 1 _287
+
+NOTE C2 1 _288
+NOTE C#2 1 _289
+NOTE D2 1 _290
+	camback 1
+
+NOTE C2 1 _291
+NOTE C#2 1 _292
+NOTE D2 1 _293
+
+NOTE C2 1 _294
+NOTE C#2 1 _295
+NOTE D2 1 _296
+	camleft 1
+	plateau 0.2 0.3 0.8
+	color 0.1 0.9 0.9
+
+NOTE C2 1 _297
+	plateau 1 1 3
+NOTE C#2 1 _298
+NOTE D2 1 _299
+
+NOTE C2 1 _300
+camstring 1
+NOTE C#2 1 _301
+NOTE D2 1 _302
+	
+NOTE C2 1 _303
+NOTE C#2 1 _304
+NOTE D2 1 _305
+
+NOTE C2 1 _306
+NOTE C#2 1 _307
+	
+NOTE D2 1 _308
+
+NOTE C2 1 _309
+NOTE C#2 1 _310
+NOTE D2 1 _311
+	
+	
+
+NOTE C2 1 _312
+
+NOTE C#2 1 _313
+	
+	
+NOTE D2 1 _314
+	
+NOTE C2 1 _315	
+	
+NOTE C#2 1 _316
+	camleft 1
+	railup 2
+	rotorup 0
+NOTE D2 1 _317
+	
+
+NOTE C2 1 _318
+NOTE C#2 1 _319
+	camback 1
+NOTE D2 1 _320
+	
+	
+
+NOTE C2 1 _321
+NOTE C#2 1 _322
+NOTE D2 1 _323
+	camavar 1
+	
+NOTE C2 1 _324
+	
+NOTE C#2 1 _325	
+NOTE D2 1 _326
+	
+
+
+NOTE C2 1 _327
+NOTE C#2 1 _328
+	camwood 1
+NOTE D2 1 _329
+
+
+NOTE C2 1 _330
+NOTE C#2 1 _331
+NOTE D2 1 _332
+	
+NOTE C2 1 _333
+	camup 1
+	color 0.4 0.3 1
+NOTE C#2 1 _334
+NOTE D2 1 _335
+	
+
+NOTE C2 1 _336
+NOTE C#2 1 _337
+	
+NOTE D2 1 _338
+	
+
+NOTE C2 1 _339
+NOTE C#2 1 _340
+	
+NOTE D2 1 _341
+	
+
+NOTE C2 1 _342
+NOTE C#2 1 _343
+	
+NOTE D2 1 _344
+	
+
+NOTE C2 1 _345
+NOTE C#2 1 _346
+NOTE D2 1 _347
+	
+
+NOTE C2 1 _348
+NOTE C#2 1 _349
+NOTE D2 1 _350
+	
+
+NOTE C2 1 _351
+	color 0.1 0.2 5
+NOTE C#2 1 _352
+
+NOTE D2 1 _353
+	
+
+NOTE C2 1 _354
+
+	color 0 0 0
+	camtravel 1
+NOTE C#2 1 _355
+NOTE D2 1 _356
+
+NOTE C2 1 _357
+NOTE C#2 1 _358
+NOTE D2 1 _359
+	
+
+NOTE C2 1 _360
+NOTE C#2 1 _361
+    
+	
+NOTE D2 1 _362
+
+NOTE C2 1 _363
+NOTE C#2 1 _364
+NOTE D2 1 _365
+	plateau 1 0 1
+
+NOTE C2 1 _366
+NOTE C#2 1 _367
+NOTE D2 1 _368
+	
+	
+NOTE C2 1 _369
+NOTE C#2 1 _370
+NOTE D2 1 _371
+	
+
+NOTE C2 1 _372
+NOTE C#2 1 _373
+NOTE D2 1 _374
+	
+color 2 2 2
+NOTE C2 1 _375
+NOTE C#2 1 _376
+camright 1
+NOTE D2 1 _377
+	plateau 1 0 3
+
+
+NOTE C2 1 _378
+NOTE C#2 1 _379
+NOTE D2 1 _380
+	camback 1
+
+NOTE C2 1 _381
+NOTE C#2 1 _382
+NOTE D2 1 _383
+
+NOTE C2 1 _384
+NOTE C#2 1 _385
+NOTE D2 1 _386
+
+NOTE C2 1 _387
+NOTE C#2 1 _388
+NOTE D2 1 _389
+
+NOTE C2 1 _390
+	
+NOTE C#2 1 _391
+NOTE D2 1 _392
+
+NOTE C2 1 _393
+NOTE C#2 1 _394
+NOTE D2 1 _395
+	plateau 0 1 1
+
+NOTE C2 1 _396
+NOTE C#2 1 _397
+NOTE D2 1 _398
+
+NOTE C2 1 _399
+NOTE C#2 1 _400
+	camavatar 1
+NOTE D2 1 _401
+
+NOTE C2 1 _402
+NOTE C#2 1 _403
+camstring 1
+NOTE D2 1 _404
+
+
+NOTE C2 1 _405
+NOTE C#2 1 _406
+NOTE D2 1 _407
+
+NOTE C2 1 _408
+	camup 1
+	railup 16
+	rotorup 2
+NOTE C#2 1 _409
+NOTE D2 1 _410
+	
+	
+NOTE C2 1 _411
+NOTE C#2 1 _412
+NOTE D2 1 _413
+
+NOTE C2 1 _414
+NOTE C#2 1 _415
+NOTE D2 1 _416
+	
+NOTE C2 1 _417
+	cambrass 1
+NOTE C#2 1 _418
+NOTE D2 1 _419
+
+NOTE C2 1 _420
+NOTE C#2 1 _421
+NOTE D2 1 _422
+	camup 1
+
+NOTE C2 1 _423
+NOTE C#2 1 _424
+NOTE D2 1 _425
+	
+NOTE C2 1 _426
+NOTE C#2 1 _427
+NOTE D2 1 _428
+    
+
+NOTE C2 1 _429
+NOTE C#2 1 _430
+NOTE D2 1 _431
+
+NOTE C2 1 _432
+NOTE C#2 1 _433
+NOTE D2 1 _434
+
+NOTE C2 1 _435
+NOTE C#2 1 _436
+NOTE D2 1 _437
+
+NOTE C2 1 _438
+NOTE C#2 1 _439
+NOTE D2 1 _440
+
+NOTE C2 1 _441
+NOTE C#2 1 _442
+NOTE D2 1 _443
+
+NOTE C2 1 _444
+NOTE C#2 1 _445
+NOTE D2 1 _446
+  camup 1
+	railup 4
+	rotorup 1
+
+NOTE C2 1 _447
+NOTE C#2 1 _448
+NOTE D2 1 _449
+
+NOTE C2 1 _450
+NOTE C#2 1 _451
+NOTE D2 1 _452
+		railright 14
+	camright 1
+
+NOTE C2 1 _453
+NOTE C#2 1 _454
+NOTE D2 1 _455
+
+NOTE C2 1 _456
+NOTE C#2 1 _457
+NOTE D2 1 _458
+	camback 1
+
+NOTE C2 1 _459
+NOTE C#2 1 _460
+NOTE D2 1 _461
+
+NOTE C2 1 _462
+NOTE C#2 1 _463
+NOTE D2 1 _464
+
+NOTE C2 1 _465
+NOTE C#2 1 _466
+NOTE D2 1 _467
+	camup 1
+
+NOTE C2 1 _468
+NOTE C#2 1 _469
+NOTE D2 1 _470
+	
+NOTE C2 1 _471
+	color 0
+NOTE C#2 1 _472
+NOTE D2 1 _473
+	railrightline 0
+	railright 0
+
+NOTE C2 1 _474
+NOTE C#2 1 _475
+NOTE D2 1 _476
+
+
+NOTE C2 1 _477
+NOTE C#2 1 _478
+	color 3
+	railrightline 15
+NOTE D2 1 _479
+	
+
+NOTE C2 1 _480
+NOTE C#2 1 _481
+    railright 4
+	camright 1
+NOTE D2 1 _482
+	
+NOTE C2 1 _483
+NOTE C#2 1 _484
+NOTE D2 1 _485
+
+
+NOTE C2 1 _486
+NOTE C#2 1 _487
+NOTE D2 1 _488
+	
+NOTE C2 1 _489
+NOTE C#2 1 _490
+NOTE D2 1 _491
+	color 0.9 0.4 0.3
+
+NOTE C2 1 _492
+NOTE C#2 1 _493
+NOTE D2 1 _494
+	camback 1
+
+NOTE C2 1 _495
+NOTE C#2 1 _496
+NOTE D2 1 _497
+
+NOTE C2 1 _498
+NOTE C#2 1 _499
+NOTE D2 1 _500
+
+
+NOTE C2 1 _501
+NOTE C#2 1 _502
+NOTE D2 1 _503
+
+NOTE C2 1 _504
+NOTE C#2 1 _505
+
+
+NOTE D2 1 _506
+
+NOTE C2 1 _507
+	
+		camwood 1
+	 color 0 0 0
+ plateau 1 1 1
+NOTE C#2 1 _508
+NOTE D2 1 _509
+
+NOTE C2 1 _510
+
+NOTE C#2 1 _511
+NOTE D2 1 _512
+
+NOTE C2 1 _513
+NOTE C#2 1 _514
+NOTE D2 1 _515
+
+NOTE C2 1 _516
+NOTE C#2 1 _517
+NOTE D2 1 _518
+
+NOTE C2 1 _519
+NOTE C#2 1 _520
+	
+NOTE D2 1 _521
+	
+
+NOTE C2 1 _522
+NOTE C#2 1 _523
+NOTE D2 1 _524
+
+NOTE C2 1 _525
+NOTE C#2 1 _526
+NOTE D2 1 _527
+
+NOTE C2 1 _528
+NOTE C#2 1 _529
+NOTE D2 1 _530
+	camleft 1
+	
+NOTE C2 1 _531
+NOTE C#2 1 _532
+NOTE D2 1 _533
+
+NOTE C2 1 _534
+NOTE C#2 1 _535
+	camtravel 1
+	plateau 2 2 2
+	color 1 0 0 
+NOTE D2 1 _536
+	
+NOTE C2 1 _537
+NOTE C#2 1 _538
+NOTE D2 1 _539
+
+NOTE C2 1 _540
+NOTE C#2 1 _541
+NOTE D2 1 _542
+
+NOTE C2 1 _543
+NOTE C#2 1 _544
+NOTE D2 1 _545
+	
+NOTE C2 1 _546
+NOTE C#2 1 _547
+NOTE D2 1 _548
+    
+
+NOTE C2 1 _549
+NOTE C#2 1 _550
+NOTE D2 1 _551
+
+NOTE C2 1 _552
+NOTE C#2 1 _553
+NOTE D2 1 _554
+
+NOTE C2 1 _555
+NOTE C#2 1 _556
+NOTE D2 1 _557
+
+NOTE C2 1 _558
+NOTE C#2 1 _559
+ camup 1
+ 	color 0.5 0 1 
+NOTE D2 1 _560
+
+
+
+NOTE C2 1 _561
+NOTE C#2 1 _562
+NOTE D2 1 _563
+
+NOTE C2 1 _564
+NOTE C#2 1 _565
+NOTE D2 1 _566
+ 
+
+NOTE C2 1 _567
+NOTE C#2 1 _568
+NOTE D2 1 _569
+
+NOTE C2 1 _570
+NOTE C#2 1 _571
+NOTE D2 1 _572
+
+NOTE C2 1 _573
+	camback 1
+NOTE C#2 1 _574
+NOTE D2 1 _575
+
+NOTE C2 1 _576
+NOTE C#2 1 _577
+NOTE D2 1 _578
+	
+
+NOTE C2 1 _579
+NOTE C#2 1 _580
+NOTE D2 1 _581
+cambrass 1
+	plateau 0.8 0.8 0.8
+	color 0.5 0.5 0.9
+
+NOTE C2 1 _582
+NOTE C#2 1 _583
+NOTE D2 1 _584
+	
+
+NOTE C2 1 _585
+NOTE C#2 1 _586
+NOTE D2 1 _587
+
+NOTE C2 1 _588
+NOTE C#2 1 _589
+NOTE D2 1 _590
+	
+
+NOTE C2 1 _591
+NOTE C#2 1 _592
+NOTE D2 1 _593
+
+NOTE C2 1 _594
+NOTE C#2 1 _595
+NOTE D2 1 _596
+
+NOTE C2 1 _597
+NOTE C#2 1 _598
+NOTE D2 1 _599
+
+NOTE C2 1 _600
+
+NOTE C#2 1 _601
+NOTE D2 1 _602
+	
+NOTE C2 1 _603
+NOTE C#2 1 _604
+NOTE D2 1 _605
+
+NOTE C2 1 _606
+NOTE C#2 1 _607
+	camwood 1
+NOTE D2 1 _608
+
+NOTE C2 1 _609
+NOTE C#2 1 _610
+NOTE D2 1 _611
+	railup 4
+	rotorup 1
+	
+
+NOTE C2 1 _612
+
+NOTE C#2 1 _613
+	camup 1
+	
+NOTE D2 1 _614
+	
+NOTE C2 1 _615	
+	camwood 1
+NOTE C#2 1 _616
+	
+NOTE D2 1 _617
+	
+
+NOTE C2 1 _618
+NOTE C#2 1 _619
+	camback 1
+NOTE D2 1 _620
+	
+	
+
+NOTE C2 1 _621
+NOTE C#2 1 _622
+NOTE D2 1 _623
+	camavar 1
+	
+NOTE C2 1 _624
+	
+NOTE C#2 1 _625	
+NOTE D2 1 _626
+	
+
+
+NOTE C2 1 _627
+NOTE C#2 1 _628
+	camwood 1
+NOTE D2 1 _629
+
+
+NOTE C2 1 _630
+NOTE C#2 1 _631
+NOTE D2 1 _632
+	
+NOTE C2 1 _633
+NOTE C#2 1 _634
+NOTE D2 1 _635
+	camleft 1
+	
+
+NOTE C2 1 _636
+NOTE C#2 1 _637
+	
+NOTE D2 1 _638
+	color 0.4 0.3 1
+
+NOTE C2 1 _639
+NOTE C#2 1 _640
+	
+NOTE D2 1 _641
+	
+
+NOTE C2 1 _642
+NOTE C#2 1 _643
+	
+NOTE D2 1 _644
+	
+
+NOTE C2 1 _645
+NOTE C#2 1 _646
+NOTE D2 1 _647
+	
+
+NOTE C2 1 _648
+NOTE C#2 1 _649
+NOTE D2 1 _650
+	
+
+NOTE C2 1 _651
+	color 0.1 0.2 5
+NOTE C#2 1 _652
+
+NOTE D2 1 _653
+	railrightline 0
+	railright 0
+
+NOTE C2 1 _654
+color 0.1 0.2 5
+	camtravel 1
+NOTE C#2 1 _655
+NOTE D2 1 _656
+	
+	railrightline 15
+
+NOTE C2 1 _657
+NOTE C#2 1 _658
+NOTE D2 1 _659
+	
+
+NOTE C2 1 _660
+NOTE C#2 1 _661
+    railright 4
+	camright 1
+NOTE D2 1 _662
+
+NOTE C2 1 _663
+NOTE C#2 1 _664
+NOTE D2 1 _665
+	plateau 1 0 1
+
+NOTE C2 1 _666
+NOTE C#2 1 _667
+NOTE D2 1 _668
+	camtravel 1
+	
+NOTE C2 1 _669
+NOTE C#2 1 _670
+NOTE D2 1 _671
+	
+
+NOTE C2 1 _672
+NOTE C#2 1 _673
+NOTE D2 1 _674
+	
+
+NOTE C2 1 _675
+NOTE C#2 1 _676
+NOTE D2 1 _677
+	color 2 2 2
+
+NOTE C2 1 _678
+NOTE C#2 1 _679
+NOTE D2 1 _680
+	camback 1
+
+NOTE C2 1 _681
+NOTE C#2 1 _682
+NOTE D2 1 _683
+
+NOTE C2 1 _684
+NOTE C#2 1 _685
+NOTE D2 1 _686
+
+NOTE C2 1 _687
+NOTE C#2 1 _688
+NOTE D2 1 _689
+
+NOTE C2 1 _690
+	
+NOTE C#2 1 _691
+NOTE D2 1 _692
+
+NOTE C2 1 _693
+NOTE C#2 1 _694
+NOTE D2 1 _695
+	plateau 0 1 1
+
+NOTE C2 1 _696
+NOTE C#2 1 _697
+NOTE D2 1 _698
+
+NOTE C2 1 _699
+NOTE C#2 1 _700
+	camavatar 1
+NOTE D2 1 _701
+
+NOTE C2 1 _702
+NOTE C#2 1 _703
+camstring 1
+NOTE D2 1 _704
+
+
+NOTE C2 1 _705
+NOTE C#2 1 _706
+NOTE D2 1 _707
+
+NOTE C2 1 _708
+	camup 1
+	railup 16
+	rotorup 2
+NOTE C#2 1 _709
+NOTE D2 1 _710
+	
+	
+NOTE C2 1 _711
+NOTE C#2 1 _712
+NOTE D2 1 _713
+
+NOTE C2 1 _714
+NOTE C#2 1 _715
+NOTE D2 1 _716
+	
+NOTE C2 1 _717
+	cambrass 1
+NOTE C#2 1 _718
+NOTE D2 1 _719
+
+NOTE C2 1 _720
+NOTE C#2 1 _721
+NOTE D2 1 _722
+	camup 1
+
+NOTE C2 1 _723
+NOTE C#2 1 _724
+NOTE D2 1 _725
+	
+NOTE C2 1 _726
+NOTE C#2 1 _727
+NOTE D2 1 _728
+    
+
+NOTE C2 1 _729
+NOTE C#2 1 _730
+NOTE D2 1 _731
+
+NOTE C2 1 _732
+NOTE C#2 1 _733
+NOTE D2 1 _734
+
+NOTE C2 1 _735
+NOTE C#2 1 _736
+NOTE D2 1 _737
+
+NOTE C2 1 _738
+NOTE C#2 1 _739
+NOTE D2 1 _740
+
+NOTE C2 1 _741
+NOTE C#2 1 _742
+NOTE D2 1 _743
+
+NOTE C2 1 _744
+NOTE C#2 1 _745
+NOTE D2 1 _746
+  camup 1
+	railup 4
+	rotorup 1
+
+NOTE C2 1 _747
+NOTE C#2 1 _748
+NOTE D2 1 _749
+
+NOTE C2 1 _750
+NOTE C#2 1 _751
+NOTE D2 1 _752
+		railright 14
+	camright 1
+
+NOTE C2 1 _753
+NOTE C#2 1 _754
+NOTE D2 1 _755
+
+NOTE C2 1 _756
+NOTE C#2 1 _757
+NOTE D2 1 _758
+	camback 1
+
+NOTE C2 1 _759
+NOTE C#2 1 _760
+NOTE D2 1 _761
+
+NOTE C2 1 _762
+NOTE C#2 1 _763
+NOTE D2 1 _764
+
+NOTE C2 1 _765
+NOTE C#2 1 _766
+NOTE D2 1 _767
+	camup 1
+
+NOTE C2 1 _768
+NOTE C#2 1 _769
+NOTE D2 1 _770
+	
+NOTE C2 1 _771
+	color 0
+NOTE C#2 1 _772
+NOTE D2 1 _773
+	railrightline 0
+	railright 0
+
+NOTE C2 1 _774
+NOTE C#2 1 _775
+NOTE D2 1 _776
+
+
+NOTE C2 1 _777
+NOTE C#2 1 _778
+	color 3
+	railrightline 15
+NOTE D2 1 _779
+	
+
+NOTE C2 1 _780
+NOTE C#2 1 _781
+    railright 4
+	camright 1
+NOTE D2 1 _782
+	
+NOTE C2 1 _783
+NOTE C#2 1 _784
+NOTE D2 1 _785
+
+
+NOTE C2 1 _786
+NOTE C#2 1 _787
+NOTE D2 1 _788
+	
+NOTE C2 1 _789
+NOTE C#2 1 _790
+NOTE D2 1 _791
+	color 0.9 0.4 0.3
+
+NOTE C2 1 _792
+NOTE C#2 1 _793
+NOTE D2 1 _794
+	camback 1
+
+NOTE C2 1 _795
+NOTE C#2 1 _796
+NOTE D2 1 _797
+
+NOTE C2 1 _798
+NOTE C#2 1 _799
+NOTE D2 1 _800
+
+
+NOTE C2 1 _801
+NOTE C#2 1 _802
+NOTE D2 1 _803
+
+NOTE C2 1 _804
+NOTE C#2 1 _805
+NOTE D2 1 _806
+
+NOTE C2 1 _807
+	plateau 1 0.4 0.5
+NOTE C#2 1 _808
+NOTE D2 1 _809
+
+NOTE C2 1 _810
+	camneur 1
+NOTE C#2 1 _811
+NOTE D2 1 _812
+
+NOTE C2 1 _813
+NOTE C#2 1 _814
+NOTE D2 1 _815
+
+NOTE C2 1 _816
+camavatar2 1
+NOTE C#2 1 _817
+NOTE D2 1 _818
+
+NOTE C2 1 _819
+NOTE C#2 1 _820
+	camavatar 1
+NOTE D2 1 _821
+
+NOTE C2 1 _822
+NOTE C#2 1 _823
+NOTE D2 1 _824
+
+NOTE C2 1 _825
+NOTE C#2 1 _826
+NOTE D2 1 _827
+camneur 1
+
+NOTE C2 1 _828
+NOTE C#2 1 _829
+NOTE D2 1 _830
+	
+	
+NOTE C2 1 _831
+NOTE C#2 1 _832
+NOTE D2 1 _833
+
+NOTE C2 1 _834
+NOTE C#2 1 _835
+	
+NOTE D2 1 _836
+	
+NOTE C2 1 _837
+NOTE C#2 1 _838
+NOTE D2 1 _839
+
+NOTE C2 1 _840
+NOTE C#2 1 _841
+	camback 1
+	plateau 0.8 0.8 0.8
+	color 0.5 0.5 0.9
+NOTE D2 1 _842
+
+NOTE C2 1 _843
+NOTE C#2 1 _844
+NOTE D2 1 _845
+	camneur 1
+	
+NOTE C2 1 _846
+NOTE C#2 1 _847
+NOTE D2 1 _848
+
+NOTE C2 1 _849
+NOTE C#2 1 _850
+	camneur2 1
+NOTE D2 1 _851
+
+NOTE C2 1 _852
+NOTE C#2 1 _853
+NOTE D2 1 _854
+
+NOTE C2 1 _855
+NOTE C#2 1 _856
+NOTE D2 1 _857
+
+NOTE C2 1 _858
+NOTE C#2 1 _859
+NOTE D2 1 _860
+
+NOTE C2 1 _861
+NOTE C#2 1 _862
+NOTE D2 1 _863
+
+NOTE C2 1 _864
+NOTE C#2 1 _865
+NOTE D2 1 _866
+
+
+NOTE C2 1 _867
+NOTE C#2 1 _868
+NOTE D2 1 _869
+
+NOTE C2 1 _870
+NOTE C#2 1 _871
+NOTE D2 1 _872
+
+NOTE C2 1 _873
+NOTE C#2 1 _874
+NOTE D2 1 _875
+
+NOTE C2 1 _876
+NOTE C#2 1 _877
+NOTE D2 1 _878
+	camback 1
+
+NOTE C2 1 _879
+NOTE C#2 1 _880
+NOTE D2 1 _881
+
+NOTE C2 1 _882
+NOTE C#2 1 _883
+NOTE D2 1 _884
+	
+
+NOTE C2 1 885
+NOTE C#2 1 _886
+NOTE D2 1 _887
+
+NOTE C2 1 _888
+NOTE C#2 1 _889
+NOTE D2 1 _890
+	  camup 1
+	railup 4
+	rotorup 1
+
+NOTE C2 1 _891
+NOTE C#2 1 _892
+NOTE D2 1 _893
+
+NOTE C2 1 _894
+NOTE C#2 1 _895
+NOTE D2 1 _896
+
+NOTE C2 1 _897
+NOTE C#2 1 _898
+NOTE D2 1 _899
+
+
+NOTE C2 1 _900
+NOTE C#2 1 _901
+NOTE D2 1 _902
+	
+NOTE C2 1 _903
+NOTE C#2 1 _904
+NOTE D2 1 _905
+
+NOTE C2 1 _906
+NOTE C#2 1 _907
+	
+NOTE D2 1 _908
+
+NOTE C2 1 _909
+NOTE C#2 1 _910
+NOTE D2 1 _911
+	
+
+NOTE C2 1 _912
+
+NOTE C#2 1 _913
+	camstring 1
+	
+NOTE D2 1 _914
+	
+NOTE C2 1 _915	
+	
+NOTE C#2 1 _916
+	
+NOTE D2 1 _917
+	
+
+NOTE C2 1 _918
+NOTE C#2 1 _919
+NOTE D2 1 _920
+	
+
+
+
+
