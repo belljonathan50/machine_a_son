@@ -1,0 +1,26 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<title>Nonet - Viola</title>
+
+	<link href="fonts/fonts.css" rel="stylesheet">
+	<link href="nonet.css" rel="stylesheet">
+	<script src="lib/timesync.min.js"></script>
+	<script src="lib/comm.js"></script>
+	<script src="lib/clientVid.js"></script>
+    <!-- ATTENTION ! Ne pas modifier cette page, elle est générée automatiquement à partir de rsrc/template.html.  -->
+</head>
+
+<body>
+	<button id="lock" type="button" onclick="vid.play();vid.pause();this.remove();">please click</button>
+
+	<center>
+		<video id="vid" height="80%" width="100%" src="audio/bass.mp4" controls playsinline></video>
+	</center>
+</body>
+
+<script>
+    connectclient("Viola");
+    var vid = document.getElementById("vid");
+</script>
+</html>
