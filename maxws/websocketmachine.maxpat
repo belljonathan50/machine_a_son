@@ -40,6 +40,19 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-19",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 168.5, 5.5, 221.0, 22.0 ],
+					"presentation_linecount" : 3,
+					"text" : "connect wss://huihuibell.herokuapp.com"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-15",
 					"linecount" : 6,
 					"maxclass" : "comment",
@@ -82,7 +95,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 625.0, 33.0, 50.0, 22.0 ],
-					"text" : "3"
+					"text" : "53"
 				}
 
 			}
@@ -118,7 +131,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 717.0, -13.0, 50.0, 22.0 ],
-					"text" : "98"
+					"text" : "77"
 				}
 
 			}
@@ -176,7 +189,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 798.0, 173.5, 88.0, 22.0 ],
+					"patching_rect" : [ 798.0, 229.0, 88.0, 22.0 ],
 					"text" : "s simulgotosec"
 				}
 
@@ -199,7 +212,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 429.0, 455.0, 916.0, 589.0 ],
+						"rect" : [ 344.0, 154.0, 916.0, 589.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -227,7 +240,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-8",
@@ -248,7 +260,7 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-5",
-									"loop" : [ 0, 1000 ],
+									"loop" : [ 0.0, 1000.0 ],
 									"maxclass" : "bach.roll",
 									"numinlets" : 6,
 									"numoutlets" : 8,
@@ -300,7 +312,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 110.0, 405.0, 79.0, 22.0 ],
-									"text" : "480"
+									"text" : "54"
 								}
 
 							}
@@ -324,7 +336,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 267.0, 140.0, 79.0, 22.0 ],
-									"text" : "58.837971"
+									"text" : "30."
 								}
 
 							}
@@ -1121,7 +1133,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 34.0, 87.0, 1486.0, 565.0 ],
+										"rect" : [ -27.0, 130.0, 785.0, 565.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1151,13 +1163,25 @@
 										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
+													"id" : "obj-12",
+													"linecount" : 3,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 244.0, 57.0, 150.0, 47.0 ],
+													"text" : "immediately?\nwas not on next count before"
+												}
+
+											}
+, 											{
+												"box" : 												{
 													"id" : "obj-4",
 													"maxclass" : "message",
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 344.0, 234.0, 50.0, 22.0 ],
-													"text" : "240."
+													"text" : "27."
 												}
 
 											}
@@ -1394,7 +1418,8 @@
 											}
 , 											{
 												"patchline" : 												{
-													"destination" : [ "obj-46", 3 ],
+													"color" : [ 0.774352431297302, 0.0, 0.0, 1.0 ],
+													"destination" : [ "obj-46", 2 ],
 													"order" : 1,
 													"source" : [ "obj-1", 0 ]
 												}
@@ -1793,8 +1818,8 @@
 ,
 								"number" : 								{
 									"fontname" : [ "Arial" ],
-									"fontsize" : [ 12.0 ],
-									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
+									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+									"fontsize" : [ 12.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3583,8 +3608,8 @@
 ,
 								"number" : 								{
 									"fontname" : [ "Arial" ],
-									"fontsize" : [ 12.0 ],
-									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
+									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+									"fontsize" : [ 12.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -3942,8 +3967,8 @@
 ,
 												"number" : 												{
 													"fontname" : [ "Arial" ],
-													"fontsize" : [ 12.0 ],
-													"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
+													"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+													"fontsize" : [ 12.0 ]
 												}
 ,
 												"parentstyle" : "",
@@ -4273,8 +4298,8 @@
 ,
 												"number" : 												{
 													"fontname" : [ "Arial" ],
-													"fontsize" : [ 12.0 ],
-													"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
+													"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+													"fontsize" : [ 12.0 ]
 												}
 ,
 												"parentstyle" : "",
@@ -5371,8 +5396,8 @@
 ,
 								"number" : 								{
 									"fontname" : [ "Arial" ],
-									"fontsize" : [ 12.0 ],
-									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
+									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+									"fontsize" : [ 12.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5445,7 +5470,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 145.5, 5.5, 58.0, 22.0 ],
+					"patching_rect" : [ 91.5, -8.5, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -6028,6 +6053,8 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
+										"node_bin_path" : "",
+										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -6233,8 +6260,8 @@
 ,
 								"number" : 								{
 									"fontname" : [ "Arial" ],
-									"fontsize" : [ 12.0 ],
-									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
+									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+									"fontsize" : [ 12.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -6525,7 +6552,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 34.0, 401.0, 1937.0, 785.0 ],
+						"rect" : [ -531.0, 401.0, 1937.0, 785.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -6773,7 +6800,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1623.5, 290.0, 50.0, 49.0 ],
-									"text" : "startfrombeat 480"
+									"text" : "startfrombeat 54"
 								}
 
 							}
@@ -7743,8 +7770,8 @@
 ,
 								"number" : 								{
 									"fontname" : [ "Arial" ],
-									"fontsize" : [ 12.0 ],
-									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
+									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+									"fontsize" : [ 12.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -8167,7 +8194,7 @@
 									"patching_rect" : [ 462.0, 753.0, 85.0, 22.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 544.0, 203.0, 85.0, 22.0 ],
-									"text" : "54.978392"
+									"text" : "0."
 								}
 
 							}
@@ -8636,8 +8663,8 @@
 ,
 												"number" : 												{
 													"fontname" : [ "Arial" ],
-													"fontsize" : [ 12.0 ],
-													"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
+													"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+													"fontsize" : [ 12.0 ]
 												}
 ,
 												"parentstyle" : "",
@@ -8949,12 +8976,13 @@
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-17",
+													"linecount" : 2,
 													"maxclass" : "message",
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 23.0, 341.0, 50.0, 35.0 ],
-													"text" : "/seek 3"
+													"text" : "/seek 53"
 												}
 
 											}
@@ -9151,7 +9179,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 296.0, 599.0, 50.0, 22.0 ],
-									"text" : "4"
+									"text" : "54"
 								}
 
 							}
@@ -9510,7 +9538,7 @@
 									"patching_rect" : [ 577.0, 607.0, 91.0, 22.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 577.0, 607.0, 91.0, 22.0 ],
-									"text" : "_3"
+									"text" : "_53"
 								}
 
 							}
@@ -10005,8 +10033,8 @@
 ,
 								"number" : 								{
 									"fontname" : [ "Arial" ],
-									"fontsize" : [ 12.0 ],
-									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
+									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+									"fontsize" : [ 12.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -27044,7 +27072,7 @@
 									"cursor_color" : [ 1.0, 1.0, 1.0, 1.0 ],
 									"cursor_followmouse" : 0,
 									"cursor_noringoffset" : 0,
-									"cursor_position" : 252.0,
+									"cursor_position" : -1.0,
 									"cursor_shape" : "bar",
 									"cursor_size" : 3,
 									"cursor_sizeunit" : 0,
@@ -27435,7 +27463,7 @@
 									"cursor_color" : [ 1.0, 1.0, 1.0, 1.0 ],
 									"cursor_followmouse" : 0,
 									"cursor_noringoffset" : 0,
-									"cursor_position" : 252.0,
+									"cursor_position" : -1.0,
 									"cursor_shape" : "bar",
 									"cursor_size" : 3,
 									"cursor_sizeunit" : 0,
@@ -27517,7 +27545,7 @@
 									"cursor_color" : [ 1.0, 1.0, 1.0, 1.0 ],
 									"cursor_followmouse" : 0,
 									"cursor_noringoffset" : 0,
-									"cursor_position" : 252.0,
+									"cursor_position" : -1.0,
 									"cursor_shape" : "bar",
 									"cursor_size" : 3,
 									"cursor_sizeunit" : 0,
@@ -33307,6 +33335,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-120", 0 ],
+					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-22", 0 ]
 				}
@@ -33492,8 +33527,8 @@
 ,
 				"number" : 				{
 					"fontname" : [ "Arial" ],
-					"fontsize" : [ 12.0 ],
-					"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
+					"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+					"fontsize" : [ 12.0 ]
 				}
 ,
 				"parentstyle" : "",
