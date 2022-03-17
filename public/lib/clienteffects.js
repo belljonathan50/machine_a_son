@@ -87,7 +87,7 @@ function setdate (date) {
     let audio = document.getElementById ("scene/audio-all")
     if (!audio) audio = document.getElementById ("scene/audio-gr1-flute")
     let delay = audio.currentTime/4 - date;
-    if (Math.abs(delay) < 0.07) return;
+    if (Math.abs(delay) < 0.17) return;
     console.log ("Adjust date: current delay is", delay)
     let msg = inscore.newMessageM("event");
     inscore.msgAddStr(msg, "GOTOF");
