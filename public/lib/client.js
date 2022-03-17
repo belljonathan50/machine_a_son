@@ -84,7 +84,7 @@ function isend (event) {
 }
 
 function setdate (date) {
-    let audio = document.getElementById ("scen/audio-all")
+    let audio = document.getElementById ("scen/saudio-all")
     if (!audio) audio = document.getElementById ("scene/audio-gr1-flute")
     let delay = audio.currentTime/4 - date;
     if (Math.abs(delay) < 0.07) return;
